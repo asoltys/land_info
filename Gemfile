@@ -1,7 +1,13 @@
 source 'http://rubygems.org'
 
 gem 'rails', '3.0.4'
-gem 'mysql2'
+
+if defined?(JRUBY_VERSION)
+  gem 'activerecord-jdbc-adapter'
+  gem 'jdbc-sqlserver'
+else
+  gem 'activerecord-sqlserver-adapter'
+end
 
 group :development, :test do
   gem 'ruby-debug19', :require => 'ruby-debug'
