@@ -6,6 +6,7 @@ if defined?(JRUBY_VERSION)
   gem 'activerecord-jdbc-adapter'
   gem 'jdbc-sqlserver'
 else
+  gem 'tiny_tds'
   gem 'activerecord-sqlserver-adapter'
 end
 
