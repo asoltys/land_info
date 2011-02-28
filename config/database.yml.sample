@@ -1,20 +1,6 @@
 development:
-  adapter: mysql2
-  database: land_info
-  username: root
-  password: password 
-  host: localhost 
-
-test:
-  adapter: mysql2
-  database: land_info_test
-  username: root
-  password: password 
-  host: localhost 
-
-production:
-  adapter: mysql2
-  database: land_info_test
-  username: root
-  password: password 
-  host: localhost 
+  adapter: jdbc
+  username: user
+  password: password
+  driver: com.microsoft.sqlserver.jdbc.SQLServerDriver
+  url: jdbc:sqlserver://localhost:1433;databaseName=land_info
