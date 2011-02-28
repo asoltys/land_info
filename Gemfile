@@ -8,6 +8,7 @@ if defined?(JRUBY_VERSION)
 else
   gem 'tiny_tds'
   gem 'activerecord-sqlserver-adapter'
+  gem 'mysql2'
 end
 
 group :development, :test do
