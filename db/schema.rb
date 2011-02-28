@@ -10,12 +10,12 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 0) do
+ActiveRecord::Schema.define(:version => 20110225203845) do
 
   create_table "BCLSLIST", :id => false, :force => true do |t|
     t.string "LAST_NAME",  :limit => 23
     t.string "FIRST_NAME", :limit => 20
-    t.float  "MEMBER_NUM", :limit => nil
+    t.float  "MEMBER_NUM"
     t.string "STREET_ADD", :limit => 50
     t.string "CITY",       :limit => 40
     t.string "PROVINCE",   :limit => 5
@@ -28,31 +28,31 @@ ActiveRecord::Schema.define(:version => 0) do
   end
 
   create_table "Bldg_Doc", :id => false, :force => true do |t|
-    t.float "KEYNUMFRMB", :limit => nil
-    t.float "KEYNUMFRMD", :limit => nil
+    t.float "KEYNUMFRMB"
+    t.float "KEYNUMFRMD"
   end
 
   create_table "CSurv_fi", :id => false, :force => true do |t|
-    t.float    "SURV_FILE",  :limit => nil
+    t.float    "SURV_FILE"
     t.string   "LOCATION_P", :limit => 47
-    t.float    "PROJ_NUM",   :limit => nil
-    t.float    "SSA_NUM",    :limit => nil
+    t.float    "PROJ_NUM"
+    t.float    "SSA_NUM"
     t.string   "CR_FILE",    :limit => 15
     t.datetime "STRT_DATE"
     t.datetime "CMPL_DATE"
     t.string   "PROJ_MAN",   :limit => 3
     t.string   "DEPT_SEC",   :limit => 30
     t.string   "DESCRIPT",   :limit => 35
-    t.float    "SSA_AMOUNT", :limit => nil
-    t.float    "BULK_NUM",   :limit => nil
+    t.float    "SSA_AMOUNT"
+    t.float    "BULK_NUM"
     t.string   "FIN_CODE",   :limit => 6
     t.string   "DEPT_ABBR",  :limit => 6
     t.string   "ACTIVE_FIL", :limit => 1
     t.string   "REMARK",     :limit => 28
     t.string   "LOCATION_S", :limit => 25
     t.string   "DEPT_CONTA", :limit => 15
-    t.float    "DEPT_TEL",   :limit => nil
-    t.float    "LOC_NUM",    :limit => nil
+    t.float    "DEPT_TEL"
+    t.float    "LOC_NUM"
   end
 
   create_table "DWF_file", :id => false, :force => true do |t|
@@ -86,10 +86,10 @@ ActiveRecord::Schema.define(:version => 0) do
 
   create_table "Featcode", :id => false, :force => true do |t|
     t.string "FEAT_TYPE",  :limit => 36
-    t.float  "FEATURE_CO", :limit => nil
+    t.float  "FEATURE_CO"
     t.string "SYMBOL",     :limit => 15
-    t.float  "COLUMN",     :limit => nil
-    t.float  "ROW",        :limit => nil
+    t.float  "COLUMN"
+    t.float  "ROW"
     t.string "COLOUR",     :limit => 10
   end
 
@@ -130,8 +130,8 @@ ActiveRecord::Schema.define(:version => 0) do
   end
 
   create_table "HERITAGE", :id => false, :force => true do |t|
-    t.float    "HM_KEYNUM",  :limit => nil
-    t.float    "HB_FORKEY",  :limit => nil
+    t.float    "HM_KEYNUM"
+    t.float    "HB_FORKEY"
     t.datetime "MEET_DATE"
     t.string   "MEET_TYPE",  :limit => 15
     t.string   "MEET_LOC",   :limit => 50
@@ -139,8 +139,8 @@ ActiveRecord::Schema.define(:version => 0) do
   end
 
   create_table "Heritage_Bldg", :id => false, :force => true do |t|
-    t.float    "HM_KEYNUM",  :limit => nil
-    t.float    "HB_FORKEY",  :limit => nil
+    t.float    "HM_KEYNUM"
+    t.float    "HB_FORKEY"
     t.datetime "MEET_DATE"
     t.string   "MEET_TYPE",  :limit => 15
     t.string   "MEET_LOC",   :limit => 50
@@ -148,8 +148,8 @@ ActiveRecord::Schema.define(:version => 0) do
   end
 
   create_table "Heritage_Code", :id => false, :force => true do |t|
-    t.float    "HM_KEYNUM",  :limit => nil
-    t.float    "HB_FORKEY",  :limit => nil
+    t.float    "HM_KEYNUM"
+    t.float    "HB_FORKEY"
     t.datetime "MEET_DATE"
     t.string   "MEET_TYPE",  :limit => 15
     t.string   "MEET_LOC",   :limit => 50
@@ -157,8 +157,8 @@ ActiveRecord::Schema.define(:version => 0) do
   end
 
   create_table "Heritage_Designation", :id => false, :force => true do |t|
-    t.float    "HM_KEYNUM",  :limit => nil
-    t.float    "HB_FORKEY",  :limit => nil
+    t.float    "HM_KEYNUM"
+    t.float    "HB_FORKEY"
     t.datetime "MEET_DATE"
     t.string   "MEET_TYPE",  :limit => 15
     t.string   "MEET_LOC",   :limit => 50
@@ -166,8 +166,8 @@ ActiveRecord::Schema.define(:version => 0) do
   end
 
   create_table "Heritage_Meets", :id => false, :force => true do |t|
-    t.float    "HM_KEYNUM",  :limit => nil
-    t.float    "HB_FORKEY",  :limit => nil
+    t.float    "HM_KEYNUM"
+    t.float    "HB_FORKEY"
     t.datetime "MEET_DATE"
     t.string   "MEET_TYPE",  :limit => 15
     t.string   "MEET_LOC",   :limit => 50
@@ -254,14 +254,14 @@ ActiveRecord::Schema.define(:version => 0) do
   end
 
   create_table "Meet_Doc", :id => false, :force => true do |t|
-    t.float "KEYNUMFRMM", :limit => nil
-    t.float "KEYNUMFRMD", :limit => nil
+    t.float "KEYNUMFRMM"
+    t.float "KEYNUMFRMD"
   end
 
   create_table "SURV_PL", :id => false, :force => true do |t|
     t.string   "PLAN_NO",    :limit => 10
     t.string   "SIZE",       :limit => 1
-    t.float    "SURV_FI",    :limit => nil
+    t.float    "SURV_FI"
     t.string   "SECONDARY_", :limit => 47
     t.string   "STREET_LOC", :limit => 30
     t.string   "OBJECT",     :limit => 30
@@ -270,22 +270,22 @@ ActiveRecord::Schema.define(:version => 0) do
     t.string   "ISA_CODE",   :limit => 2
     t.string   "DIST_CODE",  :limit => 2
     t.string   "DIST_LOT",   :limit => 10
-    t.float    "LATITUDE",   :limit => nil
-    t.float    "LONGITUDE",  :limit => nil
-    t.float    "NORTH_UTM",  :limit => nil
-    t.float    "EAST_UTM",   :limit => nil
-    t.float    "UTM_ZONE",   :limit => nil
+    t.float    "LATITUDE"
+    t.float    "LONGITUDE"
+    t.float    "NORTH_UTM"
+    t.float    "EAST_UTM"
+    t.float    "UTM_ZONE"
     t.string   "OLD_PLAN_N", :limit => 12
     t.text     "TITLE"
     t.datetime "PLAN_CLOSE"
     t.string   "PLAN_REG_N", :limit => 10
     t.string   "LTO_CODE",   :limit => 1
-    t.float    "MEMBERNUM",  :limit => nil
+    t.float    "MEMBERNUM"
     t.string   "COMPANY_NA", :limit => 30
-    t.float    "RECNO",      :limit => nil
+    t.float    "RECNO"
     t.string   "DFRPNUM",    :limit => 5
-    t.float    "LOC_NUM",    :limit => nil
-    t.float    "EDRM",       :limit => nil
+    t.float    "LOC_NUM"
+    t.float    "EDRM"
     t.string   "CROWN_LND_", :limit => 12
     t.string   "CLSR_PLAN",  :limit => 10
   end
