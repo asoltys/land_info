@@ -12,7 +12,7 @@ If you are interested in following this project, have questions, or feedback, pl
 
 ## Terms and Conditions of Use
 
-Unless otherwise noted, computer program source code of the Land Info Data Manager is covered under Crown Copyright, Government of Canada, and is distributed under the GNU General Public License.
+Unless otherwise noted, computer program source code of the Land Info Data Manager is covered under Crown Copyright, Government of Canada, and is distributed under the MIT License.
 
 The Canada wordmark and related graphics associated with this distribution are protected under trademark law and copyright law. No permission is granted to use them outside the parameters of the Government of Canada's corporate identity program. For more information, see http://www.tbs-sct.gc.ca/fip-pcim/index-eng.asp
 
