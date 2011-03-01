@@ -2,11 +2,13 @@
 
 This application is being developed to replace a Lotus Approach database used by the Pacific Geomatics team of Public Works and Government Services Canada for tracking land survey files. The database will be migrated to MS SQL Server and this application will provide a web-based interface for managing it.
 
+If you are interested in following this project, have questions, or feedback, please contact [Adam Soltys](mailto:adam.soltys@pwgsc-tpsgc.gc.ca)
+
 ## Technology
 
-* [Rails 3.0.5](http://www.rubyonrails.org/)
 * [JRuby 1.6.0.RC2](http://www.jruby.org/)
-* WET Core Framework - HTML5 (http://tbs-sct.ircan.gc.ca/projects/gcwwwmark-bali)
+* [Rails 3.0.5](http://www.rubyonrails.org/)
+* [WET Core Framework - HTML5](http://tbs-sct.ircan.gc.ca/projects/gcwwwmark-bali)
 
 ## Terms and Conditions of Use
 
