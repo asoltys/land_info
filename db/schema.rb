@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110301203738) do
+ActiveRecord::Schema.define(:version => 20110301214331) do
 
   create_table "BCLSLIST", :id => false, :force => true do |t|
     t.string "LAST_NAME"
@@ -332,7 +332,7 @@ ActiveRecord::Schema.define(:version => 20110301203738) do
     t.string "iLoc_Var"
   end
 
-  create_table "nSurveyFiles1", :id => false, :force => true do |t|
+  create_table "survey_files", :force => true do |t|
     t.string "Surv_File"
     t.string "Proj_Num"
     t.string "SSA_Num"
