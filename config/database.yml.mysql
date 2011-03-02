@@ -1,8 +1,0 @@
-development:
-  adapter: sqlserver
-  mode: dblib
-  dataserver: developer
-  database: land_info
-  username: sa
-  password: pickles 
-  timeout: 5000

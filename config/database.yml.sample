@@ -1,6 +1,14 @@
+<% if defined?(JRUBY_VERSION) %>
 development:
   adapter: jdbc
-  username: user
-  password: password
+  username: 
+  password: 
   driver: com.microsoft.sqlserver.jdbc.SQLServerDriver
-  url: jdbc:sqlserver://localhost:1433;databaseName=land_info
+  url: jdbc:sqlserver://gtisdev.pac.pwgsc.gc.ca:1433;databaseName=land_info
+<% else %>
+development:
+  adapter: mysql2
+  database: land_info
+  username: 
+  password: 
+<% end %>
