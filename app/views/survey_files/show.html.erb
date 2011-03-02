@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Surv file:</b>
+  <%= @survey_file.Surv_File %>
+</p>
+
+<p>
+  <b>Proj num:</b>
+  <%= @survey_file.Proj_Num %>
+</p>
+
+<p>
+  <b>Strt date:</b>
+  <%= @survey_file.Strt_Date %>
+</p>
+
+<p>
+  <b>Cmpl date:</b>
+  <%= @survey_file.Cmpl_Date %>
+</p>
+
+
+<%= link_to 'Edit', edit_survey_file_path(@survey_file) %> |
+<%= link_to 'Back', survey_files_path %>

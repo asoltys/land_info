@@ -1,0 +1,13 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  Surv_File: MyString
+  Proj_Num: MyString
+  Strt_Date: MyString
+  Cmpl_Date: MyString
+
+two:
+  Surv_File: MyString
+  Proj_Num: MyString
+  Strt_Date: MyString
+  Cmpl_Date: MyString

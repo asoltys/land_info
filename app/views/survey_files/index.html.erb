@@ -1,0 +1,29 @@
+<h1>Listing survey_files</h1>
+
+<table>
+  <tr>
+    <th>Surv file</th>
+    <th>Proj num</th>
+    <th>Strt date</th>
+    <th>Cmpl date</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @survey_files.each do |survey_file| %>
+  <tr>
+    <td><%= survey_file.Surv_File %></td>
+    <td><%= survey_file.Proj_Num %></td>
+    <td><%= survey_file.Strt_Date %></td>
+    <td><%= survey_file.Cmpl_Date %></td>
+    <td><%= link_to 'Show', survey_file %></td>
+    <td><%= link_to 'Edit', edit_survey_file_path(survey_file) %></td>
+    <td><%= link_to 'Destroy', survey_file, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Survey file', new_survey_file_path %>

@@ -1,0 +1,33 @@
+<%= form_for(@survey_file) do |f| %>
+  <% if @survey_file.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@survey_file.errors.count, "error") %> prohibited this survey_file from being saved:</h2>
+
+      <ul>
+      <% @survey_file.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :Surv_File %><br />
+    <%= f.text_field :Surv_File %>
+  </div>
+  <div class="field">
+    <%= f.label :Proj_Num %><br />
+    <%= f.text_field :Proj_Num %>
+  </div>
+  <div class="field">
+    <%= f.label :Strt_Date %><br />
+    <%= f.text_field :Strt_Date %>
+  </div>
+  <div class="field">
+    <%= f.label :Cmpl_Date %><br />
+    <%= f.text_field :Cmpl_Date %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

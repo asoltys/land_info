@@ -13,46 +13,46 @@
 ActiveRecord::Schema.define(:version => 20110301214331) do
 
   create_table "BCLSLIST", :id => false, :force => true do |t|
-    t.string "LAST_NAME"
-    t.string "FIRST_NAME"
-    t.float  "MEMBER_NUM"
-    t.string "STREET_ADD"
-    t.string "CITY"
-    t.string "PROVINCE"
-    t.string "POSTAL_COD"
-    t.string "TEL"
-    t.string "INITS"
-    t.string "COMPANY"
-    t.string "FAX"
-    t.string "TWN_BASED"
+    t.string  "LAST_NAME"
+    t.string  "FIRST_NAME"
+    t.decimal "MEMBER_NUM"
+    t.string  "STREET_ADD"
+    t.string  "CITY"
+    t.string  "PROVINCE"
+    t.string  "POSTAL_COD"
+    t.string  "TEL"
+    t.string  "INITS"
+    t.string  "COMPANY"
+    t.string  "FAX"
+    t.string  "TWN_BASED"
   end
 
   create_table "Bldg_Doc", :id => false, :force => true do |t|
-    t.float "KEYNUMFRMB"
-    t.float "KEYNUMFRMD"
+    t.decimal "KEYNUMFRMB"
+    t.decimal "KEYNUMFRMD"
   end
 
   create_table "CSurv_fi", :id => false, :force => true do |t|
-    t.float    "SURV_FILE"
+    t.decimal  "SURV_FILE"
     t.string   "LOCATION_P"
-    t.float    "PROJ_NUM"
-    t.float    "SSA_NUM"
+    t.decimal  "PROJ_NUM"
+    t.decimal  "SSA_NUM"
     t.string   "CR_FILE"
-    t.datetime "STRT_DATE"
-    t.datetime "CMPL_DATE"
+    t.datetime "STRT_DATE",  :limit => 16
+    t.datetime "CMPL_DATE",  :limit => 16
     t.string   "PROJ_MAN"
     t.string   "DEPT_SEC"
     t.string   "DESCRIPT"
-    t.float    "SSA_AMOUNT"
-    t.float    "BULK_NUM"
+    t.decimal  "SSA_AMOUNT"
+    t.decimal  "BULK_NUM"
     t.string   "FIN_CODE"
     t.string   "DEPT_ABBR"
     t.string   "ACTIVE_FIL"
     t.string   "REMARK"
     t.string   "LOCATION_S"
     t.string   "DEPT_CONTA"
-    t.float    "DEPT_TEL"
-    t.float    "LOC_NUM"
+    t.decimal  "DEPT_TEL"
+    t.decimal  "LOC_NUM"
   end
 
   create_table "DWF_file", :id => false, :force => true do |t|
@@ -85,12 +85,12 @@ ActiveRecord::Schema.define(:version => 20110301214331) do
   end
 
   create_table "Featcode", :id => false, :force => true do |t|
-    t.string "FEAT_TYPE"
-    t.float  "FEATURE_CO"
-    t.string "SYMBOL"
-    t.float  "COLUMN"
-    t.float  "ROW"
-    t.string "COLOUR"
+    t.string  "FEAT_TYPE"
+    t.decimal "FEATURE_CO"
+    t.string  "SYMBOL"
+    t.decimal "COLUMN"
+    t.decimal "ROW"
+    t.string  "COLOUR"
   end
 
   create_table "Featcode1", :id => false, :force => true do |t|
@@ -130,45 +130,45 @@ ActiveRecord::Schema.define(:version => 20110301214331) do
   end
 
   create_table "HERITAGE", :id => false, :force => true do |t|
-    t.float    "HM_KEYNUM"
-    t.float    "HB_FORKEY"
-    t.datetime "MEET_DATE"
+    t.decimal  "HM_KEYNUM"
+    t.decimal  "HB_FORKEY"
+    t.datetime "MEET_DATE",  :limit => 16
     t.string   "MEET_TYPE"
     t.string   "MEET_LOC"
     t.text     "MEET_SUBJE"
   end
 
   create_table "Heritage_Bldg", :id => false, :force => true do |t|
-    t.float    "HM_KEYNUM"
-    t.float    "HB_FORKEY"
-    t.datetime "MEET_DATE"
+    t.decimal  "HM_KEYNUM"
+    t.decimal  "HB_FORKEY"
+    t.datetime "MEET_DATE",  :limit => 16
     t.string   "MEET_TYPE"
     t.string   "MEET_LOC"
     t.text     "MEET_SUBJE"
   end
 
   create_table "Heritage_Code", :id => false, :force => true do |t|
-    t.float    "HM_KEYNUM"
-    t.float    "HB_FORKEY"
-    t.datetime "MEET_DATE"
+    t.decimal  "HM_KEYNUM"
+    t.decimal  "HB_FORKEY"
+    t.datetime "MEET_DATE",  :limit => 16
     t.string   "MEET_TYPE"
     t.string   "MEET_LOC"
     t.text     "MEET_SUBJE"
   end
 
   create_table "Heritage_Designation", :id => false, :force => true do |t|
-    t.float    "HM_KEYNUM"
-    t.float    "HB_FORKEY"
-    t.datetime "MEET_DATE"
+    t.decimal  "HM_KEYNUM"
+    t.decimal  "HB_FORKEY"
+    t.datetime "MEET_DATE",  :limit => 16
     t.string   "MEET_TYPE"
     t.string   "MEET_LOC"
     t.text     "MEET_SUBJE"
   end
 
   create_table "Heritage_Meets", :id => false, :force => true do |t|
-    t.float    "HM_KEYNUM"
-    t.float    "HB_FORKEY"
-    t.datetime "MEET_DATE"
+    t.decimal  "HM_KEYNUM"
+    t.decimal  "HB_FORKEY"
+    t.datetime "MEET_DATE",  :limit => 16
     t.string   "MEET_TYPE"
     t.string   "MEET_LOC"
     t.text     "MEET_SUBJE"
@@ -254,14 +254,14 @@ ActiveRecord::Schema.define(:version => 20110301214331) do
   end
 
   create_table "Meet_Doc", :id => false, :force => true do |t|
-    t.float "KEYNUMFRMM"
-    t.float "KEYNUMFRMD"
+    t.decimal "KEYNUMFRMM"
+    t.decimal "KEYNUMFRMD"
   end
 
   create_table "SURV_PL", :id => false, :force => true do |t|
     t.string   "PLAN_NO"
     t.string   "SIZE"
-    t.float    "SURV_FI"
+    t.decimal  "SURV_FI"
     t.string   "SECONDARY_"
     t.string   "STREET_LOC"
     t.string   "OBJECT"
@@ -270,24 +270,33 @@ ActiveRecord::Schema.define(:version => 20110301214331) do
     t.string   "ISA_CODE"
     t.string   "DIST_CODE"
     t.string   "DIST_LOT"
-    t.float    "LATITUDE"
-    t.float    "LONGITUDE"
-    t.float    "NORTH_UTM"
-    t.float    "EAST_UTM"
-    t.float    "UTM_ZONE"
+    t.decimal  "LATITUDE"
+    t.decimal  "LONGITUDE"
+    t.decimal  "NORTH_UTM"
+    t.decimal  "EAST_UTM"
+    t.decimal  "UTM_ZONE"
     t.string   "OLD_PLAN_N"
     t.text     "TITLE"
-    t.datetime "PLAN_CLOSE"
+    t.datetime "PLAN_CLOSE", :limit => 16
     t.string   "PLAN_REG_N"
     t.string   "LTO_CODE"
-    t.float    "MEMBERNUM"
+    t.decimal  "MEMBERNUM"
     t.string   "COMPANY_NA"
-    t.float    "RECNO"
+    t.decimal  "RECNO"
     t.string   "DFRPNUM"
-    t.float    "LOC_NUM"
-    t.float    "EDRM"
+    t.decimal  "LOC_NUM"
+    t.decimal  "EDRM"
     t.string   "CROWN_LND_"
     t.string   "CLSR_PLAN"
+  end
+
+  create_table "dtproperties", :force => true do |t|
+    t.integer "objectid", :limit => 10
+    t.string  "property", :limit => 64,                :null => false
+    t.string  "value"
+    t.string  "uvalue"
+    t.binary  "lvalue"
+    t.integer "version",  :limit => 10, :default => 0, :null => false
   end
 
   create_table "nBC_LOC1", :id => false, :force => true do |t|
