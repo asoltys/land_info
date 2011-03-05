@@ -3,7 +3,4 @@ class ApplicationController < ActionController::Base
 
   def index 
   end
-	
-	def survey_file
-	end
 end
