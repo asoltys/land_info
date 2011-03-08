@@ -10,49 +10,49 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110301214331) do
+ActiveRecord::Schema.define(:version => 20110304044126) do
 
   create_table "BCLSLIST", :id => false, :force => true do |t|
-    t.string  "LAST_NAME"
-    t.string  "FIRST_NAME"
-    t.decimal "MEMBER_NUM"
-    t.string  "STREET_ADD"
-    t.string  "CITY"
-    t.string  "PROVINCE"
-    t.string  "POSTAL_COD"
-    t.string  "TEL"
-    t.string  "INITS"
-    t.string  "COMPANY"
-    t.string  "FAX"
-    t.string  "TWN_BASED"
+    t.string "LAST_NAME"
+    t.string "FIRST_NAME"
+    t.float  "MEMBER_NUM"
+    t.string "STREET_ADD"
+    t.string "CITY"
+    t.string "PROVINCE"
+    t.string "POSTAL_COD"
+    t.string "TEL"
+    t.string "INITS"
+    t.string "COMPANY"
+    t.string "FAX"
+    t.string "TWN_BASED"
   end
 
   create_table "Bldg_Doc", :id => false, :force => true do |t|
-    t.decimal "KEYNUMFRMB"
-    t.decimal "KEYNUMFRMD"
+    t.float "KEYNUMFRMB"
+    t.float "KEYNUMFRMD"
   end
 
   create_table "CSurv_fi", :id => false, :force => true do |t|
-    t.decimal  "SURV_FILE"
+    t.float    "SURV_FILE"
     t.string   "LOCATION_P"
-    t.decimal  "PROJ_NUM"
-    t.decimal  "SSA_NUM"
+    t.float    "PROJ_NUM"
+    t.float    "SSA_NUM"
     t.string   "CR_FILE"
-    t.datetime "STRT_DATE",  :limit => 16
-    t.datetime "CMPL_DATE",  :limit => 16
+    t.datetime "STRT_DATE"
+    t.datetime "CMPL_DATE"
     t.string   "PROJ_MAN"
     t.string   "DEPT_SEC"
     t.string   "DESCRIPT"
-    t.decimal  "SSA_AMOUNT"
-    t.decimal  "BULK_NUM"
+    t.float    "SSA_AMOUNT"
+    t.float    "BULK_NUM"
     t.string   "FIN_CODE"
     t.string   "DEPT_ABBR"
     t.string   "ACTIVE_FIL"
     t.string   "REMARK"
     t.string   "LOCATION_S"
     t.string   "DEPT_CONTA"
-    t.decimal  "DEPT_TEL"
-    t.decimal  "LOC_NUM"
+    t.float    "DEPT_TEL"
+    t.float    "LOC_NUM"
   end
 
   create_table "DWF_file", :id => false, :force => true do |t|
@@ -85,12 +85,12 @@ ActiveRecord::Schema.define(:version => 20110301214331) do
   end
 
   create_table "Featcode", :id => false, :force => true do |t|
-    t.string  "FEAT_TYPE"
-    t.decimal "FEATURE_CO"
-    t.string  "SYMBOL"
-    t.decimal "COLUMN"
-    t.decimal "ROW"
-    t.string  "COLOUR"
+    t.string "FEAT_TYPE"
+    t.float  "FEATURE_CO"
+    t.string "SYMBOL"
+    t.float  "COLUMN"
+    t.float  "ROW"
+    t.string "COLOUR"
   end
 
   create_table "Featcode1", :id => false, :force => true do |t|
@@ -130,45 +130,45 @@ ActiveRecord::Schema.define(:version => 20110301214331) do
   end
 
   create_table "HERITAGE", :id => false, :force => true do |t|
-    t.decimal  "HM_KEYNUM"
-    t.decimal  "HB_FORKEY"
-    t.datetime "MEET_DATE",  :limit => 16
+    t.float    "HM_KEYNUM"
+    t.float    "HB_FORKEY"
+    t.datetime "MEET_DATE"
     t.string   "MEET_TYPE"
     t.string   "MEET_LOC"
     t.text     "MEET_SUBJE"
   end
 
   create_table "Heritage_Bldg", :id => false, :force => true do |t|
-    t.decimal  "HM_KEYNUM"
-    t.decimal  "HB_FORKEY"
-    t.datetime "MEET_DATE",  :limit => 16
+    t.float    "HM_KEYNUM"
+    t.float    "HB_FORKEY"
+    t.datetime "MEET_DATE"
     t.string   "MEET_TYPE"
     t.string   "MEET_LOC"
     t.text     "MEET_SUBJE"
   end
 
   create_table "Heritage_Code", :id => false, :force => true do |t|
-    t.decimal  "HM_KEYNUM"
-    t.decimal  "HB_FORKEY"
-    t.datetime "MEET_DATE",  :limit => 16
+    t.float    "HM_KEYNUM"
+    t.float    "HB_FORKEY"
+    t.datetime "MEET_DATE"
     t.string   "MEET_TYPE"
     t.string   "MEET_LOC"
     t.text     "MEET_SUBJE"
   end
 
   create_table "Heritage_Designation", :id => false, :force => true do |t|
-    t.decimal  "HM_KEYNUM"
-    t.decimal  "HB_FORKEY"
-    t.datetime "MEET_DATE",  :limit => 16
+    t.float    "HM_KEYNUM"
+    t.float    "HB_FORKEY"
+    t.datetime "MEET_DATE"
     t.string   "MEET_TYPE"
     t.string   "MEET_LOC"
     t.text     "MEET_SUBJE"
   end
 
   create_table "Heritage_Meets", :id => false, :force => true do |t|
-    t.decimal  "HM_KEYNUM"
-    t.decimal  "HB_FORKEY"
-    t.datetime "MEET_DATE",  :limit => 16
+    t.float    "HM_KEYNUM"
+    t.float    "HB_FORKEY"
+    t.datetime "MEET_DATE"
     t.string   "MEET_TYPE"
     t.string   "MEET_LOC"
     t.text     "MEET_SUBJE"
@@ -254,14 +254,14 @@ ActiveRecord::Schema.define(:version => 20110301214331) do
   end
 
   create_table "Meet_Doc", :id => false, :force => true do |t|
-    t.decimal "KEYNUMFRMM"
-    t.decimal "KEYNUMFRMD"
+    t.float "KEYNUMFRMM"
+    t.float "KEYNUMFRMD"
   end
 
   create_table "SURV_PL", :id => false, :force => true do |t|
     t.string   "PLAN_NO"
     t.string   "SIZE"
-    t.decimal  "SURV_FI"
+    t.float    "SURV_FI"
     t.string   "SECONDARY_"
     t.string   "STREET_LOC"
     t.string   "OBJECT"
@@ -270,33 +270,24 @@ ActiveRecord::Schema.define(:version => 20110301214331) do
     t.string   "ISA_CODE"
     t.string   "DIST_CODE"
     t.string   "DIST_LOT"
-    t.decimal  "LATITUDE"
-    t.decimal  "LONGITUDE"
-    t.decimal  "NORTH_UTM"
-    t.decimal  "EAST_UTM"
-    t.decimal  "UTM_ZONE"
+    t.float    "LATITUDE"
+    t.float    "LONGITUDE"
+    t.float    "NORTH_UTM"
+    t.float    "EAST_UTM"
+    t.float    "UTM_ZONE"
     t.string   "OLD_PLAN_N"
     t.text     "TITLE"
-    t.datetime "PLAN_CLOSE", :limit => 16
+    t.datetime "PLAN_CLOSE"
     t.string   "PLAN_REG_N"
     t.string   "LTO_CODE"
-    t.decimal  "MEMBERNUM"
+    t.float    "MEMBERNUM"
     t.string   "COMPANY_NA"
-    t.decimal  "RECNO"
+    t.float    "RECNO"
     t.string   "DFRPNUM"
-    t.decimal  "LOC_NUM"
-    t.decimal  "EDRM"
+    t.float    "LOC_NUM"
+    t.float    "EDRM"
     t.string   "CROWN_LND_"
     t.string   "CLSR_PLAN"
-  end
-
-  create_table "dtproperties", :force => true do |t|
-    t.integer "objectid", :limit => 10
-    t.string  "property", :limit => 64,                :null => false
-    t.string  "value"
-    t.string  "uvalue"
-    t.binary  "lvalue"
-    t.integer "version",  :limit => 10, :default => 0, :null => false
   end
 
   create_table "nBC_LOC1", :id => false, :force => true do |t|
@@ -342,30 +333,29 @@ ActiveRecord::Schema.define(:version => 20110301214331) do
   end
 
   create_table "survey_files", :force => true do |t|
-    t.string "Surv_File"
-    t.string "Proj_Num"
-    t.string "SSA_Num"
-    t.string "CR_File"
-    t.string "Strt_Date"
-    t.string "Cmpl_Date"
-    t.string "Proj_Man"
-    t.string "Dept_Sec"
-    t.string "Descript"
-    t.string "SSA_Amount"
-    t.string "Bulk_Num"
-    t.string "Fin_Code"
-    t.string "Dept_Abbr"
-    t.string "Active_File"
-    t.string "Remark"
-    t.string "Location_second"
-    t.string "Dept_Contact"
-    t.string "Dept_tel"
-    t.string "Loc_Num"
-    t.string "Strt_loc"
-    t.string "Object_Nm"
-    t.string "EDRM_Num"
-    t.string "Sigma"
-    t.string "EDRM_No"
+    t.string "survey_file"
+    t.string "project_number"
+    t.string "ssa_number"
+    t.string "cr_file"
+    t.string "start_date"
+    t.string "completion_date"
+    t.string "project_manager"
+    t.string "department_section"
+    t.string "description"
+    t.string "ssa_amount"
+    t.string "bulk_number"
+    t.string "finance_code"
+    t.string "department_abbreviation"
+    t.string "active"
+    t.string "remark"
+    t.string "location_second"
+    t.string "department_contact"
+    t.string "department_telephone"
+    t.string "location_number"
+    t.string "start_location"
+    t.string "object_number"
+    t.string "edrm_number"
+    t.string "sigma_number"
   end
 
   create_table "totscan", :id => false, :force => true do |t|
