@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110311043622) do
+ActiveRecord::Schema.define(:version => 20110311201239) do
 
   create_table "BCLSLIST", :id => false, :force => true do |t|
     t.string "LAST_NAME"
@@ -291,7 +291,7 @@ ActiveRecord::Schema.define(:version => 20110311043622) do
     t.string "iLoc_Var"
   end
 
-  create_table "plan_files", :id => false, :force => true do |t|
+  create_table "plan_files", :force => true do |t|
     t.string   "plan_number"
     t.string   "SIZE"
     t.float    "survey_file"
