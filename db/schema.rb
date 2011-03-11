@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110309210150) do
+ActiveRecord::Schema.define(:version => 20110311043622) do
 
   create_table "BCLSLIST", :id => false, :force => true do |t|
     t.string "LAST_NAME"
@@ -207,38 +207,6 @@ ActiveRecord::Schema.define(:version => 20110309210150) do
     t.float "KEYNUMFRMD"
   end
 
-  create_table "SURV_PL", :id => false, :force => true do |t|
-    t.string   "PLAN_NO"
-    t.string   "SIZE"
-    t.float    "SURV_FI"
-    t.string   "SECONDARY_"
-    t.string   "STREET_LOC"
-    t.string   "OBJECT"
-    t.string   "FIELD_BOOK"
-    t.string   "BCGS"
-    t.string   "ISA_CODE"
-    t.string   "DIST_CODE"
-    t.string   "DIST_LOT"
-    t.float    "LATITUDE"
-    t.float    "LONGITUDE"
-    t.float    "NORTH_UTM"
-    t.float    "EAST_UTM"
-    t.float    "UTM_ZONE"
-    t.string   "OLD_PLAN_N"
-    t.text     "TITLE"
-    t.datetime "PLAN_CLOSE"
-    t.string   "PLAN_REG_N"
-    t.string   "LTO_CODE"
-    t.float    "MEMBERNUM"
-    t.string   "COMPANY_NA"
-    t.float    "RECNO"
-    t.string   "DFRPNUM"
-    t.float    "LOC_NUM"
-    t.float    "EDRM"
-    t.string   "CROWN_LND_"
-    t.string   "CLSR_PLAN"
-  end
-
   create_table "marine_files", :force => true do |t|
     t.string "file_number"
     t.string "location_number"
@@ -321,6 +289,38 @@ ActiveRecord::Schema.define(:version => 20110309210150) do
     t.string "LTO_Pln_Num_Var"
     t.string "sLoc_Var"
     t.string "iLoc_Var"
+  end
+
+  create_table "plan_files", :id => false, :force => true do |t|
+    t.string   "plan_number"
+    t.string   "SIZE"
+    t.float    "survey_file"
+    t.string   "secondary"
+    t.string   "street_location"
+    t.string   "OBJECT"
+    t.string   "FIELD_BOOK"
+    t.string   "BCGS"
+    t.string   "ISA_CODE"
+    t.string   "district_code"
+    t.string   "district_lot"
+    t.float    "LATITUDE"
+    t.float    "LONGITUDE"
+    t.float    "NORTH_UTM"
+    t.float    "EAST_UTM"
+    t.float    "UTM_ZONE"
+    t.string   "old_plan_number"
+    t.text     "TITLE"
+    t.datetime "PLAN_CLOSE"
+    t.string   "plan_registration_number"
+    t.string   "LTO_CODE"
+    t.float    "member_number"
+    t.string   "company_name"
+    t.float    "record_number"
+    t.string   "dfrp_number"
+    t.float    "location_number"
+    t.float    "edrm_number"
+    t.string   "crown_land"
+    t.string   "CLSR_PLAN"
   end
 
   create_table "survey_files", :force => true do |t|
