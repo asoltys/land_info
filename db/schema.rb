@@ -10,27 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110311201239) do
-
-  create_table "BCLSLIST", :id => false, :force => true do |t|
-    t.string "LAST_NAME"
-    t.string "FIRST_NAME"
-    t.float  "MEMBER_NUM"
-    t.string "STREET_ADD"
-    t.string "CITY"
-    t.string "PROVINCE"
-    t.string "POSTAL_COD"
-    t.string "TEL"
-    t.string "INITS"
-    t.string "COMPANY"
-    t.string "FAX"
-    t.string "TWN_BASED"
-  end
-
-  create_table "Bldg_Doc", :id => false, :force => true do |t|
-    t.float "KEYNUMFRMB"
-    t.float "KEYNUMFRMD"
-  end
+ActiveRecord::Schema.define(:version => 20110312212736) do
 
   create_table "CSurv_fi", :id => false, :force => true do |t|
     t.float    "SURV_FILE"
@@ -347,6 +327,21 @@ ActiveRecord::Schema.define(:version => 20110311201239) do
     t.string "object_number"
     t.string "edrm_number"
     t.string "sigma_number"
+  end
+
+  create_table "surveyors", :force => true do |t|
+    t.string "LAST_NAME"
+    t.string "FIRST_NAME"
+    t.float  "member_number"
+    t.string "address"
+    t.string "CITY"
+    t.string "PROVINCE"
+    t.string "postal_code"
+    t.string "phone"
+    t.string "initials"
+    t.string "company_name"
+    t.string "FAX"
+    t.string "town"
   end
 
   create_table "totscan", :id => false, :force => true do |t|
