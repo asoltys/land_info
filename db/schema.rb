@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110312215929) do
+ActiveRecord::Schema.define(:version => 20110313005005) do
 
   create_table "CSurv_fi", :id => false, :force => true do |t|
     t.float    "SURV_FILE"
@@ -39,15 +39,6 @@ ActiveRecord::Schema.define(:version => 20110312215929) do
     t.string "DWF_FILE"
     t.string "Plan"
     t.string "PDF_FILE"
-    t.string "File_or_Plan_var"
-    t.string "File_Record_var"
-    t.string "Surveyor_Num_var"
-    t.string "Location_var"
-    t.string "File_var"
-    t.string "Pln_Num_Var"
-    t.string "LTO_Pln_Num_Var"
-    t.string "sLoc_Var"
-    t.string "iLoc_Var"
   end
 
   create_table "FGO", :id => false, :force => true do |t|
@@ -80,15 +71,6 @@ ActiveRecord::Schema.define(:version => 20110312215929) do
     t.string "COLUMN"
     t.string "ROW"
     t.string "COLOUR"
-    t.string "File_or_Plan_var"
-    t.string "File_Record_var"
-    t.string "Surveyor_Num_var"
-    t.string "Location_var"
-    t.string "File_var"
-    t.string "Pln_Num_Var"
-    t.string "LTO_Pln_Num_Var"
-    t.string "sLoc_Var"
-    t.string "iLoc_Var"
   end
 
   create_table "Featcode2", :id => false, :force => true do |t|
@@ -98,15 +80,6 @@ ActiveRecord::Schema.define(:version => 20110312215929) do
     t.string "COLUMN"
     t.string "ROW"
     t.string "COLOUR"
-    t.string "File_or_Plan_var"
-    t.string "File_Record_var"
-    t.string "Surveyor_Num_var"
-    t.string "Location_var"
-    t.string "File_var"
-    t.string "Pln_Num_Var"
-    t.string "LTO_Pln_Num_Var"
-    t.string "sLoc_Var"
-    t.string "iLoc_Var"
   end
 
   create_table "HERITAGE", :id => false, :force => true do |t|
@@ -157,29 +130,11 @@ ActiveRecord::Schema.define(:version => 20110312215929) do
   create_table "Lnd_Dstrct1", :id => false, :force => true do |t|
     t.string "Land_District_Name"
     t.string "Land_District_Code"
-    t.string "File_or_Plan_var"
-    t.string "File_Record_var"
-    t.string "Surveyor_Num_var"
-    t.string "Location_var"
-    t.string "File_var"
-    t.string "Pln_Num_Var"
-    t.string "LTO_Pln_Num_Var"
-    t.string "sLoc_Var"
-    t.string "iLoc_Var"
   end
 
   create_table "Lnd_Dstrct2", :id => false, :force => true do |t|
     t.string "Land_District_Name"
     t.string "Land_District_Code"
-    t.string "File_or_Plan_var"
-    t.string "File_Record_var"
-    t.string "Surveyor_Num_var"
-    t.string "Location_var"
-    t.string "File_var"
-    t.string "Pln_Num_Var"
-    t.string "LTO_Pln_Num_Var"
-    t.string "sLoc_Var"
-    t.string "iLoc_Var"
   end
 
   create_table "Meet_Doc", :id => false, :force => true do |t|
@@ -254,15 +209,6 @@ ActiveRecord::Schema.define(:version => 20110312215929) do
     t.string "Loc_Num"
     t.string "FEATURE_CODE"
     t.string "Prov_Code"
-    t.string "File_or_Plan_var"
-    t.string "File_Record_var"
-    t.string "Surveyor_Num_var"
-    t.string "Location_var"
-    t.string "File_var"
-    t.string "Pln_Num_Var"
-    t.string "LTO_Pln_Num_Var"
-    t.string "sLoc_Var"
-    t.string "iLoc_Var"
   end
 
   create_table "nBC_LOC2", :id => false, :force => true do |t|
@@ -275,15 +221,6 @@ ActiveRecord::Schema.define(:version => 20110312215929) do
     t.string "Loc_Num"
     t.string "FEATURE_CODE"
     t.string "Prov_Code"
-    t.string "File_or_Plan_var"
-    t.string "File_Record_var"
-    t.string "Surveyor_Num_var"
-    t.string "Location_var"
-    t.string "File_var"
-    t.string "Pln_Num_Var"
-    t.string "LTO_Pln_Num_Var"
-    t.string "sLoc_Var"
-    t.string "iLoc_Var"
   end
 
   create_table "plan_files", :force => true do |t|
