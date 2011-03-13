@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110312214907) do
+ActiveRecord::Schema.define(:version => 20110312215929) do
 
   create_table "CSurv_fi", :id => false, :force => true do |t|
     t.float    "SURV_FILE"
@@ -188,17 +188,18 @@ ActiveRecord::Schema.define(:version => 20110312214907) do
   end
 
   create_table "drawings", :force => true do |t|
-    t.string "TIFF_FILE"
-    t.string "BCGS"
-    t.string "DRAWN_BY"
-    t.string "SURVEYOR"
-    t.string "SIZE"
-    t.string "SECTOR"
-    t.string "LOCATION"
-    t.string "PROJECT_NU"
-    t.string "TITLE"
-    t.string "PLAN"
-    t.string "STATUS"
+    t.string  "tiff_file"
+    t.string  "bcgs"
+    t.string  "drawn_by"
+    t.string  "surveyor"
+    t.string  "size"
+    t.string  "sector"
+    t.string  "location"
+    t.string  "project_number"
+    t.string  "title"
+    t.string  "plan"
+    t.string  "status"
+    t.integer "plan_file_id"
   end
 
   create_table "marine_files", :force => true do |t|
