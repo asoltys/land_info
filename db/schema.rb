@@ -12,7 +12,7 @@
 
 ActiveRecord::Schema.define(:version => 20110313183417) do
 
-  create_table "CSurv_fi", :id => false, :force => true do |t|
+  create_table "csurv_fi", :id => false, :force => true do |t|
     t.float    "SURV_FILE"
     t.string   "LOCATION_P"
     t.float    "PROJ_NUM"
@@ -35,68 +35,6 @@ ActiveRecord::Schema.define(:version => 20110313183417) do
     t.float    "LOC_NUM"
   end
 
-  create_table "DWF_file", :id => false, :force => true do |t|
-    t.string "DWF_FILE"
-    t.string "Plan"
-    t.string "PDF_FILE"
-  end
-
-  create_table "FGO", :id => false, :force => true do |t|
-    t.string "FGO"
-    t.string "TYPE"
-    t.string "ABBREV"
-    t.string "NAME"
-  end
-
-  create_table "FGOU", :id => false, :force => true do |t|
-    t.string "FGO"
-    t.string "FGOU"
-    t.string "ABBREV"
-    t.string "NAME"
-  end
-
-  create_table "Featcode", :id => false, :force => true do |t|
-    t.string "FEAT_TYPE"
-    t.float  "FEATURE_CO"
-    t.string "SYMBOL"
-    t.float  "COLUMN"
-    t.float  "ROW"
-    t.string "COLOUR"
-  end
-
-  create_table "Featcode1", :id => false, :force => true do |t|
-    t.string "FEAT_TYPE"
-    t.string "FEATURE_CO"
-    t.string "SYMBOL"
-    t.string "COLUMN"
-    t.string "ROW"
-    t.string "COLOUR"
-  end
-
-  create_table "Featcode2", :id => false, :force => true do |t|
-    t.string "FEAT_TYPE"
-    t.string "FEATURE_CO"
-    t.string "SYMBOL"
-    t.string "COLUMN"
-    t.string "ROW"
-    t.string "COLOUR"
-  end
-
-  create_table "Lnd_Dstrct1", :id => false, :force => true do |t|
-    t.string "Land_District_Name"
-    t.string "Land_District_Code"
-  end
-
-  create_table "Lnd_Dstrct2", :id => false, :force => true do |t|
-    t.string "Land_District_Name"
-    t.string "Land_District_Code"
-  end
-
-  create_table "Meet_Doc", :id => false, :force => true do |t|
-    t.float "KEYNUMFRMM"
-    t.float "KEYNUMFRMD"
-  end
-
   create_table "drawings", :force => true do |t|
     t.string   "tiff_file"
     t.string   "bcgs"
@@ -114,6 +52,63 @@ ActiveRecord::Schema.define(:version => 20110313183417) do
     t.string   "drawing_content_type"
     t.integer  "drawing_file_size"
     t.datetime "drawing_updated_at"
+  end
+
+  create_table "dwf_file", :id => false, :force => true do |t|
+    t.string "DWF_FILE"
+    t.string "Plan"
+    t.string "PDF_FILE"
+  end
+
+  create_table "featcode", :id => false, :force => true do |t|
+    t.string "FEAT_TYPE"
+    t.float  "FEATURE_CO"
+    t.string "SYMBOL"
+    t.float  "COLUMN"
+    t.float  "ROW"
+    t.string "COLOUR"
+  end
+
+  create_table "featcode1", :id => false, :force => true do |t|
+    t.string "FEAT_TYPE"
+    t.string "FEATURE_CO"
+    t.string "SYMBOL"
+    t.string "COLUMN"
+    t.string "ROW"
+    t.string "COLOUR"
+  end
+
+  create_table "featcode2", :id => false, :force => true do |t|
+    t.string "FEAT_TYPE"
+    t.string "FEATURE_CO"
+    t.string "SYMBOL"
+    t.string "COLUMN"
+    t.string "ROW"
+    t.string "COLOUR"
+  end
+
+  create_table "fgo", :id => false, :force => true do |t|
+    t.string "FGO"
+    t.string "TYPE"
+    t.string "ABBREV"
+    t.string "NAME"
+  end
+
+  create_table "fgou", :id => false, :force => true do |t|
+    t.string "FGO"
+    t.string "FGOU"
+    t.string "ABBREV"
+    t.string "NAME"
+  end
+
+  create_table "lnd_dstrct1", :id => false, :force => true do |t|
+    t.string "Land_District_Name"
+    t.string "Land_District_Code"
+  end
+
+  create_table "lnd_dstrct2", :id => false, :force => true do |t|
+    t.string "Land_District_Name"
+    t.string "Land_District_Code"
   end
 
   create_table "marine_files", :force => true do |t|
@@ -158,7 +153,12 @@ ActiveRecord::Schema.define(:version => 20110313183417) do
     t.string "Gator"
   end
 
-  create_table "nBC_LOC1", :id => false, :force => true do |t|
+  create_table "meet_doc", :id => false, :force => true do |t|
+    t.float "KEYNUMFRMM"
+    t.float "KEYNUMFRMD"
+  end
+
+  create_table "nbc_loc1", :id => false, :force => true do |t|
     t.string "OFF_NAME"
     t.string "MAPSHEET"
     t.string "LATITUDE"
@@ -170,7 +170,7 @@ ActiveRecord::Schema.define(:version => 20110313183417) do
     t.string "Prov_Code"
   end
 
-  create_table "nBC_LOC2", :id => false, :force => true do |t|
+  create_table "nbc_loc2", :id => false, :force => true do |t|
     t.string "OFF_NAME"
     t.string "MAPSHEET"
     t.string "LATITUDE"
