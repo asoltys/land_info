@@ -1,6 +1,6 @@
 class CleanupMarineFiles < ActiveRecord::Migration
   def self.up
-    rename_table :MarineFiles, :marine_files
+    rename_table :marinefile, :marine_files
 
     change_table "marine_files" do |t|
       t.rename "File_No", "file_number"
@@ -30,15 +30,6 @@ class CleanupMarineFiles < ActiveRecord::Migration
       t.rename "Fed_Cont", "federal_contact"
       t.rename "Reg_Cd", "registration_code"
       t.rename "FGO_Cd", "fgo_code"
-      t.remove "File_or_Plan_var"
-      t.remove "File_Record_var"
-      t.remove "Surveyor_Num_var"
-      t.remove "Location_var"
-      t.remove "File_var"
-      t.remove "Pln_Num_Var"
-      t.remove "LTO_Pln_Num_Var"
-      t.remove "sLoc_Var"
-      t.remove "iLoc_Var"
     end
   end
 
@@ -71,17 +62,8 @@ class CleanupMarineFiles < ActiveRecord::Migration
       t.rename"federal_contact", "Fed_Cont"
       t.rename"registration_code", "Reg_Cd"
       t.rename"fgo_code", "FGO_Cd"
-      t.string "File_or_Plan_var"
-      t.string "File_Record_var"
-      t.string "Surveyor_Num_var"
-      t.string "Location_var"
-      t.string "File_var"
-      t.string "Pln_Num_Var"
-      t.string "LTO_Pln_Num_Var"
-      t.string "sLoc_Var"
-      t.string "iLoc_Var"
     end
 
-    rename_table :marine_files, :MarineFiles
+    rename_table :marine_files, :marinefile
   end
 end

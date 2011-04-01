@@ -1,29 +1,43 @@
 class CleanupBclslist < ActiveRecord::Migration
   def self.up
-    rename_table :BCLSLIST, :surveyors
+    transaction do
+      rename_table :bclslist, :surveyors
 
-    change_table "surveyors" do |t|
-      t.rename "MEMBER_NUM", "member_number"
-      t.rename "STREET_ADD", "address"
-      t.rename "POSTAL_COD", "postal_code"
-      t.rename "TEL", "phone"
-      t.rename "INITS", "initials"
-      t.rename "COMPANY", "company_name"
-      t.rename "TWN_BASED", "town"
+      change_table "surveyors" do |t|
+        t.rename "LAST_NAME", "last_name"
+        t.rename "FIRST_NAME", "first_name"
+        t.rename "MEMBER_NUM", "member_number"
+        t.rename "STREET_ADD", "street_address"
+        t.rename "CITY", "city"
+        t.rename "PROVINCE", "province"
+        t.rename "POSTAL_COD", "postal_code"
+        t.rename "tel", "phone"
+        t.rename "Inits", "initials"
+        t.rename "Company", "company"
+        t.rename "fax", "fax"
+        t.rename "Twn_based", "town"
+      end
     end
   end
 
   def self.down
-    change_table "surveyors" do |t|
-      t.rename "member_number", "MEMBER_NUM"
-      t.rename "address", "STREET_ADD"
-      t.rename "postal_code", "POSTAL_COD"
-      t.rename "phone", "TEL"
-      t.rename "initials", "INITS"
-      t.rename "company_name", "COMPANY"
-      t.rename "town", "TWN_BASED"
-    end
+    transaction do
+      change_table "surveyors" do |t|
+        t.rename "last_name", "LAST_NAME"
+        t.rename "first_name", "FIRST_NAME"
+        t.rename "member_number", "MEMBER_NUM"
+        t.rename "street_address", "STREET_ADD"
+        t.rename "city", "CITY"
+        t.rename "province", "PROVINCE"
+        t.rename "postal_code", "POSTAL_COD"
+        t.rename "phone", "tel"
+        t.rename "initials", "Inits"
+        t.rename "company", "Company"
+        t.rename "fax", "fax"
+        t.rename "town", "Twn_based"
+      end
 
-    rename_table :surveyors, :BCLSLIST
+      rename_table :surveyors, :bclslist
+    end
   end
 end

@@ -1,7 +1,7 @@
 class ConsolidateFeatcodeTables < ActiveRecord::Migration
   def self.up
-    rename table :featcode1, :features
-    remove_table :featcode2
+    rename_table :featcode1, :features
+    drop_table :featcode2
   end
 
   def self.down
@@ -14,6 +14,6 @@ class ConsolidateFeatcodeTables < ActiveRecord::Migration
       t.string "COLOUR"
     end
 
-    rename table :featcode1, :features
+    rename_table :featcode1, :features
   end
 end
