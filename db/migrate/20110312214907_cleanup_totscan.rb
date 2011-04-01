@@ -1,7 +1,6 @@
 class CleanupTotscan < ActiveRecord::Migration
   def self.up
     rename_table :totscan, :drawings
-    add_column :drawings, :id, :primary_key
 
     change_table :drawings do |t|
       if ActiveRecord::Base.connection.adapter_name != 'MSSQL'
@@ -37,7 +36,6 @@ class CleanupTotscan < ActiveRecord::Migration
       t.rename "project_number", "PROJECT_NU"
     end
 
-    remove_column :drawings, :id
     rename_table :drawings, :totscan
   end
 end

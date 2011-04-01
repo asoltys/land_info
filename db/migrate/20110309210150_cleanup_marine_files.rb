@@ -1,7 +1,6 @@
 class CleanupMarineFiles < ActiveRecord::Migration
   def self.up
     rename_table :MarineFiles, :marine_files
-    add_column :marine_files, :id, :primary_key
 
     change_table "marine_files" do |t|
       t.rename "File_No", "file_number"
@@ -83,7 +82,6 @@ class CleanupMarineFiles < ActiveRecord::Migration
       t.string "iLoc_Var"
     end
 
-    remove_column :marine_files, :id
     rename_table :marine_files, :MarineFiles
   end
 end

@@ -11,13 +11,9 @@ class CleanupBclslist < ActiveRecord::Migration
       t.rename "COMPANY", "company_name"
       t.rename "TWN_BASED", "town"
     end
-
-    add_column :surveyors, :id, :primary_key
   end
 
   def self.down
-    remove_column :surveyors, :id
-
     change_table "surveyors" do |t|
       t.rename "member_number", "MEMBER_NUM"
       t.rename "address", "STREET_ADD"
