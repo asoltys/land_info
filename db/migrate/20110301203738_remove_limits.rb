@@ -1,6 +1,6 @@
 class RemoveLimits < ActiveRecord::Migration
   def self.up
-    change_table "BCLSLIST" do |t|
+    change_table "bclslist" do |t|
       t.change "LAST_NAME", :string, :limit => nil
       t.change "FIRST_NAME", :string, :limit => nil
       t.change "STREET_ADD", :string, :limit => nil
@@ -14,10 +14,10 @@ class RemoveLimits < ActiveRecord::Migration
       t.change "TWN_BASED", :string, :limit => nil
     end
 
-    change_table "Bldg_Doc" do |t|
+    change_table "bldg_doc" do |t|
     end
 
-    change_table "CSurv_fi" do |t|
+    change_table "csurv_fi" do |t|
       t.change   "LOCATION_P", :string, :limit => nil
       t.change   "CR_FILE", :string, :limit => nil
       t.change   "PROJ_MAN", :string, :limit => nil
@@ -31,131 +31,61 @@ class RemoveLimits < ActiveRecord::Migration
       t.change   "DEPT_CONTA", :string, :limit => nil
     end
 
-    change_table "DWF_file" do |t|
+    change_table "dwf_file" do |t|
       t.change "DWF_FILE", :string, :limit => nil
       t.change "Plan", :string, :limit => nil
       t.change "PDF_FILE", :string, :limit => nil
-      t.change "File_or_Plan_var", :string, :limit => nil
-      t.change "File_Record_var", :string, :limit => nil
-      t.change "Surveyor_Num_var", :string, :limit => nil
-      t.change "Location_var", :string, :limit => nil
-      t.change "File_var", :string, :limit => nil
-      t.change "Pln_Num_Var", :string, :limit => nil
-      t.change "LTO_Pln_Num_Var", :string, :limit => nil
-      t.change "sLoc_Var", :string, :limit => nil
-      t.change "iLoc_Var", :string, :limit => nil
     end
 
-    change_table "FGO" do |t|
+    change_table "fgo" do |t|
       t.change "FGO", :string, :limit => nil
       t.change "TYPE", :string, :limit => nil
       t.change "ABBREV", :string, :limit => nil
       t.change "NAME", :string, :limit => nil
     end
 
-    change_table "FGOU" do |t|
+    change_table "fgou" do |t|
       t.change "FGO", :string, :limit => nil
       t.change "FGOU", :string, :limit => nil
       t.change "ABBREV", :string, :limit => nil
       t.change "NAME", :string, :limit => nil
     end
 
-    change_table "Featcode" do |t|
+    change_table "featcode" do |t|
       t.change "FEAT_TYPE", :string, :limit => nil
       t.change "SYMBOL", :string, :limit => nil
       t.change "COLOUR", :string, :limit => nil
     end
 
-    change_table "Featcode1" do |t|
-      t.change "FEAT_TYPE", :string, :limit => nil
-      t.change "FEATURE_CO", :string, :limit => nil
-      t.change "SYMBOL", :string, :limit => nil
-      t.change "COLUMN", :string, :limit => nil
-      t.change "ROW", :string, :limit => nil
-      t.change "COLOUR", :string, :limit => nil
-      t.change "File_or_Plan_var", :string, :limit => nil
-      t.change "File_Record_var", :string, :limit => nil
-      t.change "Surveyor_Num_var", :string, :limit => nil
-      t.change "Location_var", :string, :limit => nil
-      t.change "File_var", :string, :limit => nil
-      t.change "Pln_Num_Var", :string, :limit => nil
-      t.change "LTO_Pln_Num_Var", :string, :limit => nil
-      t.change "sLoc_Var", :string, :limit => nil
-      t.change "iLoc_Var", :string, :limit => nil
-    end
-
-    change_table "Featcode2" do |t|
+    change_table "featcode1" do |t|
       t.change "FEAT_TYPE", :string, :limit => nil
       t.change "FEATURE_CO", :string, :limit => nil
       t.change "SYMBOL", :string, :limit => nil
       t.change "COLUMN", :string, :limit => nil
       t.change "ROW", :string, :limit => nil
       t.change "COLOUR", :string, :limit => nil
-      t.change "File_or_Plan_var", :string, :limit => nil
-      t.change "File_Record_var", :string, :limit => nil
-      t.change "Surveyor_Num_var", :string, :limit => nil
-      t.change "Location_var", :string, :limit => nil
-      t.change "File_var", :string, :limit => nil
-      t.change "Pln_Num_Var", :string, :limit => nil
-      t.change "LTO_Pln_Num_Var", :string, :limit => nil
-      t.change "sLoc_Var", :string, :limit => nil
-      t.change "iLoc_Var", :string, :limit => nil
     end
 
-    change_table "HERITAGE" do |t|
-      t.change   "MEET_TYPE", :string, :limit => nil
-      t.change   "MEET_LOC", :string, :limit => nil
+    change_table "featcode2" do |t|
+      t.change "FEAT_TYPE", :string, :limit => nil
+      t.change "FEATURE_CO", :string, :limit => nil
+      t.change "SYMBOL", :string, :limit => nil
+      t.change "COLUMN", :string, :limit => nil
+      t.change "ROW", :string, :limit => nil
+      t.change "COLOUR", :string, :limit => nil
     end
 
-    change_table "Heritage_Bldg" do |t|
-      t.change   "MEET_TYPE", :string, :limit => nil
-      t.change   "MEET_LOC", :string, :limit => nil
-    end
-
-    change_table "Heritage_Code" do |t|
-      t.change   "MEET_TYPE", :string, :limit => nil
-      t.change   "MEET_LOC", :string, :limit => nil
-    end
-
-    change_table "Heritage_Designation" do |t|
-      t.change   "MEET_TYPE", :string, :limit => nil
-      t.change   "MEET_LOC", :string, :limit => nil
-    end
-
-    change_table "Heritage_Meets" do |t|
-      t.change   "MEET_TYPE", :string, :limit => nil
-      t.change   "MEET_LOC", :string, :limit => nil
-    end
-
-    change_table "Lnd_Dstrct1" do |t|
+    change_table "lnd_dstrct1" do |t|
       t.change "Land_District_Name", :string, :limit => nil
       t.change "Land_District_Code", :string, :limit => nil
-      t.change "File_or_Plan_var", :string, :limit => nil
-      t.change "File_Record_var", :string, :limit => nil
-      t.change "Surveyor_Num_var", :string, :limit => nil
-      t.change "Location_var", :string, :limit => nil
-      t.change "File_var", :string, :limit => nil
-      t.change "Pln_Num_Var", :string, :limit => nil
-      t.change "LTO_Pln_Num_Var", :string, :limit => nil
-      t.change "sLoc_Var", :string, :limit => nil
-      t.change "iLoc_Var", :string, :limit => nil
     end
 
-    change_table "Lnd_Dstrct2" do |t|
+    change_table "lnd_dstrct2" do |t|
       t.change "Land_District_Name", :string, :limit => nil
       t.change "Land_District_Code", :string, :limit => nil
-      t.change "File_or_Plan_var", :string, :limit => nil
-      t.change "File_Record_var", :string, :limit => nil
-      t.change "Surveyor_Num_var", :string, :limit => nil
-      t.change "Location_var", :string, :limit => nil
-      t.change "File_var", :string, :limit => nil
-      t.change "Pln_Num_Var", :string, :limit => nil
-      t.change "LTO_Pln_Num_Var", :string, :limit => nil
-      t.change "sLoc_Var", :string, :limit => nil
-      t.change "iLoc_Var", :string, :limit => nil
     end
 
-    change_table "MarineFiles" do |t|
+    change_table "marinefiles" do |t|
       t.change "File_No", :string, :limit => nil
       t.change "Loc_Num", :string, :limit => nil
       t.change "Lat_Deg", :string, :limit => nil
@@ -195,18 +125,9 @@ class RemoveLimits < ActiveRecord::Migration
       t.change "FGO_Cd", :string, :limit => nil
       t.change "NTS_sheet", :string, :limit => nil
       t.change "Gator", :string, :limit => nil
-      t.change "File_or_Plan_var", :string, :limit => nil
-      t.change "File_Record_var", :string, :limit => nil
-      t.change "Surveyor_Num_var", :string, :limit => nil
-      t.change "Location_var", :string, :limit => nil
-      t.change "File_var", :string, :limit => nil
-      t.change "Pln_Num_Var", :string, :limit => nil
-      t.change "LTO_Pln_Num_Var", :string, :limit => nil
-      t.change "sLoc_Var", :string, :limit => nil
-      t.change "iLoc_Var", :string, :limit => nil
     end
 
-    change_table "SURV_PL" do |t|
+    change_table "surv_pl" do |t|
       t.change   "PLAN_NO", :string, :limit => nil
       t.change   "SIZE", :string, :limit => nil
       t.change   "SECONDARY_", :string, :limit => nil
@@ -226,7 +147,7 @@ class RemoveLimits < ActiveRecord::Migration
       t.change   "CLSR_PLAN", :string, :limit => nil
     end
 
-    change_table "nBC_LOC1" do |t|
+    change_table "nbc_loc1" do |t|
       t.change "OFF_NAME", :string, :limit => nil
       t.change "MAPSHEET", :string, :limit => nil
       t.change "LATITUDE", :string, :limit => nil
@@ -236,18 +157,9 @@ class RemoveLimits < ActiveRecord::Migration
       t.change "Loc_Num", :string, :limit => nil
       t.change "FEATURE_CODE", :string, :limit => nil
       t.change "Prov_Code", :string, :limit => nil
-      t.change "File_or_Plan_var", :string, :limit => nil
-      t.change "File_Record_var", :string, :limit => nil
-      t.change "Surveyor_Num_var", :string, :limit => nil
-      t.change "Location_var", :string, :limit => nil
-      t.change "File_var", :string, :limit => nil
-      t.change "Pln_Num_Var", :string, :limit => nil
-      t.change "LTO_Pln_Num_Var", :string, :limit => nil
-      t.change "sLoc_Var", :string, :limit => nil
-      t.change "iLoc_Var", :string, :limit => nil
     end
 
-    change_table "nBC_LOC2" do |t|
+    change_table "nbc_loc2" do |t|
       t.change "OFF_NAME", :string, :limit => nil
       t.change "MAPSHEET", :string, :limit => nil
       t.change "LATITUDE", :string, :limit => nil
@@ -257,18 +169,9 @@ class RemoveLimits < ActiveRecord::Migration
       t.change "Loc_Num", :string, :limit => nil
       t.change "FEATURE_CODE", :string, :limit => nil
       t.change "Prov_Code", :string, :limit => nil
-      t.change "File_or_Plan_var", :string, :limit => nil
-      t.change "File_Record_var", :string, :limit => nil
-      t.change "Surveyor_Num_var", :string, :limit => nil
-      t.change "Location_var", :string, :limit => nil
-      t.change "File_var", :string, :limit => nil
-      t.change "Pln_Num_Var", :string, :limit => nil
-      t.change "LTO_Pln_Num_Var", :string, :limit => nil
-      t.change "sLoc_Var", :string, :limit => nil
-      t.change "iLoc_Var", :string, :limit => nil
     end
 
-    change_table "nSurveyFiles1" do |t|
+    change_table "nsurveyfiles1" do |t|
       t.change "Surv_File", :string, :limit => nil
       t.change "Proj_Num", :string, :limit => nil
       t.change "SSA_Num", :string, :limit => nil
