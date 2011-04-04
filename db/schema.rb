@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110404052846) do
+ActiveRecord::Schema.define(:version => 20110404170104) do
 
   create_table "drawings", :force => true do |t|
     t.string   "tiff_file"
@@ -31,10 +31,10 @@ ActiveRecord::Schema.define(:version => 20110404052846) do
     t.datetime "drawing_updated_at"
   end
 
-  create_table "dwf_file", :force => true do |t|
-    t.string "DWF_FILE"
-    t.string "Plan"
-    t.string "PDF_FILE"
+  create_table "dwf_files", :force => true do |t|
+    t.string "file"
+    t.string "plan"
+    t.string "pdf"
   end
 
   create_table "features", :force => true do |t|
@@ -44,20 +44,6 @@ ActiveRecord::Schema.define(:version => 20110404052846) do
     t.string "column"
     t.string "row"
     t.string "colour"
-  end
-
-  create_table "fgo", :force => true do |t|
-    t.string "FGO"
-    t.string "Type"
-    t.string "Abbrev"
-    t.string "Name"
-  end
-
-  create_table "fgou", :force => true do |t|
-    t.string "FGO"
-    t.string "FGOU"
-    t.string "Abbrev"
-    t.string "Name"
   end
 
   create_table "land_districts", :force => true do |t|
@@ -117,6 +103,20 @@ ActiveRecord::Schema.define(:version => 20110404052846) do
     t.string "fgo_code"
     t.string "NTS_sheet"
     t.string "Gator"
+  end
+
+  create_table "organizational_units", :force => true do |t|
+    t.string "fgo_code"
+    t.string "code"
+    t.string "abbreviation"
+    t.string "name"
+  end
+
+  create_table "organizations", :force => true do |t|
+    t.string "code"
+    t.string "type"
+    t.string "abbreviation"
+    t.string "name"
   end
 
   create_table "plan_files", :force => true do |t|
