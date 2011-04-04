@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110314005620) do
+ActiveRecord::Schema.define(:version => 20110404035555) do
 
   create_table "drawings", :force => true do |t|
     t.string   "tiff_file"
@@ -31,6 +31,16 @@ ActiveRecord::Schema.define(:version => 20110314005620) do
     t.datetime "drawing_updated_at"
   end
 
+  create_table "dtproperties", :id => false, :force => true do |t|
+    t.integer "id",                                            :null => false
+    t.integer "objectid"
+    t.string  "property", :limit => 64,                        :null => false
+    t.string  "value"
+    t.string  "uvalue"
+    t.binary  "lvalue",   :limit => 2147483647
+    t.integer "version",                        :default => 0, :null => false
+  end
+
   create_table "dwf_file", :force => true do |t|
     t.string "DWF_FILE"
     t.string "Plan"
@@ -38,12 +48,12 @@ ActiveRecord::Schema.define(:version => 20110314005620) do
   end
 
   create_table "features", :force => true do |t|
-    t.string "FEAT_TYPE"
-    t.string "FEATURE_CO"
-    t.string "SYMBOL"
-    t.string "COLUMN"
-    t.string "ROW"
-    t.string "COLOUR"
+    t.string "type"
+    t.string "code"
+    t.string "symbol"
+    t.string "column"
+    t.string "row"
+    t.string "colour"
   end
 
   create_table "fgo", :force => true do |t|
@@ -60,14 +70,21 @@ ActiveRecord::Schema.define(:version => 20110314005620) do
     t.string "Name"
   end
 
-  create_table "lnd_dstrct1", :force => true do |t|
-    t.string "Land_District_Name"
-    t.string "Land_District_Code"
+  create_table "land_districts", :force => true do |t|
+    t.string "name"
+    t.string "code"
   end
 
-  create_table "lnd_dstrct2", :force => true do |t|
-    t.string "Land_District_Name"
-    t.string "Land_District_Code"
+  create_table "locations", :force => true do |t|
+    t.string "name"
+    t.string "mapsheet"
+    t.string "latitude"
+    t.string "longitude"
+    t.string "latitude_calculation"
+    t.string "longitude_calculation"
+    t.string "location_number"
+    t.string "feature_code"
+    t.string "province_code"
   end
 
   create_table "marine_files", :force => true do |t|
@@ -110,30 +127,6 @@ ActiveRecord::Schema.define(:version => 20110314005620) do
     t.string "fgo_code"
     t.string "NTS_sheet"
     t.string "Gator"
-  end
-
-  create_table "nbc_loc1", :force => true do |t|
-    t.string "OFF_NAME"
-    t.string "MAPSHEET"
-    t.string "LATITUDE"
-    t.string "LONGITUDE"
-    t.string "LATCALC"
-    t.string "LONCALC"
-    t.string "Loc_Num"
-    t.string "FEATURE_CODE"
-    t.string "Prov_Code"
-  end
-
-  create_table "nbc_loc2", :force => true do |t|
-    t.string "OFF_NAME"
-    t.string "MAPSHEET"
-    t.string "LATITUDE"
-    t.string "LONGITUDE"
-    t.string "LATCALC"
-    t.string "LONCALC"
-    t.string "Loc_Num"
-    t.string "FEATURE_CODE"
-    t.string "Prov_Code"
   end
 
   create_table "nsurveyfiles2", :force => true do |t|
@@ -195,16 +188,10 @@ ActiveRecord::Schema.define(:version => 20110314005620) do
     t.string "clsr_plan"
   end
 
-  create_table "prov_codes1", :force => true do |t|
-    t.string "Prov_ID"
-    t.string "ABBREVIATE"
-    t.string "Prov_Nm"
-  end
-
-  create_table "prov_codes2", :force => true do |t|
-    t.string "Prov_ID"
-    t.string "ABBREVIATE"
-    t.string "Prov_Nm"
+  create_table "provinces", :force => true do |t|
+    t.string "number"
+    t.string "abbreviation"
+    t.string "name"
   end
 
   create_table "region_bdy", :force => true do |t|
