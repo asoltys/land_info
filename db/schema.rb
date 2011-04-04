@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110404035555) do
+ActiveRecord::Schema.define(:version => 20110404052846) do
 
   create_table "drawings", :force => true do |t|
     t.string   "tiff_file"
@@ -29,16 +29,6 @@ ActiveRecord::Schema.define(:version => 20110404035555) do
     t.string   "drawing_content_type"
     t.integer  "drawing_file_size"
     t.datetime "drawing_updated_at"
-  end
-
-  create_table "dtproperties", :id => false, :force => true do |t|
-    t.integer "id",                                            :null => false
-    t.integer "objectid"
-    t.string  "property", :limit => 64,                        :null => false
-    t.string  "value"
-    t.string  "uvalue"
-    t.binary  "lvalue",   :limit => 2147483647
-    t.integer "version",                        :default => 0, :null => false
   end
 
   create_table "dwf_file", :force => true do |t|
@@ -129,33 +119,6 @@ ActiveRecord::Schema.define(:version => 20110404035555) do
     t.string "Gator"
   end
 
-  create_table "nsurveyfiles2", :force => true do |t|
-    t.string "Surv_File"
-    t.string "Proj_Num"
-    t.string "SSA_Num"
-    t.string "CR_File"
-    t.string "Strt_Date"
-    t.string "Cmpl_Date"
-    t.string "Proj_Man"
-    t.string "Dept_Sec"
-    t.string "Descript"
-    t.string "SSA_Amount"
-    t.string "Bulk_Num"
-    t.string "Fin_Code"
-    t.string "Dept_Abbr"
-    t.string "Active_File"
-    t.string "Remark"
-    t.string "Location_second"
-    t.string "Dept_Contact"
-    t.string "Dept_tel"
-    t.string "Loc_Num"
-    t.string "Strt_loc"
-    t.string "Object_Nm"
-    t.string "EDRM_Num"
-    t.string "Sigma"
-    t.string "EDRM_No"
-  end
-
   create_table "plan_files", :force => true do |t|
     t.string "plan_number"
     t.string "size"
@@ -194,14 +157,9 @@ ActiveRecord::Schema.define(:version => 20110404035555) do
     t.string "name"
   end
 
-  create_table "region_bdy", :force => true do |t|
-    t.string "Region_Nm"
-    t.string "Region_Cd"
-  end
-
-  create_table "sf_tracking", :force => true do |t|
-    t.string "SF_present"
-    t.string "SF_tracked"
+  create_table "regions", :force => true do |t|
+    t.string "number"
+    t.string "code"
   end
 
   create_table "survey_files", :force => true do |t|
