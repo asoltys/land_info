@@ -7,7 +7,6 @@ class AddReferencesToDrawings < ActiveRecord::Migration
       end
 
       execute "UPDATE drawings SET surveyor_id = (SELECT id FROM surveyors WHERE CONCAT(first_name, ' ', last_name) = drawings.surveyor)"   
-      execute "UPDATE drawings SET location_id = (SELECT id FROM locations WHERE locations.name = drawings.location LIMIT 1)"   
     end
   end
 
