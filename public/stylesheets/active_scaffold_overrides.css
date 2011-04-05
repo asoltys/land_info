@@ -7,6 +7,8 @@
  For details, see the ActiveScaffold web site: http://www.activescaffold.com/
 */
 
+a:active, a:focus {cursor: pointer;}
+
 .active-scaffold form,
 .active-scaffold table,
 .active-scaffold p,
