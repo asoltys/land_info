@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110404170104) do
+ActiveRecord::Schema.define(:version => 20110404244955) do
 
   create_table "drawings", :force => true do |t|
     t.string   "tiff_file"
@@ -29,6 +29,8 @@ ActiveRecord::Schema.define(:version => 20110404170104) do
     t.string   "drawing_content_type"
     t.integer  "drawing_file_size"
     t.datetime "drawing_updated_at"
+    t.integer  "surveyor_id"
+    t.integer  "location_id"
   end
 
   create_table "dwf_files", :force => true do |t|

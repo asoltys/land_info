@@ -1,7 +1,7 @@
 class RemoveDuplicateRegions < ActiveRecord::Migration
   def self.up
     execute <<-SQL
-      SELECT bad_rows.*
+      DELETE bad_rows.*
       FROM regions AS bad_rows
       INNER JOIN (
       SELECT 
