@@ -390,9 +390,9 @@ display: block;
    ============================= */
 
 .active-scaffold .view {
-background-color: #DAFFCD;
+background-color: #D5EACF;
 padding: 4px;
-border: solid 1px #7FcF00;
+border: solid 1px #71C671;
 }
 
 .active-scaffold tbody.records td.inline-adapter-cell .view {
@@ -703,7 +703,7 @@ border: none;
 padding: 2px;
 margin: 0;
 text-transform: none;
-color: #1F7F00;
+color: #488214;
 letter-spacing: -1px;
 font: bold 16px arial;
 }
