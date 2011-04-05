@@ -697,6 +697,13 @@ clear: both;
 border: none;
 }
 
+.active-scaffold h2 {
+padding: 2px 0px;
+margin: 0;
+color: #000;
+font: bold 160% verdana, sans-serif;
+}
+
 .active-scaffold h4,
 .active-scaffold h5 {
 padding: 2px;
