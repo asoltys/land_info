@@ -79,7 +79,10 @@ background-color: #005CB8;
 padding: 2px 0px;
 margin: 0;
 color: #000;
-font: 160% verdana, sans-serif;
+font: inherit;
+font-weight: inherit;
+font-family: inherit;
+font-size: 160%;
 }
 
 .blue-theme .active-scaffold-header h2 {
@@ -247,8 +250,9 @@ margin-left: 5px;
 .active-scaffold tr.record td {
 padding: 5px 4px;
 color: #000;
-font-family: Verdana, sans-serif;
-font-size: 12px;
+font-family: 'Verdana,Arial,Helvetica,sans-serif';
+font: inherit;
+font-size: inherit;
 border-bottom: solid 1px #71C671;
 border-left: solid 1px #71C671;
 }
@@ -306,7 +310,10 @@ padding: 0 2px;
 
 .active-scaffold tr.record td.actions a,
 .active-scaffold tr.record td.actions div {
-font: normal 12px verdana, sans-serif;
+font-weight: inherit;
+font-size: inherit;
+font-family: 'Verdana,Arial,Helvetica,sans-serif';
+font: inherit;
 letter-spacing: 0px;
 padding: 2px;
 margin: 0 2px;
@@ -428,7 +435,7 @@ margin-right: 15px;
 }
 
 .active-scaffold .active-scaffold .active-scaffold-header h2 {
-font-size: 12px;
+font-size: inherit;
 font-weight: inherit;
 }
 
@@ -444,7 +451,7 @@ right: 0px;
 
 .active-scaffold .active-scaffold .active-scaffold-header div.actions a,
 .active-scaffold .active-scaffold .active-scaffold-header div.actions div {
-font: 11px verdana, sans-serif;
+font: 11px 'Verdana,Arial,Helvetica,sans-serif';
 }
 
 .blue-theme .active-scaffold .active-scaffold-header div.actions a,
@@ -492,13 +499,17 @@ font-size: 11px;
 .active-scaffold-calculations td {
 background-color: #eee;
 border-top: 2px solid #005CB8;
-font: 12px verdana, sans-serif;
+font-weight: inherit;
+font-family: 'Verdana,Arial,Helvetica,sans-serif'
+font: inherit;
 }
 
 .active-scaffold .active-scaffold-footer {
 padding: 3px 0px 2px 0px;
 border-bottom: none;
-font: 12px verdana, sans-serif;
+font-weight: inherit;
+font-family: 'Verdana,Arial,Helvetica,sans-serif'
+font: inherit;
 }
 
 .blue-theme .active-scaffold-footer {
@@ -521,7 +532,9 @@ text-decoration: none;
 letter-spacing: 0;
 padding: 0 2px;
 margin: 0 -2px;
-font: 12px verdana,sans-serif;
+font-weight: inherit;
+font-family: 'Verdana,Arial,Helvetica,sans-serif'
+font: inherit;
 }
 
 .blue-theme .active-scaffold-footer a,
@@ -577,7 +590,7 @@ position: absolute;
 right: 10px;
 top: 4px;
 padding: 0;
-font: 11px verdana, sans-serif;
+font: 11px 'Verdana,Arial,Helvetica,sans-serif';
 letter-spacing: 0px;
 }
 
@@ -619,7 +632,8 @@ color: #333;
 font-size: 11px;
 margin: 0;
 letter-spacing: 0;
-font-family: Verdana;
+font-family: 'Verdana,Arial,Helvetica,sans-serif';
+font: inherit;
 background-color: #f66;
 }
 
@@ -632,12 +646,13 @@ list-style: disc;
 .active-scaffold .errorExplanation p {
 font-size: 11px;
 padding: 2px 5px;
-font-family: Verdana;
+font-family: 'Verdana,Arial,Helvetica,sans-serif';
+font: inherit;
 margin: 0;
 }
 
 .active-scaffold .errorExplanation ul li {
-font: 11px verdana;
+font: 11px 'Verdana,Arial,Helvetica,sans-serif';
 letter-spacing: 0px;
 margin: 0;
 padding: 0;
@@ -675,7 +690,10 @@ line-height: 16px;
 
 .active-scaffold .show-view dd {
 float: left;
-font: 14px verdana;
+font-weight: inherit;
+font-size: inherit;
+font-family: 'Verdana,Arial,Helvetica,sans-serif';
+font: inherit;
 padding-left: 5px;
 margin-bottom: 5px;
 }
@@ -685,8 +703,8 @@ margin-bottom: 5px;
 
 .active-scaffold .submit {
 font-weight: inherit;
-font-size: 14px;
-font-family: Arial, sans-serif;
+font-size: inherit;
+font-family: 'Verdana,Arial,Helvetica,sans-serif';
 letter-spacing: 0;
 margin: 0;
 margin-top: 5px;
@@ -701,10 +719,13 @@ border: none;
 }
 
 .active-scaffold h2 {
-padding: 2px 0px;
+padding: 0;
 margin: 0;
 color: #000;
-font: 160% verdana, sans-serif;
+font: inherit;
+font-weight: bold;
+font-family: inherit;
+font-size: 170%;
 }
 
 .active-scaffold h4,
@@ -714,13 +735,16 @@ margin: 0;
 text-transform: none;
 color: #000;
 letter-spacing: 0px;
-font: 16px verdana;
+font-size: inherit;
+font-family: 'Verdana,Arial,Helvetica,sans-serif';
+font: inherit;
+font-weight: inherit;
 }
 
 .active-scaffold h5 {
 padding: 0;
 margin: 5px 0 2px 0;
-font-size: 14px;
+font-size: inherit;
 letter-spacing: 0;
 }
 
@@ -738,7 +762,10 @@ clear: both;
 
 .active-scaffold a.as_cancel,
 .active-scaffold p.form-footer a {
-font: 14px verdana, sans-serif;
+font-weight: inherit;
+font-size: inherit;
+font-family: 'Verdana,Arial,Helvetica,sans-serif';
+font: inherit;
 letter-spacing: 0;
 }
 
@@ -750,7 +777,10 @@ clear: both;
 }
 
 .active-scaffold label {
-font: normal 12px verdana, sans-serif;
+font-weight: inherit;
+font-size: inherit;
+font-family: 'Verdana,Arial,Helvetica,sans-serif';
+font: inherit;
 color: #000;
 }
 
@@ -786,13 +816,17 @@ font-weight: inherit;
 
 .active-scaffold label.example {
 font-size: 11px;
-font-family: verdana;
+font-family: 'Verdana,Arial,Helvetica,sans-serif';
+font: inherit;
 color: #888;
 }
 
 .active-scaffold input.text-input,
 .active-scaffold select {
-font: 16px verdana;
+font-size: inherit;
+font-family: 'Verdana,Arial,Helvetica,sans-serif';
+font: inherit;
+font-weight: inherit;
 letter-spacing: 0px;
 border: solid 1px #1F7F00;
 }
@@ -824,8 +858,8 @@ background-color: #ffc;
 }
 
 .active-scaffold textarea {
-font-family: Arial, sans-serif;
-font-size: 12px;
+font-family: 'Verdana,Arial,Helvetica,sans-serif';
+font-size: inherit;
 padding: 1px;
 border: solid 1px #1F7F00;
 }
@@ -898,7 +932,7 @@ background: none;
 }
 
 .active-scaffold .sub-form table th {
-font: normal 10px verdana, sans-serif;
+font: normal 10px 'Verdana,Arial,Helvetica,sans-serif';
 color: #555;
 padding: 0 5px 0 1px;
 background: none;
@@ -947,13 +981,17 @@ display: none;
 }
 
 .active-scaffold .sub-form .association-record a {
-font: 12px verdana;
+font-weight: inherit;
+font-family: 'Verdana,Arial,Helvetica,sans-serif'
+font: inherit;
 }
 
 .active-scaffold .sub-form input.text-input,
 .active-scaffold .sub-form select {
 letter-spacing: 0;
-font: 12px verdana;
+font-weight: inherit;
+font-family: 'Verdana,Arial,Helvetica,sans-serif'
+font: inherit;
 }
 
 .active-scaffold .sub-form .footer-wrapper {
@@ -969,7 +1007,7 @@ padding: 3px 5px;
 .active-scaffold .sub-form .footer select,
 .active-scaffold .sub-form .footer input {
 font-weight: inherit;
-font-size: 12px;
+font-size: inherit;
 padding: 0;
 }
 
