@@ -1,3 +1,12 @@
+GIT
+  remote: git://github.com/asoltys/active_scaffold.git
+  revision: 214d3e654ebfdf01b7844e4fcc2c4b95112de409
+  specs:
+    active_scaffold_vho (3.0.18)
+      rails (~> 3.0.0)
+      render_component_vho
+      verification
+
 GEM
   remote: http://rubygems.org/
   specs:
@@ -63,16 +72,22 @@ GEM
       rake (>= 0.8.7)
       thor (~> 0.14.4)
     rake (0.8.7)
+    render_component_vho (3.0.3)
+      railties (~> 3.0.0)
     thor (0.14.6)
     treetop (1.4.9)
       polyglot (>= 0.3.1)
     tzinfo (0.3.24)
+    verification (1.0.1)
+      actionpack (~> 3.0.0)
+      activesupport (~> 3.0.0)
 
 PLATFORMS
   java
   ruby
 
 DEPENDENCIES
+  active_scaffold_vho!
   activerecord-jdbc-adapter
   paperclip (= 2.3.8)
   rails (= 3.0.5)
