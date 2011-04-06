@@ -294,6 +294,7 @@ text-align: right;
 border-right: solid 1px #ccc;
 padding: 0;
 min-width: 1%;
+display: none;
 }
 
 .active-scaffold tr.record td.actions table {
