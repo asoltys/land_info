@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110406014356) do
+ActiveRecord::Schema.define(:version => 20110406034909) do
 
   create_table "drawings", :force => true do |t|
     t.string   "tiff_file"
@@ -79,33 +79,33 @@ ActiveRecord::Schema.define(:version => 20110406014356) do
     t.string "longitude_degrees_decimal"
     t.string "lot_number"
     t.string "law_record"
-    t.string "Returned"
+    t.string "returned"
     t.string "district_company"
     t.string "secondary_location"
-    t.string "Marine_tif"
+    t.string "marine_tif"
     t.string "dfrp_number"
-    t.string "FGOU_Cd"
+    t.string "fgou_code"
     t.string "province_file"
-    t.string "Prv_File"
-    t.string "FED_File"
+    t.string "province_file2"
+    t.string "federal_file"
     t.string "reservation_number"
     t.string "reservation_use"
     t.string "reservation_type"
-    t.string "OIC_PC"
+    t.string "oic_pc"
     t.string "area_hectares"
     t.string "area_acres"
-    t.string "Expiry"
+    t.string "expiry"
     t.string "reservation_term"
     t.string "cooperating_department"
-    t.string "PWC_Cust"
+    t.string "pwc_customer"
     t.string "provincial_contact"
     t.string "federal_contact"
-    t.string "Notes"
+    t.string "notes"
     t.string "registration_code"
-    t.string "Legal"
+    t.string "legal"
     t.string "fgo_code"
-    t.string "NTS_sheet"
-    t.string "Gator"
+    t.string "nts_sheet"
+    t.string "gator"
   end
 
   create_table "organizational_units", :force => true do |t|
