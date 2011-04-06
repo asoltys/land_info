@@ -214,25 +214,25 @@ color: #fff;
 text-decoration:none;
 }
 
-.active-scaffold th.sorted {
-background-color: #333;
+.active-scaffold th.sorted,
+.active-scaffold th.asc a,
+.active-scaffold th.desc a,
+.active-scaffold th.loading a {
+background-color: #000;
 }
 
 .active-scaffold th.sorted a {
 padding-right: 18px;
 }
 
-.active-scaffold th.asc a,
 .active-scaffold th.asc a:hover {
 background: #333 url(../../../images/active_scaffold/default/arrow_up.gif) right 50% no-repeat;
 }
 
-.active-scaffold th.desc a,
 .active-scaffold th.desc a:hover {
 background: #333 url(../../../images/active_scaffold/default/arrow_down.gif) right 50% no-repeat;
 }
 
-.active-scaffold th.loading a,
 .active-scaffold th.loading a:hover {
 background: #333 url(../../../images/active_scaffold/default/indicator-small.gif) right 50% no-repeat;
 }
@@ -250,7 +250,7 @@ margin-left: 5px;
 .active-scaffold tr.record td {
 padding: 5px 4px;
 color: #000;
-font-family: 'Verdana,Arial,Helvetica,sans-serif';
+font-family: Verdana,Arial,Helvetica,sans-serif;
 font: inherit;
 font-size: inherit;
 border-bottom: solid 1px #71C671;
@@ -312,7 +312,7 @@ padding: 0 2px;
 .active-scaffold tr.record td.actions div {
 font-weight: inherit;
 font-size: inherit;
-font-family: 'Verdana,Arial,Helvetica,sans-serif';
+font-family: Verdana,Arial,Helvetica,sans-serif;
 font: inherit;
 letter-spacing: 0px;
 padding: 2px;
@@ -451,7 +451,7 @@ right: 0px;
 
 .active-scaffold .active-scaffold .active-scaffold-header div.actions a,
 .active-scaffold .active-scaffold .active-scaffold-header div.actions div {
-font: 11px 'Verdana,Arial,Helvetica,sans-serif';
+font: 11px Verdana,Arial,Helvetica,sans-serif;
 }
 
 .blue-theme .active-scaffold .active-scaffold-header div.actions a,
@@ -500,7 +500,7 @@ font-size: 11px;
 background-color: #eee;
 border-top: 2px solid #005CB8;
 font-weight: inherit;
-font-family: 'Verdana,Arial,Helvetica,sans-serif'
+font-family: Verdana,Arial,Helvetica,sans-serif;
 font: inherit;
 }
 
@@ -508,7 +508,7 @@ font: inherit;
 padding: 3px 0px 2px 0px;
 border-bottom: none;
 font-weight: inherit;
-font-family: 'Verdana,Arial,Helvetica,sans-serif'
+font-family: Verdana,Arial,Helvetica,sans-serif;
 font: inherit;
 }
 
@@ -533,7 +533,7 @@ letter-spacing: 0;
 padding: 0 2px;
 margin: 0 -2px;
 font-weight: inherit;
-font-family: 'Verdana,Arial,Helvetica,sans-serif'
+font-family: Verdana,Arial,Helvetica,sans-serif;
 font: inherit;
 }
 
@@ -590,7 +590,7 @@ position: absolute;
 right: 10px;
 top: 4px;
 padding: 0;
-font: 11px 'Verdana,Arial,Helvetica,sans-serif';
+font: 11px Verdana,Arial,Helvetica,sans-serif;
 letter-spacing: 0px;
 }
 
@@ -632,7 +632,7 @@ color: #333;
 font-size: 11px;
 margin: 0;
 letter-spacing: 0;
-font-family: 'Verdana,Arial,Helvetica,sans-serif';
+font-family: Verdana,Arial,Helvetica,sans-serif;
 font: inherit;
 background-color: #f66;
 }
@@ -646,13 +646,13 @@ list-style: disc;
 .active-scaffold .errorExplanation p {
 font-size: 11px;
 padding: 2px 5px;
-font-family: 'Verdana,Arial,Helvetica,sans-serif';
+font-family: Verdana,Arial,Helvetica,sans-serif;
 font: inherit;
 margin: 0;
 }
 
 .active-scaffold .errorExplanation ul li {
-font: 11px 'Verdana,Arial,Helvetica,sans-serif';
+font: 11px Verdana,Arial,Helvetica,sans-serif;
 letter-spacing: 0px;
 margin: 0;
 padding: 0;
@@ -692,7 +692,7 @@ line-height: 16px;
 float: left;
 font-weight: inherit;
 font-size: inherit;
-font-family: 'Verdana,Arial,Helvetica,sans-serif';
+font-family: Verdana,Arial,Helvetica,sans-serif;
 font: inherit;
 padding-left: 5px;
 margin-bottom: 5px;
@@ -704,7 +704,7 @@ margin-bottom: 5px;
 .active-scaffold .submit {
 font-weight: inherit;
 font-size: inherit;
-font-family: 'Verdana,Arial,Helvetica,sans-serif';
+font-family: Verdana,Arial,Helvetica,sans-serif;
 letter-spacing: 0;
 margin: 0;
 margin-top: 5px;
@@ -735,10 +735,10 @@ margin: 0;
 text-transform: none;
 color: #000;
 letter-spacing: 0px;
-font-size: inherit;
-font-family: 'Verdana,Arial,Helvetica,sans-serif';
 font: inherit;
-font-weight: inherit;
+font-weight: bold;
+font-size: 130%;
+font-family: Verdana,Arial,Helvetica,sans-serif;
 }
 
 .active-scaffold h5 {
@@ -764,7 +764,7 @@ clear: both;
 .active-scaffold p.form-footer a {
 font-weight: inherit;
 font-size: inherit;
-font-family: 'Verdana,Arial,Helvetica,sans-serif';
+font-family: Verdana,Arial,Helvetica,sans-serif;
 font: inherit;
 letter-spacing: 0;
 }
@@ -779,7 +779,7 @@ clear: both;
 .active-scaffold label {
 font-weight: inherit;
 font-size: inherit;
-font-family: 'Verdana,Arial,Helvetica,sans-serif';
+font-family: Verdana,Arial,Helvetica,sans-serif;
 font: inherit;
 color: #000;
 }
@@ -816,7 +816,7 @@ font-weight: inherit;
 
 .active-scaffold label.example {
 font-size: 11px;
-font-family: 'Verdana,Arial,Helvetica,sans-serif';
+font-family: Verdana,Arial,Helvetica,sans-serif;
 font: inherit;
 color: #888;
 }
@@ -824,7 +824,7 @@ color: #888;
 .active-scaffold input.text-input,
 .active-scaffold select {
 font-size: inherit;
-font-family: 'Verdana,Arial,Helvetica,sans-serif';
+font-family: Verdana,Arial,Helvetica,sans-serif;
 font: inherit;
 font-weight: inherit;
 letter-spacing: 0px;
@@ -858,7 +858,7 @@ background-color: #ffc;
 }
 
 .active-scaffold textarea {
-font-family: 'Verdana,Arial,Helvetica,sans-serif';
+font-family: Verdana,Arial,Helvetica,sans-serif;
 font-size: inherit;
 padding: 1px;
 border: solid 1px #1F7F00;
@@ -932,7 +932,7 @@ background: none;
 }
 
 .active-scaffold .sub-form table th {
-font: normal 10px 'Verdana,Arial,Helvetica,sans-serif';
+font: normal 10px Verdana,Arial,Helvetica,sans-serif;
 color: #555;
 padding: 0 5px 0 1px;
 background: none;
@@ -982,7 +982,7 @@ display: none;
 
 .active-scaffold .sub-form .association-record a {
 font-weight: inherit;
-font-family: 'Verdana,Arial,Helvetica,sans-serif'
+font-family: Verdana,Arial,Helvetica,sans-serif;
 font: inherit;
 }
 
@@ -990,7 +990,7 @@ font: inherit;
 .active-scaffold .sub-form select {
 letter-spacing: 0;
 font-weight: inherit;
-font-family: 'Verdana,Arial,Helvetica,sans-serif'
+font-family: Verdana,Arial,Helvetica,sans-serif;
 font: inherit;
 }
 
@@ -1018,3 +1018,5 @@ font-size: 100%;
 .active-scaffold-found {
   float:left;
 }
+
+a:active, a:focus {cursor: pointer;}
