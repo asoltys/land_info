@@ -307,7 +307,7 @@ padding: 0 2px;
 .active-scaffold tr.record td.actions a,
 .active-scaffold tr.record td.actions div {
 font: normal 12px verdana, sans-serif;
-letter-spacing: -1px;
+letter-spacing: 0px;
 padding: 2px;
 margin: 0 2px;
 line-height: 16px;
@@ -578,7 +578,7 @@ right: 10px;
 top: 4px;
 padding: 0;
 font: 11px verdana, sans-serif;
-letter-spacing: -1px;
+letter-spacing: 0px;
 }
 
 .active-scaffold .messages-container .message {
@@ -638,7 +638,7 @@ margin: 0;
 
 .active-scaffold .errorExplanation ul li {
 font: 11px verdana;
-letter-spacing: -1px;
+letter-spacing: 0px;
 margin: 0;
 padding: 0;
 background-color: transparent;
@@ -713,7 +713,7 @@ padding: 2px;
 margin: 0;
 text-transform: none;
 color: #000;
-letter-spacing: -1px;
+letter-spacing: 0px;
 font: 16px verdana;
 }
 
@@ -793,7 +793,7 @@ color: #888;
 .active-scaffold input.text-input,
 .active-scaffold select {
 font: 16px verdana;
-letter-spacing: -1px;
+letter-spacing: 0px;
 border: solid 1px #1F7F00;
 }
 
