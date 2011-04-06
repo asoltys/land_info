@@ -4,5 +4,6 @@ class SurveyFilesController < ApplicationController
     conf.list.columns = [:survey_file, :description, :start_date, :completion_date]
 		columns[:start_date].description = "(MM/DD/YYYY)"
 		columns[:completion_date].description = "(MM/DD/YYYY)"
+    conf.columns[:description].set_link(:update)
   end
 end 
