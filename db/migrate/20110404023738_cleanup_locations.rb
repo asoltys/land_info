@@ -4,14 +4,16 @@ class CleanupLocations < ActiveRecord::Migration
       drop_table :nbc_loc2
 
       change_table :nbc_loc1 do |t|
+        if ActiveRecord::Base.connection.adapter_name != 'MSSQL'
+          t.rename "MAPSHEET", "mapsheet"
+          t.rename "LATITUDE", "latitude"
+          t.rename "LONGITUDE", "longitude"
+          t.rename "FEATURE_CODE", "feature_code"
+        end
         t.rename "OFF_NAME", "name"
-        t.rename "MAPSHEET", "mapsheet"
-        t.rename "LATITUDE", "latitude"
-        t.rename "LONGITUDE", "longitude"
         t.rename "LATCALC", "latitude_calculation"
         t.rename "LONCALC", "longitude_calculation"
         t.rename "Loc_Num", "location_number"
-        t.rename "FEATURE_CODE", "feature_code"
         t.rename "Prov_Code", "province_code"
       end
 
@@ -24,14 +26,16 @@ class CleanupLocations < ActiveRecord::Migration
       rename_table :locations, :nbc_loc1
 
       change_table :nbc_loc1 do |t|
+        if ActiveRecord::Base.connection.adapter_name != 'MSSQL'
+          t.rename "mapsheet", "MAPSHEET"
+          t.rename "latitude", "LATITUDE"
+          t.rename "longitude", "LONGITUDE"
+          t.rename "feature_code", "FEATURE_CODE"
+        end
         t.rename "name", "OFF_NAME"
-        t.rename "mapsheet", "MAPSHEET"
-        t.rename "latitude", "LATITUDE"
-        t.rename "longitude", "LONGITUDE"
         t.rename "latitude_calculation", "LATCALC"
         t.rename "longitude_calculation", "LONCALC"
         t.rename "location_number", "Loc_Num"
-        t.rename "feature_code", "FEATURE_CODE"
         t.rename "province_code", "Prov_Code"
       end
 
