@@ -3,5 +3,6 @@ class MarineFilesController < ApplicationController
 		conf.label = "Marine Files"
     conf.list.columns = [:file_number, :location, :reservation_use, :reservation_term, :expiry, :notes]
     conf.columns[:file_number].set_link(:edit)
+    conf.update.columns.exclude :location
   end
 end 

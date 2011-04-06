@@ -3,5 +3,6 @@ class PlanFilesController < ApplicationController
 		conf.label = "Plan Files"
     conf.list.columns = [:plan_number, :location, :size, :title, :tiff_file]
     conf.columns[:plan_number].set_link(:edit)
+    conf.update.columns.exclude [:location, :drawings]
   end
 end 
