@@ -8,4 +8,8 @@ class ApplicationController < ActionController::Base
 
   def index 
   end
+
+  def search
+    redirect_to :controller => 'survey_files', :action => 'show_search'
+  end
 end
