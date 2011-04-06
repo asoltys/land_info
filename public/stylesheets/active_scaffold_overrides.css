@@ -7,8 +7,6 @@
  For details, see the ActiveScaffold web site: http://www.activescaffold.com/
 */
 
-a:active, a:focus {cursor: pointer;}
-
 .active-scaffold form,
 .active-scaffold table,
 .active-scaffold p,
@@ -19,7 +17,7 @@ padding: 0;
 }
 
 .active-scaffold {
-margin: 5px 0;
+margin: 0 0 5px 0;
 }
 
 .active-scaffold table {
@@ -38,7 +36,8 @@ color: #999;
 }
 
 .active-scaffold a:hover, .active-scaffold div.hover, .active-scaffold td span.hover {
-background-color: #ff8;
+background-color: auto;
+text-decoration:underline;
 }
 
 .active-scaffold div.actions a img,
@@ -79,8 +78,8 @@ background-color: #005CB8;
 .active-scaffold-header h2 {
 padding: 2px 0px;
 margin: 0;
-color: #555;
-font: bold 160% arial, sans-serif;
+color: #000;
+font: bold 160% verdana, sans-serif;
 }
 
 .blue-theme .active-scaffold-header h2 {
@@ -91,7 +90,7 @@ padding: 2px 5px 4px 5px;
 .active-scaffold-header div.actions a,
 .active-scaffold-header div.actions {
 float: right;
-font: bold 14px arial;
+font: bold 14px verdana;
 letter-spacing: -1px;
 text-decoration: none;
 padding: 1px 2px;
@@ -185,15 +184,15 @@ text-align: right;
    ============================= */
 
 .active-scaffold th {
-background-color: #555;
+background-color: #000;
 text-align: left;
 }
 
 .active-scaffold th a,
 .active-scaffold th p {
-font: bold 11px arial, sans-serif;
+font: auto;
 display: block;
-background-color: #555;
+background-color: #000;
 }
 
 .active-scaffold th a, .active-scaffold th a:visited {
@@ -207,8 +206,9 @@ padding: 2px 5px;
 }
 
 .active-scaffold th a:hover {
-background-color: #000;
-color: #ff8;
+background-color: #555;
+color: #fff;
+text-decoration:none;
 }
 
 .active-scaffold th.sorted {
@@ -242,15 +242,15 @@ margin-left: 5px;
    ============================= */
 
 .active-scaffold tr.record {
-  background-color: #E6F2FF;
+  background-color: #D5EACF;
 }
 .active-scaffold tr.record td {
 padding: 5px 4px;
-color: #333;
+color: #000;
 font-family: Verdana, sans-serif;
-font-size: 11px;
-border-bottom: solid 1px #C5DBF7;
-border-left: solid 1px #C5DBF7;
+font-size: 12px;
+border-bottom: solid 1px #71C671;
+border-left: solid 1px #71C671;
 }
 
 .active-scaffold tr.record td.messages-container {
@@ -261,7 +261,7 @@ padding: 0px;
 background-color: #fff;
 }
 .active-scaffold tr.even-record td {
-border-left-color: #ddd;
+border-left-color: #71C671;
 }
 
 .active-scaffold tr.record td.sorted {
@@ -306,7 +306,7 @@ padding: 0 2px;
 
 .active-scaffold tr.record td.actions a,
 .active-scaffold tr.record td.actions div {
-font: bold 11px verdana, sans-serif;
+font: normal 12px verdana, sans-serif;
 letter-spacing: -1px;
 padding: 2px;
 margin: 0 2px;
@@ -320,7 +320,7 @@ opacity: 0.5;
 }
 
 .active-scaffold .actions .action_group div:hover {
-background-color: #ff8;
+background-color: auto;
 }
 
 .active-scaffold .actions .action_group {
@@ -392,9 +392,9 @@ display: block;
    ============================= */
 
 .active-scaffold .view {
-background-color: #DAFFCD;
+background-color: #D5EACF;
 padding: 4px;
-border: solid 1px #7FcF00;
+border: solid 1px #71C671;
 }
 
 .active-scaffold tbody.records td.inline-adapter-cell .view {
@@ -492,13 +492,13 @@ font-size: 11px;
 .active-scaffold-calculations td {
 background-color: #eee;
 border-top: 2px solid #005CB8;
-font: bold 12px arial, sans-serif;
+font: bold 12px verdana, sans-serif;
 }
 
 .active-scaffold .active-scaffold-footer {
 padding: 3px 0px 2px 0px;
 border-bottom: none;
-font: bold 12px arial, sans-serif;
+font: bold 12px verdana, sans-serif;
 }
 
 .blue-theme .active-scaffold-footer {
@@ -521,7 +521,7 @@ text-decoration: none;
 letter-spacing: 0;
 padding: 0 2px;
 margin: 0 -2px;
-font: bold 12px arial, sans-serif;
+font: bold 12px verdana, sans-serif;
 }
 
 .blue-theme .active-scaffold-footer a,
@@ -668,14 +668,14 @@ margin-left: 5px;
 width: 12em;
 float: left;
 clear: left;
-font: normal 11px verdana, sans-serif;
-color: #555;
+font: auto;
+color: #000;
 line-height: 16px;
 }
 
 .active-scaffold .show-view dd {
 float: left;
-font: bold 14px arial;
+font: bold 14px verdana;
 padding-left: 5px;
 margin-bottom: 5px;
 }
@@ -700,14 +700,21 @@ clear: both;
 border: none;
 }
 
+.active-scaffold h2 {
+padding: 2px 0px;
+margin: 0;
+color: #000;
+font: bold 160% verdana, sans-serif;
+}
+
 .active-scaffold h4,
 .active-scaffold h5 {
 padding: 2px;
 margin: 0;
 text-transform: none;
-color: #1F7F00;
+color: #000;
 letter-spacing: -1px;
-font: bold 16px arial;
+font: bold 16px verdana;
 }
 
 .active-scaffold h5 {
@@ -731,7 +738,7 @@ clear: both;
 
 .active-scaffold a.as_cancel,
 .active-scaffold p.form-footer a {
-font: bold 14px arial, sans-serif;
+font: bold 14px verdana, sans-serif;
 letter-spacing: 0;
 }
 
@@ -743,8 +750,8 @@ clear: both;
 }
 
 .active-scaffold label {
-font: normal 11px verdana, sans-serif;
-color: #555;
+font: normal 12px verdana, sans-serif;
+color: #000;
 }
 
 .active-scaffold li.form-element dt {
@@ -779,13 +786,13 @@ font-weight: bold;
 
 .active-scaffold label.example {
 font-size: 11px;
-font-family: arial;
+font-family: verdana;
 color: #888;
 }
 
 .active-scaffold input.text-input,
 .active-scaffold select {
-font: bold 16px arial;
+font: bold 16px verdana;
 letter-spacing: -1px;
 border: solid 1px #1F7F00;
 }
@@ -940,13 +947,13 @@ display: none;
 }
 
 .active-scaffold .sub-form .association-record a {
-font: bold 12px arial;
+font: bold 12px verdana;
 }
 
 .active-scaffold .sub-form input.text-input,
 .active-scaffold .sub-form select {
 letter-spacing: 0;
-font: bold 12px arial;
+font: bold 12px verdana;
 }
 
 .active-scaffold .sub-form .footer-wrapper {
@@ -972,4 +979,8 @@ font-size: 100%;
 
 .active-scaffold-found {
   float:left;
+}
+
+.active-scaffold th.actions {
+  display: none'
 }
