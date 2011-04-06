@@ -1,17 +1,21 @@
 class CleanupFgo < ActiveRecord::Migration
   def self.up
     change_table "fgo" do |t|
+      if ActiveRecord::Base.connection.adapter_name != 'MSSQL'
+        t.rename "Name", "name"
+      end
       t.rename "FGO", "code"
       t.rename "Type", "type"
       t.rename "Abbrev", "abbreviation"
-      t.rename "Name", "name"
     end
 
     change_table "fgou" do |t|
+      if ActiveRecord::Base.connection.adapter_name != 'MSSQL'
+        t.rename "Name", "name"
+      end
       t.rename "FGO", "fgo_code"
       t.rename "FGOU", "code"
       t.rename "Abbrev", "abbreviation"
-      t.rename "Name", "name"
     end
 
     rename_table :fgo, :organizations
@@ -23,17 +27,21 @@ class CleanupFgo < ActiveRecord::Migration
     rename_table :organizations, :fgo
 
     change_table "fgou" do |t|
+      if ActiveRecord::Base.connection.adapter_name != 'MSSQL'
+        t.rename "name", "Name"
+      end
       t.rename "fgo_code", "FGO"
       t.rename "code", "FGOU"
       t.rename "abbreviation", "Abbrev"
-      t.rename "name", "Name"
     end
 
     change_table "fgo" do |t|
+      if ActiveRecord::Base.connection.adapter_name != 'MSSQL'
+        t.rename "name", "Name"
+      end
       t.rename "code", "FGO"
       t.rename "type", "Type"
       t.rename "abbreviation", "Abbrev"
-      t.rename "name", "Name"
     end
   end
 end

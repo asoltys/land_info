@@ -3,8 +3,10 @@ class CleanupDwfFiles < ActiveRecord::Migration
     rename_table :dwf_file, :dwf_files
 
     change_table :dwf_files do |t|
+      if ActiveRecord::Base.connection.adapter_name != 'MSSQL'
+        t.rename "Plan", "plan"
+      end
       t.rename "DWF_FILE", "file"
-      t.rename "Plan", "plan"
       t.rename "PDF_FILE", "pdf"
     end
   end
