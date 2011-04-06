@@ -36,7 +36,7 @@ color: #999;
 }
 
 .active-scaffold a:hover, .active-scaffold div.hover, .active-scaffold td span.hover {
-background-color: auto;
+background-color: inherit;
 text-decoration:underline;
 }
 
@@ -59,7 +59,7 @@ noscript.active-scaffold {
 border-left: solid 5px #f66;
 background-color: #fbb;
 font-size: 11px;
-font-weight: bold;
+font-weight: inherit;
 padding: 5px 20px 5px 5px;
 color: #333;
 }
@@ -79,7 +79,7 @@ background-color: #005CB8;
 padding: 2px 0px;
 margin: 0;
 color: #000;
-font: bold 160% verdana, sans-serif;
+font: 160% verdana, sans-serif;
 }
 
 .blue-theme .active-scaffold-header h2 {
@@ -90,11 +90,11 @@ padding: 2px 5px 4px 5px;
 .active-scaffold-header div.actions a,
 .active-scaffold-header div.actions {
 float: right;
-font: bold 14px verdana;
-letter-spacing: -1px;
+font: inherit;
+letter-spacing: inherit;
 text-decoration: none;
-padding: 1px 2px;
-white-space: nowrap;
+padding: inherit;
+white-space: inherit;
 margin-left: 5px;
 background-position: 1px 50%;
 background-repeat: no-repeat;
@@ -190,7 +190,7 @@ text-align: left;
 
 .active-scaffold th a,
 .active-scaffold th p {
-font: auto;
+font: inherit;
 display: block;
 background-color: #000;
 }
@@ -320,7 +320,7 @@ opacity: 0.5;
 }
 
 .active-scaffold .actions .action_group div:hover {
-background-color: auto;
+background-color: inherit;
 }
 
 .active-scaffold .actions .action_group {
@@ -429,7 +429,7 @@ margin-right: 15px;
 
 .active-scaffold .active-scaffold .active-scaffold-header h2 {
 font-size: 12px;
-font-weight: bold;
+font-weight: inherit;
 }
 
 .blue-theme .active-scaffold .active-scaffold-header h2,
@@ -444,7 +444,7 @@ right: 0px;
 
 .active-scaffold .active-scaffold .active-scaffold-header div.actions a,
 .active-scaffold .active-scaffold .active-scaffold-header div.actions div {
-font: bold 11px verdana, sans-serif;
+font: 11px verdana, sans-serif;
 }
 
 .blue-theme .active-scaffold .active-scaffold-header div.actions a,
@@ -492,13 +492,13 @@ font-size: 11px;
 .active-scaffold-calculations td {
 background-color: #eee;
 border-top: 2px solid #005CB8;
-font: bold 12px verdana, sans-serif;
+font: 12px verdana, sans-serif;
 }
 
 .active-scaffold .active-scaffold-footer {
 padding: 3px 0px 2px 0px;
 border-bottom: none;
-font: bold 12px verdana, sans-serif;
+font: 12px verdana, sans-serif;
 }
 
 .blue-theme .active-scaffold-footer {
@@ -521,7 +521,7 @@ text-decoration: none;
 letter-spacing: 0;
 padding: 0 2px;
 margin: 0 -2px;
-font: bold 12px verdana, sans-serif;
+font: 12px verdana,sans-serif;
 }
 
 .blue-theme .active-scaffold-footer a,
@@ -564,7 +564,7 @@ color: #666;
 
 .active-scaffold .message {
 font-size: 11px;
-font-weight: bold;
+font-weight: auto;
 padding: 5px 20px 5px 5px;
 color: #333;
 position: relative;
@@ -577,7 +577,7 @@ position: absolute;
 right: 10px;
 top: 4px;
 padding: 0;
-font: bold 11px verdana, sans-serif;
+font: 11px verdana, sans-serif;
 letter-spacing: -1px;
 }
 
@@ -637,7 +637,7 @@ margin: 0;
 }
 
 .active-scaffold .errorExplanation ul li {
-font: bold 11px verdana;
+font: 11px verdana;
 letter-spacing: -1px;
 margin: 0;
 padding: 0;
@@ -668,14 +668,14 @@ margin-left: 5px;
 width: 12em;
 float: left;
 clear: left;
-font: auto;
+font: inherit;
 color: #000;
 line-height: 16px;
 }
 
 .active-scaffold .show-view dd {
 float: left;
-font: bold 14px verdana;
+font: 14px verdana;
 padding-left: 5px;
 margin-bottom: 5px;
 }
@@ -684,7 +684,7 @@ margin-bottom: 5px;
    ============================== */
 
 .active-scaffold .submit {
-font-weight: bold;
+font-weight: inherit;
 font-size: 14px;
 font-family: Arial, sans-serif;
 letter-spacing: 0;
@@ -704,7 +704,7 @@ border: none;
 padding: 2px 0px;
 margin: 0;
 color: #000;
-font: bold 160% verdana, sans-serif;
+font: 160% verdana, sans-serif;
 }
 
 .active-scaffold h4,
@@ -714,7 +714,7 @@ margin: 0;
 text-transform: none;
 color: #000;
 letter-spacing: -1px;
-font: bold 16px verdana;
+font: 16px verdana;
 }
 
 .active-scaffold h5 {
@@ -738,7 +738,7 @@ clear: both;
 
 .active-scaffold a.as_cancel,
 .active-scaffold p.form-footer a {
-font: bold 14px verdana, sans-serif;
+font: 14px verdana, sans-serif;
 letter-spacing: 0;
 }
 
@@ -781,7 +781,7 @@ margin-left: 5px;
 }
 
 .active-scaffold .required label {
-font-weight: bold;
+font-weight: inherit;
 }
 
 .active-scaffold label.example {
@@ -792,7 +792,7 @@ color: #888;
 
 .active-scaffold input.text-input,
 .active-scaffold select {
-font: bold 16px verdana;
+font: 16px verdana;
 letter-spacing: -1px;
 border: solid 1px #1F7F00;
 }
@@ -933,7 +933,7 @@ clear: left;
 }
 
 .active-scaffold .sub-form .association-record a.destroy {
-font-weight: bold;
+font-weight: inherit;
 display: block;
 height: 16px;
 padding: 0;
@@ -947,13 +947,13 @@ display: none;
 }
 
 .active-scaffold .sub-form .association-record a {
-font: bold 12px verdana;
+font: 12px verdana;
 }
 
 .active-scaffold .sub-form input.text-input,
 .active-scaffold .sub-form select {
 letter-spacing: 0;
-font: bold 12px verdana;
+font: 12px verdana;
 }
 
 .active-scaffold .sub-form .footer-wrapper {
@@ -968,7 +968,7 @@ padding: 3px 5px;
 
 .active-scaffold .sub-form .footer select,
 .active-scaffold .sub-form .footer input {
-font-weight: bold;
+font-weight: inherit;
 font-size: 12px;
 padding: 0;
 }
@@ -979,8 +979,4 @@ font-size: 100%;
 
 .active-scaffold-found {
   float:left;
-}
-
-.active-scaffold th.actions {
-  display: none'
 }
