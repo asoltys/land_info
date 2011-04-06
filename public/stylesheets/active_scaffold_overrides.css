@@ -7,8 +7,6 @@
  For details, see the ActiveScaffold web site: http://www.activescaffold.com/
 */
 
-a:active, a:focus {cursor: pointer;}
-
 .active-scaffold form,
 .active-scaffold table,
 .active-scaffold p,
@@ -38,6 +36,7 @@ color: #999;
 }
 
 .active-scaffold a:hover, .active-scaffold div.hover, .active-scaffold td span.hover {
+background-color: auto;
 text-decoration:underline;
 }
 
@@ -191,6 +190,7 @@ text-align: left;
 
 .active-scaffold th a,
 .active-scaffold th p {
+font: auto;
 display: block;
 background-color: #000;
 }
@@ -320,7 +320,7 @@ opacity: 0.5;
 }
 
 .active-scaffold .actions .action_group div:hover {
-
+background-color: auto;
 }
 
 .active-scaffold .actions .action_group {
@@ -668,6 +668,7 @@ margin-left: 5px;
 width: 12em;
 float: left;
 clear: left;
+font: auto;
 color: #000;
 line-height: 16px;
 }
@@ -978,4 +979,8 @@ font-size: 100%;
 
 .active-scaffold-found {
   float:left;
+}
+
+.active-scaffold th.actions {
+  display: none'
 }
