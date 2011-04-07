@@ -271,6 +271,10 @@ font: normal 11px verdana, sans-serif;
 color: #000;
 }
 
+.active-scaffold li.form-element dl {
+margin: 0;
+}
+
 .active-scaffold label.example {
 font-size: 11px;
 font-family: Verdana,Arial,Helvetica,sans-serif;
