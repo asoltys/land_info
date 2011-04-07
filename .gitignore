@@ -7,3 +7,4 @@ tmp/
 public/javascripts/active_scaffold/*
 public/stylesheets/active_scaffold/*
 Gemfile.lock
+config/initializers/set_environment.rb

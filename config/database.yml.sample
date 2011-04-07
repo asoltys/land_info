@@ -1,14 +1,19 @@
-<% if defined?(JRUBY_VERSION) %>
-development:
+windowsdev:
   adapter: jdbc
-  username: 
-  password: 
+  username:
+  password:
   driver: com.microsoft.sqlserver.jdbc.SQLServerDriver
   url: jdbc:sqlserver://gtisdev.pac.pwgsc.gc.ca:1433;databaseName=land_info
-<% else %>
-development:
+linuxdev:
   adapter: mysql2
   database: land_info
-  username: 
-  password: 
-<% end %>
+  username:
+  password:
+gtisdev:
+  adapter: sqlserver
+  mode: dblib
+  dataserver: development
+  database: land_info 
+  username:
+  password:
+  timeout: 5000
