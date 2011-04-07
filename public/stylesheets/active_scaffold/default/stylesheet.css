@@ -745,6 +745,10 @@ font: normal 11px verdana, sans-serif;
 color: #555;
 }
 
+.active-scaffold li.form-element dl {
+margin: 0;
+}
+
 .active-scaffold li.form-element dt {
 float: left;
 width: 12em;
