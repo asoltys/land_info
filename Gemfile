@@ -4,7 +4,7 @@ gem 'rails', '3.0.5'
 gem "paperclip", "2.3.8"
 gem 'active_scaffold_vho', :git => 'git://github.com/asoltys/active_scaffold.git'
 
-platforms :mswin do
+platforms :jruby do
   gem 'activerecord-jdbc-adapter'
 end
 
