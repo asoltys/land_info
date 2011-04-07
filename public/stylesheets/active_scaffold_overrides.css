@@ -36,7 +36,7 @@ color: #999;
 }
 
 .active-scaffold a:hover, .active-scaffold div.hover, .active-scaffold td span.hover {
-background-color: inherit;
+background-color: transparent;
 text-decoration:underline;
 }
 
