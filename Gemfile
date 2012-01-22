@@ -1,8 +1,8 @@
 source 'http://rubygems.org'
 
-gem 'rails', '3.0.5'
+gem 'rails', '3.1'
 gem "paperclip", "2.3.8"
-gem 'active_scaffold_vho', :git => 'git://github.com/asoltys/active_scaffold.git'
+gem 'active_scaffold', :git => 'git://github.com/activescaffold/active_scaffold.git'
 
 if defined?(JRUBY_VERSION)
   gem 'activerecord-jdbc-adapter'
