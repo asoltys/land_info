@@ -1,4 +1,6 @@
 LandInfo::Application.routes.draw do
+  devise_for :users
+
   resources :survey_files do as_routes end
   resources :plan_files do as_routes end
   resources :marine_files do as_routes end
