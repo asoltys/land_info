@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120131162434) do
+ActiveRecord::Schema.define(:version => 20120224051648) do
 
   create_table "drawings", :force => true do |t|
     t.string   "tiff_file"
@@ -182,7 +182,7 @@ ActiveRecord::Schema.define(:version => 20120131162434) do
     t.string  "bulk_number"
     t.string  "finance_code"
     t.string  "department_abbreviation"
-    t.string  "active"
+    t.boolean "active"
     t.string  "remark"
     t.string  "location_second"
     t.string  "department_contact"
