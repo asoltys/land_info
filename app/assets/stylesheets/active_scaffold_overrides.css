@@ -7,15 +7,6 @@
  For details, see the ActiveScaffold web site: http://www.activescaffold.com/
 */
 
-.active-scaffold form,
-.active-scaffold table,
-.active-scaffold p,
-.active-scaffold div,
-.active-scaffold fieldset {
-margin: 0;
-padding: 0;
-}
-
 .active-scaffold {
 margin: 0 0 5px 0;
 }
@@ -69,6 +60,7 @@ color: #333;
 
 .active-scaffold-header {
 position: relative;
+margin-bottom: 10px;
 }
 
 .blue-theme .active-scaffold-header {
