@@ -29,36 +29,9 @@
 	<meta name="dcterms.language" title="ISO639-2" content="eng" />
 	<!-- Meta-data ends / Fin des métadonnées -->
 
-  <!-- WET scripts/CSS begin / Début des scripts/CSS de la BOEW --><!--[if IE 6]><![endif]-->
-	<%= stylesheet_link_tag 'base', :media => 'screen,print' %>
-	<!--[if IE 8]><%= stylesheet_link_tag 'base-ie8', :media => 'screen,print' %><![endif]-->
-	<!--[if IE 7]><%= stylesheet_link_tag 'base-ie7', :media => 'screen,print' %><![endif]-->
-	<!--[if lte IE 6]><%= stylesheet_link_tag 'base-ie6', :media => 'screen,print' %><![endif]-->
-	<%= stylesheet_link_tag 'util', :media => 'screen,print' %>
-  <!-- clf2-nsi2 theme begins / Début du thème clf2-nsi2 -->
-	<%= stylesheet_link_tag 'theme-clf2-nsi2', :media => 'screen,print' %>
-	<!--[if IE 7]><%= stylesheet_link_tag 'theme-clf2-nsi2-ie7', :media => 'screen,print' %><![endif]-->
-	<!--[if lte IE 6]><%= stylesheet_link_tag 'theme-clf2-nsi2-ie6', :media => 'screen,print' %><![endif]-->
-  <!-- clf2-nsi2 theme ends / Fin du thème clf2-nsi2 -->
-	<!-- WET scripts/CSS end / Fin des scripts/CSS de la BOEW -->
-
-	<!-- Progressive enhancement begins / Début de l'amélioration progressive -->
-	<%= javascript_include_tag "jquery.min.js" %>
-  <script id="progressive" src="/javascripts/pe-ap.js"></script>
-  <script type="text/javascript">
-	/* <![CDATA[ */
-		var params = {
-		};
-		PE.progress(params);
-	/* ]]> */
-	</script>
-	<!-- Progressive enhancement ends / Fin de l'amélioration progressive -->
-	
-	<!-- WET print CSS begins / Début du CSS de la BOEW pour l'impression -->
-	<%= stylesheet_link_tag 'pf-if', :media => 'print' %>
-	<!-- WET print CSS ends / Fin du CSS de la BOEW pour l'impression -->
-
-	<%= stylesheet_link_tag 'active_scaffold_overrides' %>
+  <%= stylesheet_link_tag    "application" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
 </head>
 <body>
 <!-- Two column layout begins / Début de la mise en page de deux colonnes -->
