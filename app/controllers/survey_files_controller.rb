@@ -22,7 +22,6 @@ class SurveyFilesController < ApplicationController
 		columns[:start_date].description = "(MM/DD/YYYY)"
 		columns[:completion_date].description = "(MM/DD/YYYY)"
 
-    config.actions << :field_search
     config.actions.exclude :nested
 
     config.list.sorting = { :survey_file => :desc }
