@@ -4,4 +4,4 @@
 # If you change this key, all old signed cookies will become invalid!
 # Make sure the secret is at least 30 characters and all random,
 # no regular words or you'll be exposed to dictionary attacks.
-LandInfo::Application.config.secret_token = 'f7d7793d4674a0bc2ebce2b380c459cd0eeda08e6033af0eb16247d3503d6261f99dfe3290c12504b58cbd1c4678ae1d7a546147a9100604a90ebd9027baa5fd'
+LandInfo::Application.config.secret_token = '32e2452da9683cb2acfc2ce223fa5fc93c7f439d43df4a3513a0780af967e2a1a2e16c1e3d4e94bae16601b39b62db638cba079e4a521cb7e64ba61d7b30912e'
