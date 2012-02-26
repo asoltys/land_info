@@ -4,5 +4,6 @@ class PlanFilesController < ApplicationController
     config.list.columns = [:plan_number, :location, :size, :title, :tiff_file]
     config.columns[:plan_number].set_link(:edit)
     config.update.columns.exclude [:location, :drawings]
+    config.list.always_show_search = true
   end
 end 
