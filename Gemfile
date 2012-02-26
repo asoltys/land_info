@@ -6,4 +6,6 @@ gem 'active_scaffold', :git => 'git://github.com/asoltys/active_scaffold.git'
 gem 'devise'
 gem 'thin'
 gem 'mysql2'
-
+gem 'sass'
+gem 'coffee-script'
+gem 'uglifier'
