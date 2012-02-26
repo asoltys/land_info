@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120225003229) do
+ActiveRecord::Schema.define(:version => 20120225061612) do
 
   create_table "drawings", :force => true do |t|
     t.string   "tiff_file"
@@ -177,7 +177,7 @@ ActiveRecord::Schema.define(:version => 20120225003229) do
     t.date    "completion_date"
     t.string  "project_manager"
     t.string  "department_section"
-    t.string  "description"
+    t.text    "description"
     t.string  "ssa_amount"
     t.string  "bulk_number"
     t.string  "finance_code"
