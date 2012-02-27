@@ -4,7 +4,9 @@ class SurveyFilesController < ApplicationController
   active_scaffold :survey_file do |config|
 		config.label = "Survey Files"
 
+    config.columns[:location].search_sql = 'locations.name'
     config.list.columns = [:survey_file, :description, :location]
+    config.search.columns = [:survey_file, :description, :location]
 
     config.columns = [
       :survey_file,
