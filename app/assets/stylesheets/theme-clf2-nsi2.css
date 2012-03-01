@@ -64,7 +64,7 @@ Conditions régissant l'utilisation : http://tbs-sct.ircan.gc.ca/projects/gcwwwt
 .cn-left-col-default li a, .cn-right-col-default li a, #cn-search-box a {display: block; padding: 3px 5px 3px 10px;}
 .cn-left-col-default li a:link, .cn-right-col-default li a:link, #cn-search-box a:link {color: #000; text-decoration: none;}
 .cn-left-col-default li a:visited, .cn-right-col-default li a:visited, #cn-search-box a:visited {color: #000; text-decoration: none;}
-.cn-left-col-default li a:hover, .cn-left-col-default li a:focus, .cn-left-col-default li a:active, .cn-right-col-default li a:hover, .cn-right-col-default li a:focus, .cn-right-col-default li a:active, #cn-search-box a:hover, #cn-search-box a:focus, #cn-search-box a:active {color: #000; text-decoration:underline; outline: none;}
+.cn-left-col-default li a:hover, .cn-left-col-default li a:focus, .cn-left-col-default li a:active, .cn-right-col-default li a:hover, .cn-right-col-default li a:focus, .cn-right-col-default li a:active, #cn-search-box a:hover, #cn-search-box a:focus, #cn-search-box a:active {color: #000; text-decoration:underline; outline: none; background: white; }
 .cn-left-col-default ul, .cn-right-col-default ul {list-style-type: none; margin-top: 0; margin-bottom: 0;}
 .cn-left-col-default ul ul, .cn-right-col-default ul ul {list-style-type: disc;}
 .cn-left-col-default li, .cn-right-col-default li {margin-left: -40px;}
