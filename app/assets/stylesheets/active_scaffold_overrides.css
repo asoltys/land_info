@@ -18,17 +18,18 @@ border-collapse: separate;
 
 .active-scaffold a,
 .active-scaffold a:visited {
-color: #06c;
+color: #06C;
 text-decoration: none;
 }
 
 .active-scaffold a.disabled {
-color: #999;
+color: #06C;
 }
 
 .active-scaffold a:hover, .active-scaffold div.hover, .active-scaffold td span.hover {
 background-color: inherit;
-text-decoration:underline;
+color: #06C;
+text-decoration:none;
 }
 
 .active-scaffold div.actions a img,
@@ -191,7 +192,7 @@ background-color: #000;
 }
 
 .active-scaffold th a, .active-scaffold th a:visited {
-color: #fff;
+color: #06C;
 padding: 2px 2px 2px 5px;
 }
 
