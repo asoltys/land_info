@@ -4,9 +4,8 @@ class SurveyFilesController < ApplicationController
   active_scaffold :survey_file do |config|
 		config.label = "Survey Files"
 
-    config.columns[:location].search_sql = 'locations.name'
-    config.list.columns = [:survey_file, :description, :location]
-    config.search.columns = [:survey_file, :description, :location]
+    config.actions << :nested
+    config.actions << :field_search
 
     config.columns = [
       :survey_file,
@@ -19,12 +18,18 @@ class SurveyFilesController < ApplicationController
       :active
     ]
 
+    config.search.columns = config.list.columns = [
+      :survey_file, 
+      :description, 
+      :location, 
+      :plan_files
+    ]
+
     config.columns[:survey_file].set_link(:edit)
+    config.columns[:location].search_sql = 'locations.name'
 
 		columns[:start_date].description = "(MM/DD/YYYY)"
 		columns[:completion_date].description = "(MM/DD/YYYY)"
-
-    config.actions.exclude :nested
 
     config.list.sorting = { :survey_file => :desc }
     config.list.always_show_search = true
