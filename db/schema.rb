@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120225061612) do
+ActiveRecord::Schema.define(:version => 20120227050224) do
 
   create_table "drawings", :force => true do |t|
     t.string   "tiff_file"
@@ -155,6 +155,7 @@ ActiveRecord::Schema.define(:version => 20120225061612) do
     t.string  "crown_land_plan_number"
     t.string  "clsr_plan"
     t.integer "location_id"
+    t.integer "survey_file_id"
   end
 
   create_table "provinces", :force => true do |t|
