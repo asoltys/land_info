@@ -181,6 +181,7 @@ text-align: right;
 
 .active-scaffold th {
 background-color: #000;
+color: #fff;
 text-align: left;
 }
 
@@ -192,7 +193,7 @@ background-color: #000;
 }
 
 .active-scaffold th a, .active-scaffold th a:visited {
-color: #06C;
+color: #fff;
 padding: 2px 2px 2px 5px;
 }
 
@@ -202,7 +203,7 @@ padding: 2px 5px;
 }
 
 .active-scaffold th a:hover {
-background-color: #555;
+background-color: #000;
 color: #fff;
 text-decoration:none;
 }
