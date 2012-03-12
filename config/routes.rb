@@ -10,6 +10,7 @@ LandInfo::Application.routes.draw do
   resources :locations do as_routes end
   resources :regions do as_routes end
   resources :surveyors do as_routes end
+  resources :drawings do as_routes end
 
   root :to => "survey_files#index"
 	match ':action', :to => "application"
