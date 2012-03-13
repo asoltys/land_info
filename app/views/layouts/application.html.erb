@@ -1,105 +1,164 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="utf-8" />
-	<link rel="schema.dcterms" href="http://purl.org/dc/terms/" />
+<meta charset="utf-8" />
+<!-- Web Experience Toolkit (WET) / Boîte à outils de l'expérience Web (BOEW)
+www.tbs.gc.ca/ws-nw/wet-boew/terms / www.sct.gc.ca/ws-nw/wet-boew/conditions -->
+<title>Land Info Database</title>
 
-	<!-- Web Experience Toolkit (WET) / Boîte à outils de l'expérience Web (BOEW)
-	Terms and conditions of use: http://tbs-sct.ircan.gc.ca/projects/gcwwwtemplates/wiki/Terms
-	Conditions régissant l'utilisation : http://tbs-sct.ircan.gc.ca/projects/gcwwwtemplates/wiki/Conditions
-	-->
+<link rel="shortcut icon" href="fip-pcim/images/favicon.ico" />
+<meta name="dcterms.description" content="English description / Description en anglais" />
+<meta name="description" content="English description / Description en anglais" />
+<meta name="keywords" content="English keywords / Mots-clés en anglais" />
+<meta name="dcterms.creator" content="English name of the content author / Nom en anglais de l'auteur du contenu" />
+<meta name="dcterms.title" content="English title / Titre en anglais" />
+<meta name="dcterms.issued" title="W3CDTF" content="Date published (YYYY-MM-DD) / Date de publication (AAAA-MM-JJ)" />
+<meta name="dcterms.modified" title="W3CDTF" content="Date modified (YYYY-MM-DD) / Date de modification (AAAA-MM-JJ)" />
+<meta name="dcterms.subject" title="scheme" content="English subject terms / Termes de sujet en anglais" />
+<meta name="dcterms.language" title="ISO639-2" content="eng" />
 
-	<!-- Title begins / Début du titre -->
-	<title>Land Info Database</title>
-	<!-- Title ends / Fin du titre -->
-	
-	<!-- Favicon (optional) begins / Début du favicon (optionnel) -->
-	<!-- <link rel="shortcut icon" href="images/favicon.ico" /> -->
-	<!-- Favicon (optional) ends / Find du favicon (optionnel) -->
-	
-	<!-- Meta-data begins / Début des métadonnées -->
-	<meta name="dcterms.description" content="English description / Description en anglais" />
-	<meta name="description" content="English description / Description en anglais" />
-	<meta name="keywords" content="English keywords / Mots-clés en anglais" />
-	<meta name="dcterms.creator" title="Titles of Federal Organizations" content="English name of the content author / Nom en anglais de l'auteur du contenu" />
-	<meta name="dcterms.title" content="English title / Titre en anglais" />
-	<meta name="dcterms.issued" title="W3CDTF" content="Date published (YYYY-MM-DD) / Date de publication (AAAA-MM-JJ)" />
-	<meta name="dcterms.modified" title="W3CDTF" content="Date modified (YYYY-MM-DD) / Date de modification (AAAA-MM-JJ)" />
-	<meta name="dcterms.subject" title="scheme" content="English subject terms / Termes de sujet en anglais" />
-	<meta name="dcterms.language" title="ISO639-2" content="eng" />
-	<!-- Meta-data ends / Fin des métadonnées -->
+<link href="../js/support/menubar/style.css" rel="stylesheet" />
+<link href="fip-pcim/css/fip-pcim.css" rel="stylesheet" />
+<!--[if IE 8]><link href="fip-pcim/css/fip-pcim-ie8.css" rel="stylesheet" /><![endif]-->
+<!--[if IE 7]><link href="fip-pcim/css/fip-pcim-ie7.css" rel="stylesheet" /><![endif]-->
+<!--[if lte IE 6]><link href="fip-pcim/css/fip-pcim-ie6.css" rel="stylesheet" /><![endif]-->
+<!-- CSSEnd -->
 
-  <%= stylesheet_link_tag    "application" %>
-  <%= javascript_include_tag "application" %>
-  <%= csrf_meta_tags %>
+<%= stylesheet_link_tag    "application" %>
+<%= javascript_include_tag "application" %>
+<%= csrf_meta_tags %>
+
+<script src="../js/lib/jquery.min.js"></script>
+<script src="../js/pe-ap.js" id="progressive"></script>
+<script>
+/* <![CDATA[ */
+var params = {
+menubar:""
+};
+PE.progress(params);
+/* ]]> */
+</script>
+
+<!-- CustomScriptsCSSStart -->
+<!-- CustomScriptsCSSEnd -->
 </head>
-<body>
-<!-- Two column layout begins / Début de la mise en page de deux colonnes -->
-<div id="cn-body-inner-2col">
-	<!-- Header begins / Début de l'en-tête -->
-	<div id="cn-head"><div id="cn-head-inner">
 
-	</div></div>
-	<!-- Header ends / Fin de l'en-tête -->
-
-	<div id="cn-cols">
-	<!-- Main content begins / Début du contenu principal --> 
-	<div id="cn-centre-col-gap"></div>
-	<div id="cn-centre-col" role="main"><div id="cn-centre-col-inner">
-	<section>
-    <%= yield %>
-	</section>
-	</div></div>
-	<!-- Main content ends / Fin du contenu principal --> 
-
-	<!-- Primary navigation (left column) begins / Début de la navigation principale (colonne gauche) -->
-	
-	<div id="cn-left-col"><div id="cn-left-col-inner">
-	<section>
-		<h2 id="cn-nav">Primary navigation (left column)</h2>
-		<div class="cn-left-col-default">
-		<nav role="navigation">
-<!-- clf2-nsi2 theme begins / Début du thème clf2-nsi2 -->
-			<section>
-				<h3>Land Database</h3>
-				<ul>
-					<li><a href="/survey_files">Survey Files</a></li>
-					<li><a href="/plan_files">Plan Files</a></li>
-					<li><a href="/marine_files">Marine Files</a></li>
-					<li><a href="/locations">Locations</a></li>
-          <li><a href="/surveyors">Surveyors</a></li>
-				</ul>		
-			</section>
-<!-- clf2-nsi2 theme ends / Fin du thème clf2-nsi2 -->
-		</nav>
-		</div>
-	</section>
-	</div></div>
-	<!-- Primary navigation (left column) ends / Fin de la navigation principale (colonne gauche) -->
-	</div>
-
-	<!-- Footer begins / Début du pied de page --> 
-	<div id="cn-foot"><div id="cn-foot-inner">
-	<footer>
-		<h2>Footer</h2>
-<!-- clf2-nsi2 theme begins / Début du thème clf2-nsi2 -->
-		<div id="cn-in-pd">			
-			<dl id="cn-doc-dates" role="contentinfo">
-				<dt>Date Modified:</dt>
-				<dd><span><time>2010-08-09</time></span></dd>
-			</dl>
-			<div id="cn-toppage-foot"><a href="#cn-tphp" title="Return to Top of Page">Top of Page</a></div>
-			<div id="cn-in-pd-links">
-				<ul>
-					<li id="cn-inotices-link"><a href="http://www.canada.gc.ca/importantnotices.html" rel="license">Important Notices</a></li>
-				</ul>
-			</div>
-		</div>
-<!-- clf2-nsi2 theme ends / Fin du thème clf2-nsi2 -->
-	</footer>
-	</div></div>
-	<!-- Footer ends / Fin du pied de page -->
+<body><div id="cn-body-inner-1col">
+<div id="cn-skip-head">
+<ul id="cn-tphp">
+<li id="cn-sh-link-1"><a href="#cn-cont">Skip to main content</a></li>
+<li id="cn-sh-link-2"><a href="#cn-nav">Skip to footer</a></li>
+</ul>
 </div>
-<!-- Two column layout ends / Fin de la mis en page de deux colonnes -->
-</body>
+
+<div id="cn-head"><div id="cn-head-inner"><header>
+<!-- HeaderStart -->
+<nav role="navigation"><div id="cn-gcnb"><h2>Government of Canada navigation bar</h2><div id="cn-gcnb-inner"><div id="fip-pcim-gcnb">
+<div id="cn-sig"><div id="cn-sig-inner"><div id="fip-pcim-sig-eng" title="Government of Canada"><img src="fip-pcim/images/sig-eng.gif" width="214" height="20" alt="Government of Canada" /></div></div></div>
+<ul>
+<li id="cn-gcnb1"><a rel="external" href="http://www.canada.gc.ca/home.html">Canada.gc.ca</a></li>
+<li id="cn-gcnb2"><a rel="external" href="http://www.servicecanada.gc.ca/eng/home.shtml">Services</a></li>
+<li id="cn-gcnb3"><a rel="external" href="http://www.canada.gc.ca/depts/major/depind-eng.html">Departments</a></li>
+<li id="cn-gcnb-lang"><a href="1col-hsitenavbar-theme-gcwu-fegc-fra.html" lang="fr">Français</a></li>
+</ul>
+</div></div></div></nav>
+
+<div id="cn-banner" role="banner"><div id="cn-banner-inner">
+<div id="cn-wmms"><div id="cn-wmms-inner"><div id="fip-pcim-wmms" title="Symbol of the Government of Canada"><img src="fip-pcim/images/wmms.gif" width="126" height="30"  alt="Symbol of the Government of Canada" /></div></div></div>
+<div id="cn-site-title"><p id="cn-site-title-inner"><a href="home-accueil-hsitenavbar-theme-gcwu-fegc-eng.html">Site title</a></p></div>
+
+<section role="search"><div id="cn-search-box"><h2>Search</h2>
+<form action="#" method="post"><div id="cn-search-box-inner">
+<label for="cn-search">Search website</label><input id="cn-search" name="cn-search" type="text" value="" size="27" maxlength="150" />
+<input id="cn-search-submit" name="cn-search-submit" type="submit" value="Search" />
+</div></form>
+</div></section>
+</div></div>
+
+<nav role="navigation">
+<div id="cn-psnb"><h2>Site navigation bar</h2><div id="cn-psnb-inner"><div class="wet-boew-menubar"><div>
+<ul class="mb-menu">
+<li><div><a href="/survey_files">Survey Files</a></div></li>
+<li><div><a href="/plan_files">Plan Files</a></div></li>
+<li><div><a href="/marine_files">Marine Files</a></div></li>
+<li><div><a href="/locations">Locations</a></div></li>
+<li><div><a href="/surveyors">Surveyors</a></div></li>
+</ul>
+</div></div></div></div>
+
+<div id="cn-bc"><h2>Breadcrumb trail</h2><div id="cn-bc-inner">
+<ol>
+<li><a href="home-accueil-hsitenavbar-theme-gcwu-fegc-eng.html">Home</a></li>
+<li><a href="section2-eng.html">Section 2</a></li>
+<li>1 column - Horizontal site navigation bar - GC Web Usability theme</li>
+</ol></div></div>
+</nav>
+<!-- HeaderEnd -->
+</header></div></div>
+
+<div id="cn-cols"><div id="cn-cols-inner" class="equalize">
+<div id="cn-centre-col" role="main"><div id="cn-centre-col-inner">
+<!-- MainContentStart -->
+<%= yield %>
+<dl id="cn-doc-dates" role="contentinfo">
+<dt>Date modified:</dt><dd><span><time pubdate="pubdate">2011-10-31</time></span></dd>
+</dl>
+<div class="clear"></div>
+<!-- MainContentEnd -->
+</div></div>
+</div></div>
+
+<div id="cn-foot"><div id="cn-foot-inner"><footer><h2 id="cn-nav">Footer</h2>
+<!-- FooterStart -->
+<nav role="navigation"><div id="cn-sft"><h3>Site footer</h3><div id="cn-sft-inner">
+<div id="cn-ft-tctr">
+<ul>
+<li class="terms"><a href="#" rel="license">Terms and conditions</a></li>
+<li class="trans"><a href="#">Transparency</a></li>
+</ul>
+</div>
+<div class="clear"></div>
+<section><div class="span-2"><h4 class="col-head"><a href="#">About us</a></h4>
+<ul>
+<li><a href="#">Our Mandate</a></li>
+<li><a href="#">The Minister</a></li>
+</ul>
+</div></section>
+<section><div class="span-2"><h4 class="col-head"><a href="#">News</a></h4>
+<ul>
+<li><a href="#">News releases</a></li>
+<li><a href="#">Media advisories</a></li>
+<li><a href="#">Multimedia</a></li>
+</ul>
+</div></section>
+<section><div class="span-2"><h4 class="col-head"><a href="#">Contact us</a></h4>
+<address>
+<ul>
+<li><a href="#">Phone numbers</a></li>
+<li><a href="#">Office locations</a></li>
+</ul>
+</address>
+</div></section>
+<section><div class="span-2"><h4 class="col-head"><a href="#">Stay connected</a></h4>
+<ul>
+<li><a rel="external" href="#">YouTube</a></li>
+<li><a rel="external" href="#">Twitter</a></li>
+<li><a href="#">Feeds</a></li>
+</ul>
+</div></section>
+</div></div></nav>
+
+<nav role="navigation"><div id="cn-gcft"><h3>Government of Canada footer</h3><div id="cn-gcft-inner"><div id="fip-pcim-gcft">
+<ul>
+<li><a rel="external" href="http://healthycanadians.gc.ca/index-eng.php"><span>Health</span><br />healthycanadians.gc.ca</a></li>
+<li><a rel="external" href="http://www.voyage.gc.ca/index-eng.asp"><span>Travel</span><br />travel.gc.ca</a></li>
+<li><a rel="external" href="http://www.servicecanada.gc.ca/eng/home.shtml"><span>Service Canada</span><br />servicecanada.gc.ca</a></li>
+<li><a rel="external" href="http://www.jobbank.gc.ca/intro-eng.aspx"><span>Jobs</span><br />jobbank.gc.ca</a></li>
+<li><a rel="external" href="http://actionplan.gc.ca/eng/index.asp"><span>Economy</span><br />actionplan.gc.ca</a></li>
+<li id="cn-ft-ca"><div><a rel="external" href="http://www.canada.gc.ca/home.html">Canada.gc.ca</a></div></li>
+</ul>
+</div></div></div></nav>
+<!-- FooterEnd -->
+</footer></div></div>
+</div></body>
 </html>
