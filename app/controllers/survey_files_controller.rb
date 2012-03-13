@@ -10,7 +10,6 @@ class SurveyFilesController < ApplicationController
     config.columns = [
       :survey_file,
       :description, 
-      :location_id, 
       :edrm_number, 
       :sigma_number,
       :start_date,
