@@ -464,7 +464,7 @@ border: none;
 }
 
 .active-scaffold .active-scaffold  td {
-background-color: #ECFFE7;
+background-color: transparent;
 border-bottom: solid 1px #CDF7C5;
 border-left: solid 1px #CDF7C5;
 }
@@ -499,7 +499,6 @@ font: inherit;
 }
 
 .active-scaffold .active-scaffold-footer {
-padding: 3px 0px 2px 0px;
 border-bottom: none;
 font-weight: inherit;
 font-family: Verdana,Arial,Helvetica,sans-serif;
@@ -701,7 +700,6 @@ font-size: inherit;
 font-family: Verdana,Arial,Helvetica,sans-serif;
 letter-spacing: 0;
 margin: 0;
-margin-top: 5px;
 }
 
 .active-scaffold form p {
