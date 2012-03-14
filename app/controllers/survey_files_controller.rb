@@ -16,11 +16,17 @@ class SurveyFilesController < ApplicationController
       :active
     ]
 
-    config.search.columns = config.list.columns = [
+    config.list.columns = [
       :survey_file, 
       :description, 
-      :location, 
+      :location,
       :plan_files
+    ]
+    
+    config.search.columns = [
+      :survey_file, 
+      :description, 
+      :location
     ]
 
 
