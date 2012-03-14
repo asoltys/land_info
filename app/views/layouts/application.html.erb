@@ -47,9 +47,11 @@ www.tbs.gc.ca/ws-nw/wet-boew/terms / www.sct.gc.ca/ws-nw/wet-boew/conditions -->
 <div id="cn-wmms"><div id="cn-wmms-inner"><div id="fip-pcim-wmms" title="Symbol of the Government of Canada"><img src="/images/wmms.gif" width="126" height="30"  alt="Symbol of the Government of Canada" /></div></div></div>
 <div id="cn-site-title"><p id="cn-site-title-inner"><a href="/">Pacific Region Geomatics<br />Land Info Database</a></p></div>
 
+<% if active_scaffold_config.present? %>
 <section role="search"><div id="cn-search-box"><h2>Search</h2>
 <%= render :partial => 'search' %>
 </div></section>
+<% end %>
 </div></div>
 
 <nav role="navigation">
@@ -60,6 +62,7 @@ www.tbs.gc.ca/ws-nw/wet-boew/terms / www.sct.gc.ca/ws-nw/wet-boew/conditions -->
 <li><div><a href="/marine_files">Marine Files</a></div></li>
 <li><div><a href="/locations">Locations</a></div></li>
 <li><div><a href="/surveyors">Surveyors</a></div></li>
+<li><div><%= link_to "Logout", destroy_user_session_path, :method => :delete %></div></li>
 </ul>
 </div></div></div></div>
 </nav>
