@@ -269,27 +269,12 @@ text-align: right;
 
 /* Table :: Actions (Edit, Delete)
    ============================= */
-.active-scaffold th.actions {
+th.actions {
   display: none;
 }
 
-.active-scaffold tr.record td.actions {
-border-right: solid 1px #ccc;
-padding: 0;
-min-width: 1%;
+td.actions {
 display: none;
-}
-
-.active-scaffold tr.record td.actions table {
-float: right;
-width: auto;
-margin-right: 5px;
-}
-
-.active-scaffold tr.record td.actions table td {
-border: none;
-text-align: right;
-padding: 0 2px;
 }
 
 .active-scaffold tr.record td.actions a,
@@ -403,15 +388,6 @@ background: url(../../../images/close.png) 0 0 no-repeat;
 margin-right: 15px;
 }
 
-.active-scaffold .active-scaffold .active-scaffold-header h2 {
-font-size: inherit;
-font-weight: inherit;
-}
-
-.active-scaffold .active-scaffold .active-scaffold-footer {
-color: #444;
-}
-
 .active-scaffold .active-scaffold .active-scaffold-header div.actions {
 top: 0px;
 right: 0px;
@@ -430,8 +406,6 @@ border: none;
 
 .active-scaffold .active-scaffold  td {
 background-color: transparent;
-border-bottom: solid 1px #CDF7C5;
-border-left: solid 1px #CDF7C5;
 }
 
 .active-scaffold .active-scaffold td.inline-adapter-cell {
@@ -500,6 +474,10 @@ border-right: solid 1px #ccc;
 
 /* Messages
    ========================= */
+
+tbody.class messages {
+  display: none;
+}
 
 .active-scaffold .messages-container,
 .active-scaffold .active-scaffold .messages-container{
