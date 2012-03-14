@@ -409,9 +409,9 @@ background-color: transparent;
 }
 
 .active-scaffold .active-scaffold td.inline-adapter-cell {
-background-color: #FFFFBB;
+background-color: #fff;
 padding: 4px;
-border: solid 1px #DDDF37;
+border: solid 1px #eee;
 border-top: none;
 }
 
