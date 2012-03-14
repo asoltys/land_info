@@ -5,7 +5,6 @@ class SurveyFilesController < ApplicationController
 		config.label = "Survey Files"
 
     config.actions << :nested
-    config.actions << :field_search
 
     config.columns = [
       :survey_file,
@@ -24,6 +23,7 @@ class SurveyFilesController < ApplicationController
       :plan_files
     ]
 
+
     config.columns[:survey_file].set_link(:edit)
     config.columns[:location].search_sql = 'locations.name'
 
@@ -31,6 +31,6 @@ class SurveyFilesController < ApplicationController
 		columns[:completion_date].description = "(MM/DD/YYYY)"
 
     config.list.sorting = { :survey_file => :desc }
-    config.list.always_show_search = true
+    config.list.always_show_search = false
   end
 end 
