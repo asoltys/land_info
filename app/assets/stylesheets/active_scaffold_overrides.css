@@ -475,7 +475,7 @@ border-right: solid 1px #ccc;
 /* Messages
    ========================= */
 
-tbody.class messages {
+tbody.messages {
   display: none;
 }
 
