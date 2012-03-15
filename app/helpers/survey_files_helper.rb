@@ -5,7 +5,6 @@ module SurveyFilesHelper
       str += '...' if record.plan_files.count > 3
       return str
     else
-      # This way there's something to turn into a link if there are no roles associated with this record yet.
       active_scaffold_config.list.empty_field_text
     end
   end
