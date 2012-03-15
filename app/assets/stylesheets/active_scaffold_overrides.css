@@ -153,8 +153,8 @@ top: 5px;
 text-align: right;
 }
 
-.before-header {
-  display: none;
+.active-scaffold .before-header td {
+  border: none;
 }
 
 /* Table :: Column Headers
