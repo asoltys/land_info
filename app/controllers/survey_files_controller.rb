@@ -1,6 +1,11 @@
 class SurveyFilesController < ApplicationController
   helper :locations
 
+  autocomplete :location, :name,
+    :full => true, 
+    :limit => 20, 
+    :id_element => '#record_location_id'
+
   active_scaffold :survey_file do |config|
 		config.label = "Survey Files"
 
@@ -8,6 +13,7 @@ class SurveyFilesController < ApplicationController
 
     config.columns = [
       :survey_file,
+      :location_id,
       :description, 
       :edrm_number, 
       :sigma_number,

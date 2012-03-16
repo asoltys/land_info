@@ -101,22 +101,6 @@ code{font-size:90%;}
 .color-attention {color:#c00 !important;}
 .color-accent {color:#226b8e !important;}
 
-/* ---- Lists ---- */
-ul,dl,ol{margin:0 10px 8px 40px;padding:0;}
-#cn-left-col li{margin:0;}
-#cn-centre-col ul ul,#cn-centre-col dl dl,#cn-centre-col ol ol,ul ul,dl dl,ol ol{margin-bottom:4px;margin-left:30px;}
-#cn-centre-col ul ul,#cn-centre-col ol ul,#cn-centre-col ul ol,#cn-centre-col ul ul,#cn-centre-col ol ul,#cn-centre-col ul ol,#cn-centre-col ul ul,#cn-centre-col ol ul,#cn-centre-col ul ol{margin-bottom:0 !important;padding-top:0 !important;}
-ul#cn-pd-ul{padding:0;}
-ol ol li{list-style-type:lower-alpha;}
-ol ol ol li{list-style-type:lower-roman;}
-.list-lower-alpha{list-style-type:lower-alpha !important;}
-.list-lower-roman{list-style-type:lower-roman !important;}
-.list-bullet-none{list-style-type:none !important;}
-ol.list-numeric li{list-style-type:decimal !important;}
-.list-upper-alpha{list-style-type:upper-alpha !important;}
-.list-upper-roman{list-style-type:upper-roman !important;}
-ul ul{margin-top:0 !important;}
-
 /* ---- Margins ---- */
 .margin-bottom-none {margin-bottom:0 !important;}
 .margin-bottom-small {margin-bottom:2px !important;}
