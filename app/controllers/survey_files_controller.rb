@@ -12,8 +12,7 @@ class SurveyFilesController < ApplicationController
       :edrm_number, 
       :sigma_number,
       :start_date,
-      :completion_date,
-      :active
+      :completion_date
     ]
 
     config.list.columns = [
@@ -29,14 +28,17 @@ class SurveyFilesController < ApplicationController
       :location
     ]
 
+    config.update.columns.exclude :survey_file
 
     config.columns[:survey_file].set_link(:edit)
+    config.columns[:survey_file].label = "Survey File #"
+
     config.columns[:location].search_sql = 'locations.name'
 
 		columns[:start_date].description = "(MM/DD/YYYY)"
 		columns[:completion_date].description = "(MM/DD/YYYY)"
 
     config.list.sorting = { :survey_file => :desc }
-    config.list.always_show_search = false
+    config.search.link = false
   end
 end 
