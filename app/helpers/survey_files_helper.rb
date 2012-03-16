@@ -8,4 +8,8 @@ module SurveyFilesHelper
       active_scaffold_config.list.empty_field_text
     end
   end
+
+  def survey_file_survey_file_form_column(record, options)
+    text_field :record, :survey_file, :value => SurveyFile.last.survey_file.to_i + 1
+  end
 end
