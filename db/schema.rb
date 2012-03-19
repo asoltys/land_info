@@ -164,6 +164,7 @@ ActiveRecord::Schema.define(:version => 20120319201349) do
 
   add_index "plan_files", ["location_id"], :name => "index_plan_files_on_location_id"
   add_index "plan_files", ["plan_number"], :name => "index_plan_files_on_plan_number"
+  add_index "plan_files", ["survey_file_id"], :name => "index_plan_files_on_survey_file_id"
   add_index "plan_files", ["title"], :name => "index_plan_files_on_title"
 
   create_table "provinces", :force => true do |t|
