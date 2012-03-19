@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120227050224) do
+ActiveRecord::Schema.define(:version => 20120319155415) do
 
   create_table "drawings", :force => true do |t|
     t.string   "tiff_file"
@@ -170,7 +170,7 @@ ActiveRecord::Schema.define(:version => 20120227050224) do
   end
 
   create_table "survey_files", :force => true do |t|
-    t.string  "survey_file"
+    t.decimal "survey_file",             :precision => 10, :scale => 0
     t.string  "project_number"
     t.string  "ssa_number"
     t.string  "cr_file"
@@ -229,8 +229,8 @@ ActiveRecord::Schema.define(:version => 20120227050224) do
     t.datetime "last_sign_in_at"
     t.string   "current_sign_in_ip"
     t.string   "last_sign_in_ip"
-    t.datetime "created_at",                             :null => false
-    t.datetime "updated_at",                             :null => false
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   add_index "users", ["email"], :name => "index_users_on_email", :unique => true
