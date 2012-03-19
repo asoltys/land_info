@@ -4,6 +4,7 @@ class PlanFilesController < ApplicationController
 
     config.columns = [
       :plan_number,
+      :location_id,
       :size,
       :title
     ]

@@ -8,4 +8,16 @@ module PlanFilesHelper
       active_scaffold_config.list.empty_field_text
     end
   end
+
+  def plan_file_location_id_form_column(record, options)
+    str = autocomplete_field_tag( 
+      'location', 
+      '', 
+      autocomplete_location_name_survey_files_path, 
+      :value => record.location.name, 
+      :id_element => '#record_location_id'
+    )
+
+    str += hidden_field :record, :location_id
+  end
 end
