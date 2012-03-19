@@ -26,7 +26,8 @@ class SurveyFilesController < ApplicationController
     config.search.columns = [
       :survey_file, 
       :description, 
-      :location
+      :location,
+      :plan_files
     ]
 
     config.update.columns.exclude :survey_file
@@ -35,6 +36,7 @@ class SurveyFilesController < ApplicationController
     config.columns[:survey_file].label = "File number"
 
     config.columns[:location].search_sql = 'locations.name'
+    config.columns[:plan_files].search_sql = 'plan_files.plan_number'
 
 		columns[:start_date].description = "(MM/DD/YYYY)"
 		columns[:completion_date].description = "(MM/DD/YYYY)"

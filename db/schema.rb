@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120319174445) do
+ActiveRecord::Schema.define(:version => 20120319201349) do
 
   create_table "drawings", :force => true do |t|
     t.string   "tiff_file"
@@ -110,6 +110,10 @@ ActiveRecord::Schema.define(:version => 20120319174445) do
     t.integer "location_id"
   end
 
+  add_index "marine_files", ["expiry"], :name => "index_marine_files_on_expiry"
+  add_index "marine_files", ["file_number"], :name => "index_marine_files_on_file_number"
+  add_index "marine_files", ["location_id"], :name => "index_marine_files_on_location_id"
+
   create_table "organizational_units", :force => true do |t|
     t.string "fgo_code"
     t.string "code"
@@ -158,6 +162,10 @@ ActiveRecord::Schema.define(:version => 20120319174445) do
     t.integer "survey_file_id"
   end
 
+  add_index "plan_files", ["location_id"], :name => "index_plan_files_on_location_id"
+  add_index "plan_files", ["plan_number"], :name => "index_plan_files_on_plan_number"
+  add_index "plan_files", ["title"], :name => "index_plan_files_on_title"
+
   create_table "provinces", :force => true do |t|
     t.string "number"
     t.string "abbreviation"
@@ -195,6 +203,9 @@ ActiveRecord::Schema.define(:version => 20120319174445) do
     t.string  "sigma_number"
     t.integer "location_id"
   end
+
+  add_index "survey_files", ["location_id"], :name => "index_survey_files_on_location_id"
+  add_index "survey_files", ["survey_file"], :name => "index_survey_files_on_survey_file"
 
   create_table "survey_pln_title", :force => true do |t|
     t.string "LTO_Pln_No"

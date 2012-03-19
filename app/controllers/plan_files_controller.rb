@@ -9,6 +9,11 @@ class PlanFilesController < ApplicationController
       :title
     ]
 
+    config.search.columns = [
+      :plan_number,
+      :location
+    ]
+
     config.list.columns = [
       :plan_number,
       :location,
@@ -17,6 +22,7 @@ class PlanFilesController < ApplicationController
       :drawings
     ]
 
+    config.columns[:location].search_sql = 'locations.name'
     config.columns[:plan_number].set_link(:edit)
     config.update.columns.exclude [:location, :drawings]
     config.list.always_show_search = false
