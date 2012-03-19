@@ -10,15 +10,21 @@ module SurveyFilesHelper
   end
 
   def survey_file_survey_file_form_column(record, options)
-    text_field :record, :survey_file, :value => SurveyFile.last.survey_file.to_i + 1
+    text_field :record, :survey_file, :value => SurveyFile.maximum("survey_file") + 1
   end
 
   def survey_file_location_id_form_column(record, options)
+    if record.location.nil?
+      value = ''
+    else
+      value = record.location.name
+    end
+
     str = autocomplete_field_tag( 
       'location', 
       '', 
-      autocomplete_location_name_survey_files_path, 
-      :value => record.location.name, 
+      autocomplete_location_name_locations_path, 
+      :value => value, 
       :id_element => '#record_location_id'
     )
 
