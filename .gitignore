@@ -6,3 +6,4 @@ tmp/
 .rvmrc
 public/javascripts/active_scaffold/*
 public/stylesheets/active_scaffold/*
+public/assets
