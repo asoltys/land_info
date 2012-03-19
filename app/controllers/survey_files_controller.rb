@@ -32,7 +32,7 @@ class SurveyFilesController < ApplicationController
     config.update.columns.exclude :survey_file
 
     config.columns[:survey_file].set_link(:edit)
-    config.columns[:survey_file].label = "Survey File #"
+    config.columns[:survey_file].label = "File number"
 
     config.columns[:location].search_sql = 'locations.name'
 

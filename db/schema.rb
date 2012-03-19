@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120319155415) do
+ActiveRecord::Schema.define(:version => 20120319174445) do
 
   create_table "drawings", :force => true do |t|
     t.string   "tiff_file"
@@ -68,7 +68,7 @@ ActiveRecord::Schema.define(:version => 20120319155415) do
   end
 
   create_table "marine_files", :force => true do |t|
-    t.string  "file_number"
+    t.decimal "file_number",               :precision => 10, :scale => 0
     t.string  "location_number"
     t.string  "latitude_degrees"
     t.string  "latitude_minutes"
@@ -101,9 +101,9 @@ ActiveRecord::Schema.define(:version => 20120319155415) do
     t.string  "pwc_customer"
     t.string  "provincial_contact"
     t.string  "federal_contact"
-    t.string  "notes"
+    t.text    "notes"
     t.string  "registration_code"
-    t.string  "legal"
+    t.text    "legal"
     t.string  "fgo_code"
     t.string  "nts_sheet"
     t.string  "gator"
