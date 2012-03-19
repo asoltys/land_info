@@ -11,8 +11,11 @@
 margin: 0 10px 0 10px;
 }
 
-.active-scaffold table {
-border-collapse: separate;
+.active-scaffold table, .active-scaffold td {
+  margin: 0;
+  padding: 0;
+  height: 0;
+  width: 0;
 }
 
 .active-scaffold a,
@@ -440,6 +443,8 @@ border-bottom: none;
 font-weight: inherit;
 font-family: Verdana,Arial,Helvetica,sans-serif;
 font: inherit;
+height: 12px;
+padding: 10px;
 }
 
 .active-scaffold-footer .active-scaffold-pagination {
@@ -452,7 +457,6 @@ margin-right: 5px;
 text-decoration: none;
 letter-spacing: 0;
 padding: 0 2px;
-margin: 0 -2px;
 font-weight: inherit;
 font-family: Verdana,Arial,Helvetica,sans-serif;
 font: inherit;
