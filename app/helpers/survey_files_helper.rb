@@ -9,8 +9,12 @@ module SurveyFilesHelper
     end
   end
 
+  def survey_file_survey_file_column(record)
+    number_with_precision(record.survey_file, :precision => 2)
+  end
+
   def survey_file_survey_file_form_column(record, options)
-    text_field :record, :survey_file, :value => SurveyFile.maximum("survey_file") + 1
+    text_field :record, :survey_file, :value => number_with_precision(SurveyFile.maximum("survey_file").floor + 1, :precision => 2)
   end
 
   def survey_file_location_id_form_column(record, options)

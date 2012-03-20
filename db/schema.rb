@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120319201349) do
+ActiveRecord::Schema.define(:version => 20120320090059) do
 
   create_table "drawings", :force => true do |t|
     t.string   "tiff_file"
@@ -179,7 +179,7 @@ ActiveRecord::Schema.define(:version => 20120319201349) do
   end
 
   create_table "survey_files", :force => true do |t|
-    t.decimal "survey_file",             :precision => 10, :scale => 0
+    t.decimal "survey_file",             :precision => 8, :scale => 2
     t.string  "project_number"
     t.string  "ssa_number"
     t.string  "cr_file"
