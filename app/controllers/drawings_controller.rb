@@ -2,12 +2,12 @@ class DrawingsController < ApplicationController
   active_scaffold :drawing do |config|
     
     config.columns = [
+      :tiff_file,
       :title,
       :status,
       :surveyor,
       :drawn_by,
-      :bcgs,
-      :tiff_file
+      :bcgs
     ]
 
     config.columns[:tiff_file].label = "Number"
