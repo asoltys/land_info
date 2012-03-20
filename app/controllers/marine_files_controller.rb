@@ -36,5 +36,9 @@ class MarineFilesController < ApplicationController
     config.columns[:location].search_sql = 'locations.name'
     config.columns[:file_number].set_link(:edit)
     config.list.sorting = { :file_number => :desc }
+
+    config.search.link = false
+    config.show.link = false
+    config.update.link = false
   end
 end 

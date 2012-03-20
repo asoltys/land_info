@@ -42,5 +42,9 @@ class SurveyFilesController < ApplicationController
 		columns[:completion_date].description = "(MM/DD/YYYY)"
 
     config.list.sorting = { :survey_file => :desc }
+
+    config.search.link = false
+    config.show.link = false
+    config.update.link = false
   end
 end 
