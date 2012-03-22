@@ -5,4 +5,8 @@ class SurveyFile < ActiveRecord::Base
   def to_label
     "Survey File ##{survey_file}"
   end
+
+  def department
+    "#{department_abbreviation} #{department_section}"
+  end
 end
