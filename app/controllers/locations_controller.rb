@@ -4,8 +4,7 @@ class LocationsController < ApplicationController
     :limit => 20, 
     :id_element => '#record_location_id'
 
-  active_scaffold :location do |conf|
-    conf.list.columns = [:name, :latitude, :longitude]
-    conf.columns[:name].set_link(:edit)
+  active_scaffold :location do |config|
+    config.actions = []
   end
 end 
