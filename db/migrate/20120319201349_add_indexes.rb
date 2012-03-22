@@ -1,6 +1,6 @@
 class AddIndexes < ActiveRecord::Migration
   def up
-    add_index :survey_files, :survey_file
+    add_index :survey_files, :survey_file, :unique => true
     add_index :survey_files, :location_id
     add_index :marine_files, :file_number
     add_index :marine_files, :location_id

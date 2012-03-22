@@ -1,8 +1,5 @@
 class ChangeSurveyFileToDecimal < ActiveRecord::Migration
-  def up
-    change_column :survey_files, :survey_file, :decimal
-  end
-
-  def down
+  def change
+    change_column :survey_files, :survey_file, :decimal, :precision => 8, :scale 2
   end
 end
