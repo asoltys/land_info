@@ -11,19 +11,17 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120322063550) do
+ActiveRecord::Schema.define(:version => 20120322205354) do
 
   create_table "drawings", :force => true do |t|
-    t.string   "tiff_file"
+    t.string   "file_name"
     t.string   "bcgs"
     t.string   "drawn_by"
-    t.string   "surveyor"
     t.string   "size"
     t.string   "sector"
     t.string   "location"
     t.string   "project_number"
     t.string   "title"
-    t.string   "plan"
     t.string   "status"
     t.integer  "plan_file_id"
     t.string   "drawing_file_name"
@@ -42,13 +40,6 @@ ActiveRecord::Schema.define(:version => 20120322063550) do
     t.string  "uvalue"
     t.binary  "lvalue",   :limit => 2147483647
     t.integer "version",                        :default => 0, :null => false
-  end
-
-  create_table "dwf_files", :force => true do |t|
-    t.string  "file"
-    t.string  "plan"
-    t.string  "pdf"
-    t.integer "plan_file_id"
   end
 
   create_table "features", :force => true do |t|

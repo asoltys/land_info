@@ -1,7 +1,7 @@
 module PlanFilesHelper
   def plan_file_drawings_column(record)
     if record.drawings.any?
-      str = record.drawings.first(3).collect{|d| d.tiff_file}.join(', ')
+      str = record.drawings.first(3).collect{|d| d.file_name}.join(', ')
       str += '...' if record.drawings.count > 3
       return str
     else
