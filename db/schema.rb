@@ -14,19 +14,34 @@
 ActiveRecord::Schema.define(:version => 20120322063550) do
 
   create_table "drawings", :force => true do |t|
-    t.string  "tiff_file"
-    t.string  "bcgs"
-    t.string  "drawn_by"
-    t.string  "size"
-    t.string  "sector"
-    t.string  "location"
-    t.string  "project_number"
-    t.string  "title"
-    t.string  "plan"
-    t.string  "status"
-    t.integer "plan_file_id"
-    t.integer "surveyor_id"
-    t.integer "location_id"
+    t.string   "tiff_file"
+    t.string   "bcgs"
+    t.string   "drawn_by"
+    t.string   "surveyor"
+    t.string   "size"
+    t.string   "sector"
+    t.string   "location"
+    t.string   "project_number"
+    t.string   "title"
+    t.string   "plan"
+    t.string   "status"
+    t.integer  "plan_file_id"
+    t.string   "drawing_file_name"
+    t.string   "drawing_content_type"
+    t.integer  "drawing_file_size"
+    t.datetime "drawing_updated_at"
+    t.integer  "surveyor_id"
+    t.integer  "location_id"
+  end
+
+  create_table "dtproperties", :id => false, :force => true do |t|
+    t.integer "id",                                            :null => false
+    t.integer "objectid"
+    t.string  "property", :limit => 64,                        :null => false
+    t.string  "value"
+    t.string  "uvalue"
+    t.binary  "lvalue",   :limit => 2147483647
+    t.integer "version",                        :default => 0, :null => false
   end
 
   create_table "dwf_files", :force => true do |t|
@@ -78,6 +93,7 @@ ActiveRecord::Schema.define(:version => 20120322063550) do
     t.string  "returned"
     t.string  "district_company"
     t.string  "secondary_location"
+    t.string  "marine_tif"
     t.string  "dfrp_number"
     t.string  "fgou_code"
     t.string  "province_file"
@@ -100,6 +116,7 @@ ActiveRecord::Schema.define(:version => 20120322063550) do
     t.text    "legal"
     t.string  "fgo_code"
     t.string  "nts_sheet"
+    t.string  "gator"
     t.integer "location_id"
   end
 
@@ -143,6 +160,7 @@ ActiveRecord::Schema.define(:version => 20120322063550) do
     t.string  "plan_close"
     t.string  "plan_registration_number"
     t.string  "lto_code"
+    t.string  "member_number"
     t.string  "company_name"
     t.string  "record_number"
     t.string  "dfrp_number"
@@ -151,7 +169,6 @@ ActiveRecord::Schema.define(:version => 20120322063550) do
     t.string  "crown_land_plan_number"
     t.string  "clsr_plan"
     t.integer "location_id"
-    t.integer "surveyor_id"
     t.integer "survey_file_id"
   end
 
@@ -166,21 +183,30 @@ ActiveRecord::Schema.define(:version => 20120322063550) do
     t.string "name"
   end
 
+  create_table "regions", :force => true do |t|
+    t.string "number"
+    t.string "code"
+  end
+
   create_table "survey_files", :force => true do |t|
-    t.decimal "survey_file",     :precision => 8, :scale => 2
+    t.decimal "survey_file",             :precision => 8, :scale => 2
     t.string  "project_number"
     t.string  "ssa_number"
     t.string  "cr_file"
     t.date    "start_date"
     t.date    "completion_date"
     t.string  "project_manager"
+    t.string  "department_section"
     t.text    "description"
     t.string  "ssa_amount"
     t.string  "bulk_number"
     t.string  "finance_code"
+    t.string  "department_abbreviation"
     t.boolean "active"
     t.string  "remark"
     t.string  "location_second"
+    t.string  "department_contact"
+    t.string  "department_telephone"
     t.string  "location_number"
     t.string  "start_location"
     t.string  "object_number"
@@ -204,13 +230,14 @@ ActiveRecord::Schema.define(:version => 20120322063550) do
     t.string "first_name"
     t.string "member_number"
     t.string "street_address"
+    t.string "city"
     t.string "province"
     t.string "postal_code"
     t.string "phone"
     t.string "initials"
     t.string "company"
     t.string "fax"
-    t.string "city"
+    t.string "town"
   end
 
   create_table "users", :force => true do |t|
