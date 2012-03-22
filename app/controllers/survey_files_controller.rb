@@ -5,6 +5,10 @@ class SurveyFilesController < ApplicationController
     ["#{column.search_sql} LIKE '%?%'", like_pattern]
   end
 
+  def subrecord
+    render :new, :id => params[:id]
+  end
+
   active_scaffold :survey_file do |config|
 		config.label = "Survey Files"
 
@@ -31,7 +35,8 @@ class SurveyFilesController < ApplicationController
       :description, 
       :start_date,
       :completion_date,
-      :plan_files
+      :plan_files,
+      :subrecords
     ]
     
     config.search.columns = [
@@ -65,5 +70,7 @@ class SurveyFilesController < ApplicationController
     config.search.link = false
     config.show.link = false
     config.update.link = false
+
+    config.action_links.add 'subrecord', :label => 'Sub record', :page => true, :type => :member
   end
 end 
