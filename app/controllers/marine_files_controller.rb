@@ -6,8 +6,12 @@ class MarineFilesController < ApplicationController
       :file_number, 
       :federal_file,
       :location_id, 
+      :secondary_location,
       :reservation_use, 
       :reservation_term, 
+      :law_record,
+      :returned,
+      :dfrp_number,
       :expiry, 
       :legal,
       :notes,
@@ -18,8 +22,10 @@ class MarineFilesController < ApplicationController
     config.list.columns = [
       :file_number, 
       :location,
+      :secondary_location,
       :reservation_use, 
       :reservation_term, 
+      :returned,
       :expiry, 
       :notes
     ]
