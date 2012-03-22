@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120320090059) do
+ActiveRecord::Schema.define(:version => 20120322063550) do
 
   create_table "drawings", :force => true do |t|
     t.string   "tiff_file"
