@@ -57,8 +57,8 @@ class SurveyFilesController < ApplicationController
     config.columns[:start_date].search_ui = :datetime
     config.columns[:completion_date].search_ui = :datetime
 
-		columns[:start_date].description = "(MM/DD/YYYY)"
-		columns[:completion_date].description = "(MM/DD/YYYY)"
+		columns[:start_date].description = "YYYY-MM-DD"
+		columns[:completion_date].description = "YYYY-MM-DD"
 
     config.list.sorting = { :survey_file => :desc }
 
