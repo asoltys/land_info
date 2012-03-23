@@ -12,7 +12,6 @@ class DrawingsController < ApplicationController
 
     config.search.link = false
     config.show.link = false
-    config.update.link = true
 
     config.columns[:surveyor_id].form_ui = :record_select
     config.list.sorting = { :id => :desc }
