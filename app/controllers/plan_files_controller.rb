@@ -6,12 +6,14 @@ class PlanFilesController < ApplicationController
       :plan_number,
       :location_id,
       :size,
-      :title
+      :title,
+      :edrm_number
     ]
 
     config.search.columns = [
       :plan_number,
-      :location
+      :location,
+      :drawings
     ]
 
     config.list.columns = [
@@ -22,10 +24,14 @@ class PlanFilesController < ApplicationController
       :drawings
     ]
 
+    config.columns[:drawings].search_sql = 'drawings.file_name'
+
     config.columns[:location].search_sql = 'locations.name'
     config.columns[:plan_number].set_link(:edit)
     config.update.columns.exclude [:location, :drawings]
     config.list.always_show_search = false
+
+    config.list.sorting = { :plan_number => :desc }
 
     config.search.link = false
     config.show.link = false

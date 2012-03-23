@@ -56,6 +56,8 @@ class SurveyFilesController < ApplicationController
 
     config.columns[:start_date].search_ui = :datetime
     config.columns[:completion_date].search_ui = :datetime
+    config.columns[:start_date].search_sql = 'survey_files.start_date'
+    config.columns[:completion_date].search_sql = 'survey_files.completion_date'
 
 		columns[:start_date].description = "YYYY-MM-DD"
 		columns[:completion_date].description = "YYYY-MM-DD"
