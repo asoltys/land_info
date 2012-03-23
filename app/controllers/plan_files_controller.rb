@@ -31,7 +31,7 @@ class PlanFilesController < ApplicationController
     config.update.columns.exclude [:location, :drawings]
     config.list.always_show_search = false
 
-    config.list.sorting = { :plan_number => :desc }
+    config.list.sorting = { :id => :desc }
 
     config.search.link = false
     config.show.link = false
