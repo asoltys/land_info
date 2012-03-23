@@ -34,4 +34,8 @@ module SurveyFilesHelper
 
     str += hidden_field :record, :location_id
   end
+
+  def condition_for_start_date_column(column, value, like_pattern)
+    ["start_date = '?'", like_pattern]
+  end
 end
