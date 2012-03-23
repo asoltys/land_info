@@ -1,6 +1,6 @@
 module DrawingsHelper
  def drawing_file_name_column(record)
-    link_to record.file_name, "file:///R:/Drawings/#{record.file_name}"
+    link_to record.file_name, "file:///R:/ressurveys/Drawings/#{record.file_name}"
  end
 
   def drawing_surveyor_id_column(record)

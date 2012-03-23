@@ -12,6 +12,7 @@ class PlanFilesController < ApplicationController
 
     config.search.columns = [
       :plan_number,
+      :title,
       :location,
       :drawings
     ]

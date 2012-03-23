@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120323163203) do
+ActiveRecord::Schema.define(:version => 20120323210105) do
 
   create_table "drawings", :force => true do |t|
     t.string   "file_name"
@@ -31,6 +31,9 @@ ActiveRecord::Schema.define(:version => 20120323163203) do
     t.integer  "surveyor_id"
     t.integer  "location_id"
   end
+
+  add_index "drawings", ["file_name"], :name => "index_drawings_on_file_name"
+  add_index "drawings", ["plan_file_id"], :name => "index_drawings_on_plan_file_id"
 
   create_table "dtproperties", :id => false, :force => true do |t|
     t.integer "id",                                            :null => false
@@ -206,7 +209,9 @@ ActiveRecord::Schema.define(:version => 20120323163203) do
     t.integer "location_id"
   end
 
+  add_index "survey_files", ["edrm_number"], :name => "index_survey_files_on_edrm_number"
   add_index "survey_files", ["location_id"], :name => "index_survey_files_on_location_id"
+  add_index "survey_files", ["sigma_number"], :name => "index_survey_files_on_sigma_number"
   add_index "survey_files", ["survey_file"], :name => "index_survey_files_on_survey_file", :unique => true
 
   create_table "survey_pln_title", :force => true do |t|

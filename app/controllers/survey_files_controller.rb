@@ -42,7 +42,9 @@ class SurveyFilesController < ApplicationController
       :start_date,
       :completion_date,
       :department_section,
-      :department_contact
+      :department_contact,
+      :edrm_number,
+      :sigma_number
     ]
 
     config.update.columns.exclude :survey_file
@@ -52,7 +54,7 @@ class SurveyFilesController < ApplicationController
     config.columns[:location_second].label = "Secondary location"
 
     config.columns[:location].search_sql = 'locations.name'
-    config.columns[:plan_files].search_sql = 'plan_files.plan_number'
+    config.columns[:plan_files].search_sql = 'plan_files.plan_number||plan_files.title'
 
     config.columns[:start_date].search_ui = :datetime
     config.columns[:completion_date].search_ui = :datetime
