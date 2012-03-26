@@ -11,7 +11,8 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120326231620) do
+ActiveRecord::Schema.define(:version => 20120326235048) do
+
   create_table "drawings", :force => true do |t|
     t.string   "file_name"
     t.string   "bcgs"
