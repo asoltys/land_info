@@ -11,8 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120323210105) do
-
+ActiveRecord::Schema.define(:version => 20120326231620) do
   create_table "drawings", :force => true do |t|
     t.string   "file_name"
     t.string   "bcgs"
@@ -150,7 +149,7 @@ ActiveRecord::Schema.define(:version => 20120323210105) do
     t.string  "east_utm"
     t.string  "utm_zone"
     t.string  "old_plan_number"
-    t.string  "title"
+    t.text    "title"
     t.string  "plan_close"
     t.string  "plan_registration_number"
     t.string  "lto_code"
@@ -169,7 +168,7 @@ ActiveRecord::Schema.define(:version => 20120323210105) do
   add_index "plan_files", ["location_id"], :name => "index_plan_files_on_location_id"
   add_index "plan_files", ["plan_number"], :name => "index_plan_files_on_plan_number"
   add_index "plan_files", ["survey_file_id"], :name => "index_plan_files_on_survey_file_id"
-  add_index "plan_files", ["title"], :name => "index_plan_files_on_title"
+  add_index "plan_files", ["title"], :name => "index_plan_files_on_title", :length => {"title"=>20}
 
   create_table "provinces", :force => true do |t|
     t.string "number"
@@ -209,6 +208,7 @@ ActiveRecord::Schema.define(:version => 20120323210105) do
     t.integer "location_id"
   end
 
+  add_index "survey_files", ["description"], :name => "index_survey_files_on_description", :length => {"description"=>20}
   add_index "survey_files", ["edrm_number"], :name => "index_survey_files_on_edrm_number"
   add_index "survey_files", ["location_id"], :name => "index_survey_files_on_location_id"
   add_index "survey_files", ["sigma_number"], :name => "index_survey_files_on_sigma_number"
