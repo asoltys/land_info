@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120326235048) do
+ActiveRecord::Schema.define(:version => 20120327000132) do
 
   create_table "drawings", :force => true do |t|
     t.string   "file_name"
@@ -150,7 +150,7 @@ ActiveRecord::Schema.define(:version => 20120326235048) do
     t.string  "east_utm"
     t.string  "utm_zone"
     t.string  "old_plan_number"
-    t.text    "title"
+    t.text    "description"
     t.string  "plan_close"
     t.string  "plan_registration_number"
     t.string  "lto_code"
@@ -166,10 +166,10 @@ ActiveRecord::Schema.define(:version => 20120326235048) do
     t.integer "survey_file_id"
   end
 
+  add_index "plan_files", ["description"], :name => "index_plan_files_on_title", :length => {"description"=>20}
   add_index "plan_files", ["location_id"], :name => "index_plan_files_on_location_id"
   add_index "plan_files", ["plan_number"], :name => "index_plan_files_on_plan_number"
   add_index "plan_files", ["survey_file_id"], :name => "index_plan_files_on_survey_file_id"
-  add_index "plan_files", ["title"], :name => "index_plan_files_on_title", :length => {"title"=>20}
 
   create_table "provinces", :force => true do |t|
     t.string "number"

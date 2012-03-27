@@ -6,13 +6,13 @@ class PlanFilesController < ApplicationController
       :plan_number,
       :location_id,
       :size,
-      :title,
+      :description,
       :edrm_number
     ]
 
     config.search.columns = [
       :plan_number,
-      :title,
+      :description,
       :location,
       :drawings
     ]
@@ -21,7 +21,7 @@ class PlanFilesController < ApplicationController
       :plan_number,
       :location,
       :size,
-      :title,
+      :description,
       :drawings
     ]
 
