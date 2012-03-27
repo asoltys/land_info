@@ -52,7 +52,7 @@ class SurveyFilesController < ApplicationController
     config.columns[:location_second].label = "Secondary location"
 
     config.columns[:location].search_sql = 'locations.name'
-    config.columns[:plan_files].search_sql = 'plan_files.plan_number||plan_files.title'
+    config.columns[:plan_files].search_sql = 'plan_files.plan_number||plan_files.description'
 
 		columns[:start_date].description = "YYYY-MM-DD"
 		columns[:completion_date].description = "YYYY-MM-DD"
