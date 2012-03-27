@@ -9,13 +9,26 @@ module DrawingsHelper
   end
 
   def drawing_surveyor_id_form_column(record, options)
-    select_tag :surveyor_id, 
+    select_tag :surveyor_id,
       options_from_collection_for_select(
-        Surveyor.order("first_name ASC").all, 
-        'id', 
+        Surveyor.order("first_name ASC").all,
+        'id',
         'name',
         Surveyor.where("last_name = 'Robertson'").first.id
       ),
+      options
+  end
+
+  def drawing_status_form_column(record, options)
+    select_tag :status,
+      options_for_select([
+        'See DWF',
+        'Retained',
+        'Scan Color',
+        'Cent. Rec.',
+        'Disposed',
+        'Re-scanned'
+      ]),
       options
   end
 end
