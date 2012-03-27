@@ -7,14 +7,16 @@ class PlanFilesController < ApplicationController
       :location_id,
       :size,
       :description,
-      :edrm_number
+      :edrm_number,
+      :drawing_description
     ]
 
     config.search.columns = [
       :plan_number,
       :description,
       :location,
-      :drawings
+      :drawings,
+      :drawing_description
     ]
 
     config.list.columns = [
@@ -26,6 +28,8 @@ class PlanFilesController < ApplicationController
     ]
 
     config.columns[:drawings].search_sql = 'drawings.file_name'
+    config.columns[:drawing_description].search_sql = 'drawings.description'
+    config.columns.exclude(:drawing_description)
 
     config.columns[:location].search_sql = 'locations.name'
     config.columns[:plan_number].set_link(:edit)

@@ -10,4 +10,7 @@ class SurveyFile < ActiveRecord::Base
   def department
     "#{department_abbreviation} #{department_section}"
   end
+
+  def plan_files_description
+  end
 end

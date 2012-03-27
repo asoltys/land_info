@@ -6,4 +6,8 @@ class PlanFile < ActiveRecord::Base
   def to_label
     "Plan File ##{plan_number}"
   end
+
+  def drawing_description
+    nil
+  end
 end
