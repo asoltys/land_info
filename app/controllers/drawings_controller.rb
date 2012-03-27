@@ -2,7 +2,7 @@ class DrawingsController < ApplicationController
   active_scaffold :drawing do |config|
     config.columns = [
       :file_name,
-      :title,
+      :description,
       :status,
       :project_number,
       :surveyor_id,
