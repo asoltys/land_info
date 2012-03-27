@@ -19,6 +19,7 @@ class SurveyFilesController < ApplicationController
       :completion_date,
       :department_section,
       :department_contact,
+      :department,
       :plan_files_description
     ]
 
@@ -46,6 +47,9 @@ class SurveyFilesController < ApplicationController
       :sigma_number,
       :plan_files_description
     ]
+
+    config.columns[:department].sort_by :sql => ['department_abbreviation', 'department_section']
+    config.columns.exclude(:department)
 
     config.update.columns.exclude :survey_file
 
