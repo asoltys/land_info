@@ -11,25 +11,21 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120327000132) do
+ActiveRecord::Schema.define(:version => 20120327003417) do
 
   create_table "drawings", :force => true do |t|
-    t.string   "file_name"
-    t.string   "bcgs"
-    t.string   "drawn_by"
-    t.string   "size"
-    t.string   "sector"
-    t.string   "location"
-    t.string   "project_number"
-    t.string   "title"
-    t.string   "status"
-    t.integer  "plan_file_id"
-    t.string   "drawing_file_name"
-    t.string   "drawing_content_type"
-    t.integer  "drawing_file_size"
-    t.datetime "drawing_updated_at"
-    t.integer  "surveyor_id"
-    t.integer  "location_id"
+    t.string  "file_name"
+    t.string  "bcgs"
+    t.string  "drawn_by"
+    t.string  "size"
+    t.string  "sector"
+    t.string  "location"
+    t.string  "project_number"
+    t.string  "title"
+    t.string  "status"
+    t.integer "plan_file_id"
+    t.integer "surveyor_id"
+    t.integer "location_id"
   end
 
   add_index "drawings", ["file_name"], :name => "index_drawings_on_file_name"

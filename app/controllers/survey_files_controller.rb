@@ -8,8 +8,6 @@ class SurveyFilesController < ApplicationController
   active_scaffold :survey_file do |config|
 		config.label = "Survey Files"
 
-    config.actions << :nested
-
     config.columns = [
       :survey_file,
       :location_id,
