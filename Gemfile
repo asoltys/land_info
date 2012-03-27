@@ -1,7 +1,6 @@
 source 'http://rubygems.org'
 
 gem 'rails', '3.2.2'
-gem "paperclip"
 gem 'active_scaffold', :git => 'git://github.com/asoltys/active_scaffold.git'
 gem 'devise'
 gem 'thin'
