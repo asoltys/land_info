@@ -13,7 +13,8 @@ module DrawingsHelper
       options_from_collection_for_select(
         Surveyor.order("first_name ASC").all, 
         'id', 
-        'name'
+        'name',
+        Surveyor.where("last_name = 'Robertson'").first.id
       ),
       options
   end
