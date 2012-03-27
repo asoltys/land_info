@@ -28,7 +28,7 @@ module DrawingsHelper
         'Cent. Rec.',
         'Disposed',
         'Re-scanned'
-      ]),
+      ], record.status),
       options
   end
 end
