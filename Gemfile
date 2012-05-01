@@ -6,6 +6,7 @@ gem 'devise'
 gem 'thin'
 gem 'mysql2'
 gem 'rails3-jquery-autocomplete'
+gem 'debugger'
 
 # Gems used only for assets and not required
 # in production environments by default.
