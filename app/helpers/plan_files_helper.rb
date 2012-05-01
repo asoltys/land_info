@@ -26,4 +26,22 @@ module PlanFilesHelper
 
     str += hidden_field :record, :location_id
   end
+
+  def plan_file_survey_file_id_form_column(record, options)
+    if record.survey_file.nil?
+      value = ''
+    else
+      value = record.survey_file.survey_file
+    end
+
+    str = autocomplete_field_tag( 
+      'survey_file', 
+      '', 
+      autocomplete_survey_file_survey_file_survey_files_path, 
+      :value => value, 
+      :id_element => '#record_survey_file_id'
+    )
+
+    str += hidden_field :record, :location_id
+  end
 end

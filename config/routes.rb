@@ -12,7 +12,10 @@ LandInfo::Application.routes.draw do
   resources :plan_files do as_routes end
   resources :provinces do as_routes end
   resources :regions do as_routes end
-  resources :survey_files do as_routes end
+  resources :survey_files do 
+    as_routes 
+    get :autocomplete_survey_file_survey_file, :on => :collection
+  end
   resources :surveyors do as_routes end
 
   root :to => "survey_files#index"

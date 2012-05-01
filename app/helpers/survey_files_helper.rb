@@ -10,7 +10,7 @@ module SurveyFilesHelper
   end
 
   def survey_file_survey_file_column(record)
-    number_with_precision(record.survey_file, :precision => 2)
+    record.survey_file_to_two_decimal_places
   end
 
   def survey_file_survey_file_form_column(record, options)

@@ -4,7 +4,7 @@ class SurveyFile < ActiveRecord::Base
   validates :survey_file, :uniqueness => true
 
   def to_label
-    "Survey File ##{sprintf('%.2f', survey_file)}"
+    "Survey File ##{survey_file_to_two_decimal_places}"
   end
 
   def department
@@ -12,5 +12,9 @@ class SurveyFile < ActiveRecord::Base
   end
 
   def plan_files_description
+  end
+
+  def survey_file_to_two_decimal_places
+    sprintf('%.2f', survey_file)
   end
 end

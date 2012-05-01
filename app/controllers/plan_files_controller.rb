@@ -3,6 +3,7 @@ class PlanFilesController < ApplicationController
 		config.label = "Plan Files"
 
     config.columns = [
+      :survey_file_id,
       :plan_number,
       :location_id,
       :size,
@@ -20,6 +21,7 @@ class PlanFilesController < ApplicationController
     ]
 
     config.list.columns = [
+      :survey_file_id,
       :plan_number,
       :location,
       :size,

@@ -1,6 +1,12 @@
 class SurveyFilesController < ApplicationController
   helper :locations
 
+  autocomplete :survey_file, :survey_file,
+    :full => true, 
+    :limit => 20, 
+    :id_element => '#record_survey_file_id',
+    :display_value => :survey_file_to_two_decimal_places
+
   def self.condition_for_date_type(column, value, like_pattern)
     ["#{column.search_sql} LIKE '%?%'", like_pattern]
   end
