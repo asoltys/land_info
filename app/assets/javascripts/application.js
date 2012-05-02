@@ -5,6 +5,8 @@
 // the compiled file.
 //
 //= require jquery
+//= require jquery.print
 //= require jquery_ujs
 //= require active_scaffold
 //= require autocomplete-rails
+//= require print

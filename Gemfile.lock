@@ -1,6 +1,6 @@
 GIT
   remote: git://github.com/asoltys/active_scaffold.git
-  revision: 8e497c7dc865f3789c2c9f753e5fc639cc785970
+  revision: 27e19b37ffb8fb9e628a2ce1c89e8343e43738cd
   specs:
     active_scaffold (3.2.4)
       rails (>= 3.1.3)

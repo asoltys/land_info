@@ -73,8 +73,10 @@ class SurveyFilesController < ApplicationController
 
     config.list.sorting = { :survey_file => :desc }
 
-    config.search.link = false
     config.show.link = false
+    config.search.link = false
     config.update.link = false
+
+    config.action_links.add 'print', :label => 'Print', :page => true, :type => :member
   end
 end 
