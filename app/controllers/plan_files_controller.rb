@@ -43,5 +43,7 @@ class PlanFilesController < ApplicationController
     config.search.link = false
     config.show.link = false
     config.update.link = false
+
+    config.action_links.add 'print', :label => 'Print', :page => true, :type => :member
   end
 end 

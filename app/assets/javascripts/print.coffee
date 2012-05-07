@@ -1,7 +1,15 @@
 $(->
   $('a.print').click(->
-    $(this).closest('tr').addClass('printable')
-    $.get('/survey_files/320?adapter=_list_inline_adapter', (response) ->
+    row = $(this).closest('tr')
+    row.addClass('printable')
+
+    regexp = /\/(.*?)\/(.*?)\//g
+    results = regexp.exec(row.attr('data-refresh'))
+
+    controller = results[1]
+    id = results[2]
+
+    $.get("/#{controller}/#{id}?adapter=_list_inline_adapter", (response) ->
       r = $(response)
       r.find('a.as_cancel').remove()
       r.print()
