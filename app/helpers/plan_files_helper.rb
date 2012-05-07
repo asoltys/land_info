@@ -27,6 +27,18 @@ module PlanFilesHelper
     str += hidden_field :record, :location_id
   end
 
+  def plan_file_location_id_column(record)
+    record.location.name unless record.location.nil?
+  end
+
+  def plan_file_survey_file_id_column(record)
+    if record.survey_file.nil?
+      ''
+    else
+      record.survey_file.survey_file_to_two_decimal_places
+    end
+  end
+
   def plan_file_survey_file_id_form_column(record, options)
     if record.survey_file.nil?
       value = ''
@@ -35,13 +47,13 @@ module PlanFilesHelper
     end
 
     str = autocomplete_field_tag( 
-      'survey_file', 
+      'record[survey_file]', 
       '', 
       autocomplete_survey_file_survey_file_survey_files_path, 
       :value => value, 
       :id_element => '#record_survey_file_id'
     )
 
-    str += hidden_field :record, :location_id
+    str += hidden_field :record, :survey_file_id
   end
 end
