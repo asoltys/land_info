@@ -3,7 +3,6 @@ class DrawingsController < ApplicationController
     config.columns = [
       :file_name,
       :description,
-      :status,
       :project_number,
       :surveyor_id,
       :drawn_by,

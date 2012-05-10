@@ -18,17 +18,4 @@ module DrawingsHelper
       ),
       options
   end
-
-  def drawing_status_form_column(record, options)
-    select_tag :status,
-      options_for_select([
-        'See DWF',
-        'Retained',
-        'Scan Color',
-        'Cent. Rec.',
-        'Disposed',
-        'Re-scanned'
-      ], record.status),
-      options
-  end
 end
