@@ -57,7 +57,7 @@ class SurveyFilesController < ApplicationController
     config.columns[:department].sort_by :sql => ['department_abbreviation', 'department_section']
     config.columns.exclude(:department)
 
-    config.update.columns.exclude :survey_file
+    config.update.columns.exclude(:survey_file)
 
     config.columns[:survey_file].set_link(:edit)
     config.columns[:survey_file].label = "File number"
@@ -67,6 +67,7 @@ class SurveyFilesController < ApplicationController
     config.columns[:plan_files].search_sql = 'plan_files.plan_number'
     config.columns[:plan_files_description].search_sql = 'plan_files.description'
     config.columns.exclude(:plan_files_description)
+    config.update.columns.exclude(:plan_files_description)
 
 		columns[:start_date].description = "YYYY-MM-DD"
 		columns[:completion_date].description = "YYYY-MM-DD"

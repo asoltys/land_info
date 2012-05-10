@@ -66,6 +66,15 @@ www.tbs.gc.ca/ws-nw/wet-boew/terms / www.sct.gc.ca/ws-nw/wet-boew/conditions -->
 </ul>
 </div></div></div></div>
 </nav>
+<% else %>
+<nav role="navigation">
+<div id="cn-psnb"><h2>Site navigation bar</h2><div id="cn-psnb-inner"><div class="wet-boew-menubar"><div>
+<ul class="mb-menu">
+<li><div><%= link_to "Sign in", new_user_session_path %></div></li>
+<li><div><a href="/help">Help</a></div></li>
+</ul>
+</div></div></div></div>
+</nav>
 <% end %>
 <!-- HeaderEnd -->
 </header></div></div>

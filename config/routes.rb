@@ -20,4 +20,5 @@ LandInfo::Application.routes.draw do
 
   root :to => "survey_files#index"
 	match 'francais', :to => "application#francais"
+  match 'help', :to => "application#help"
 end
