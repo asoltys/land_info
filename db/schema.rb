@@ -42,6 +42,13 @@ ActiveRecord::Schema.define(:version => 20120327010815) do
     t.integer "version",                        :default => 0, :null => false
   end
 
+  create_table "dwf_files", :force => true do |t|
+    t.string  "file"
+    t.string  "plan"
+    t.string  "pdf"
+    t.integer "plan_file_id"
+  end
+
   create_table "features", :force => true do |t|
     t.string "type"
     t.string "code"
