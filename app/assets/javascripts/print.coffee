@@ -1,5 +1,5 @@
 $(->
-  $('a.print').click(->
+  $('body').on('click', 'a.print', ->
     row = $(this).closest('tr')
     row.addClass('printable')
 

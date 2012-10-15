@@ -10,3 +10,4 @@
 //= require active_scaffold
 //= require autocomplete-rails
 //= require print
+//= require plan_number

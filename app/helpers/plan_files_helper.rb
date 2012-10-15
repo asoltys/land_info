@@ -46,14 +46,23 @@ module PlanFilesHelper
       value = record.survey_file.survey_file
     end
 
-    str = autocomplete_field_tag( 
+    autocomplete_field_tag( 
       'record[survey_file]', 
       '', 
       autocomplete_survey_file_survey_file_survey_files_path, 
       :value => value, 
       :id_element => '#record_survey_file_id'
-    )
+    ) +
+    hidden_field(:record, :survey_file_id)
+  end
 
-    str += hidden_field :record, :survey_file_id
+  def plan_file_plan_number_form_column(record, options)
+    prefixes = ['BC', 'SK', 'PR', 'DPW', 'E', 'G', 'V'].map{|a| [a,a]} + [['Custom', '']]
+    select(:record, :prefix, options_for_select(prefixes, {:selected => record.prefix})) +
+    text_field(
+      :record, 
+      :plan_number, 
+      :value => number_with_precision(record.suffix, :precision => 2)
+    )
   end
 end

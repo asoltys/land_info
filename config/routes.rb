@@ -9,7 +9,13 @@ LandInfo::Application.routes.draw do
     get :autocomplete_location_name, :on => :collection
   end
   resources :marine_files do as_routes end
-  resources :plan_files do as_routes end
+  resources :plan_files do 
+    collection do
+      get 'subrecord'
+      get 'latest'
+    end
+    as_routes 
+  end
   resources :provinces do as_routes end
   resources :regions do as_routes end
   resources :survey_files do 
