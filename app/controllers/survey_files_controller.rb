@@ -78,6 +78,6 @@ class SurveyFilesController < ApplicationController
     config.search.link = false
     config.update.link = false
 
-    config.action_links.add 'print', :label => 'Print', :page => true, :type => :member
+#    config.action_links.add 'print', :label => 'Print', :page => true, :type => :member
   end
 end 

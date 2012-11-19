@@ -1,5 +1,5 @@
 module SurveyFilesHelper
-  def survey_file_plan_files_column(record)
+  def survey_file_plan_files_column(record, options)
     if record.plan_files.any?
       str = record.plan_files.first(3).collect{|p| p.plan_number}.join(', ')
       str += '...' if record.plan_files.count > 3
@@ -9,7 +9,7 @@ module SurveyFilesHelper
     end
   end
 
-  def survey_file_survey_file_column(record)
+  def survey_file_survey_file_column(record, options)
     record.survey_file_to_two_decimal_places
   end
 

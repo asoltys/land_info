@@ -47,7 +47,7 @@ class PlanFilesController < ApplicationController
     config.update.link = false
 
     # config.action_links.add 'subrecord', :label => 'Subrecords', :type => :member
-    config.action_links.add 'print', :label => 'Print', :page => true, :type => :member
+#    config.action_links.add 'print', :label => 'Print', :page => true, :type => :member
     active_scaffold_config.columns = active_scaffold_config.columns._inheritable
   end
 

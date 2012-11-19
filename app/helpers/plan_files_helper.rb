@@ -1,5 +1,5 @@
 module PlanFilesHelper
-  def plan_file_drawings_column(record)
+  def plan_file_drawings_column(record, options)
     if record.drawings.any?
       str = record.drawings.first(3).collect{|d| d.file_name}.join(', ')
       str += '...' if record.drawings.count > 3
@@ -27,11 +27,11 @@ module PlanFilesHelper
     str += hidden_field :record, :location_id
   end
 
-  def plan_file_location_id_column(record)
+  def plan_file_location_id_column(record, options)
     record.location.name unless record.location.nil?
   end
 
-  def plan_file_survey_file_id_column(record)
+  def plan_file_survey_file_id_column(record, options)
     if record.survey_file.nil?
       ''
     else

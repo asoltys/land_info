@@ -3,7 +3,7 @@ module DrawingsHelper
     link_to record.file_name, "file:///R:/ressurveys/Drawings/#{record.file_name}"
  end
 
-  def drawing_surveyor_id_column(record)
+  def drawing_surveyor_id_column(record, options)
     return '' if record.surveyor.nil?
     record.surveyor.name
   end
