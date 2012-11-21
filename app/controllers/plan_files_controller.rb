@@ -8,7 +8,7 @@ class PlanFilesController < ApplicationController
       :survey_file_id,
       :plan_number,
       :location_id,
-      :size,
+      :secondary_location,
       :description,
       :edrm_number,
       :drawing_description
@@ -26,7 +26,7 @@ class PlanFilesController < ApplicationController
       :survey_file_id,
       :plan_number,
       :location,
-      :size,
+      :secondary_location,
       :description,
       :drawings
     ]
