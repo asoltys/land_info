@@ -18,6 +18,7 @@ class PlanFilesController < ApplicationController
       :plan_number,
       :description,
       :location,
+      :secondary_location,
       :drawings,
       :drawing_description
     ]
