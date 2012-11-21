@@ -1,6 +1,7 @@
 $(->
-  $('body').on('click', 'a.print', ->
-    row = $(this).closest('tr')
+  $('body').on('click', 'a.print', (e) ->
+    e.preventDefault()
+    row = $(this).closest('table').closest('tr')
     row.addClass('printable')
 
     regexp = /\/(.*?)\/(.*?)\//g
