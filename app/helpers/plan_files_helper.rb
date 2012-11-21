@@ -35,7 +35,7 @@ module PlanFilesHelper
     if record.survey_file.nil?
       ''
     else
-      record.survey_file.survey_file_to_two_decimal_places
+      link_to record.survey_file.survey_file_to_two_decimal_places, :controller => 'survey_files', :action => 'edit', :id => record.survey_file
     end
   end
 
