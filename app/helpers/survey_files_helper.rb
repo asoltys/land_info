@@ -34,4 +34,8 @@ module SurveyFilesHelper
 
     str += hidden_field :record, :location_id
   end
+
+  def survey_file_location_id_column(record, options)
+    record.location.name
+  end
 end
