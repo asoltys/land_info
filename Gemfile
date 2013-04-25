@@ -1,12 +1,11 @@
 source 'http://rubygems.org'
 
-gem 'rails', '3.2.2'
+gem 'rails', '3.2.13'
 gem 'active_scaffold', :git => 'git://github.com/asoltys/active_scaffold.git'
 gem 'devise'
-gem 'thin'
+gem 'passenger'
 gem 'mysql2'
-gem 'rails3-jquery-autocomplete'
-gem 'debugger'
+gem 'rails3-jquery-autocomplete', :git => 'https://github.com/crowdint/rails3-jquery-autocomplete'
 
 # Gems used only for assets and not required
 # in production environments by default.

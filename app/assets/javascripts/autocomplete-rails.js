@@ -14,21 +14,21 @@
 *       <input type="text" data-autocomplete="/url/to/autocomplete" data-id-element="#id_field">
 */
 
-if(typeof String.prototype.trim !== 'function') {
-  String.prototype.trim = function() {
-    return this.replace(/^\s+|\s+$/g, ''); 
-  }
-}
-
 (function(jQuery)
 {
   var self = null;
   jQuery.fn.railsAutocomplete = function() {
-    return this.live('focus',function() {
+    var handler = function() {
       if (!this.railsAutoCompleter) {
         this.railsAutoCompleter = new jQuery.railsAutocomplete(this);
       }
-    });
+    };
+    if (jQuery.fn.on !== undefined) {
+      return $(document).on('focus',this.selector,handler);
+    }
+    else {
+      return this.live('focus',handler);
+    }
   };
 
   jQuery.railsAutocomplete = function (e) {
@@ -56,6 +56,10 @@ if(typeof String.prototype.trim !== 'function') {
           jQuery.getJSON( jQuery(e).attr('data-autocomplete'), {
             term: extractLast( request.term )
           }, function() {
+            if(arguments[0].length == 0) {
+              arguments[0] = []
+              arguments[0][0] = { id: "", label: "no existing match" }
+            }
             jQuery(arguments[0]).each(function(i, el) {
               var obj = {};
               obj[el.id] = el;
@@ -63,6 +67,20 @@ if(typeof String.prototype.trim !== 'function') {
             });
             response.apply(null, arguments);
           });
+        },
+        change: function( event, ui ) {
+            if(jQuery(jQuery(this).attr('data-id-element')).val() == "") {
+        	  	return;
+        	  }
+            jQuery(jQuery(this).attr('data-id-element')).val(ui.item ? ui.item.id : "");
+            var update_elements = jQuery.parseJSON(jQuery(this).attr("data-update-elements"));
+            var data = ui.item ? jQuery(this).data(ui.item.id.toString()) : {};
+            if(update_elements && jQuery(update_elements['id']).val() == "") { 
+            	return; 
+            }
+            for (var key in update_elements) {
+                jQuery(update_elements[key]).val(ui.item ? data[key] : "");
+            }  
         },
         search: function() {
           // custom minLength
@@ -105,8 +123,7 @@ if(typeof String.prototype.trim !== 'function') {
               jQuery(this).unbind('keyup.clearId');
             }
           });
-          jQuery(this).trigger('railsAutocomplete.select', ui);
-
+          jQuery(e).trigger('railsAutocomplete.select', ui);
           return false;
         }
       });

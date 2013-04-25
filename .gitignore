@@ -4,6 +4,6 @@ db/*.sqlite3
 log/*.log
 tmp/
 .rvmrc
-public/javascripts/active_scaffold/*
-public/stylesheets/active_scaffold/*
-public/assets
+#public/javascripts/active_scaffold/*
+#public/stylesheets/active_scaffold/*
+#public/assets

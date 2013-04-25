@@ -24,7 +24,7 @@ text-decoration: none;
 }
 
 .active-scaffold a.disabled {
-color: #06C;
+color: #000;
 }
 
 .active-scaffold a:hover, .active-scaffold div.hover, .active-scaffold td span.hover {
