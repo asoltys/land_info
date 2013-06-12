@@ -79,6 +79,16 @@ class SurveyFilesController < ApplicationController
     config.search.link = false
     config.update.link = false
 
+    config.action_links.add 'new_version', :label => 'New Version', :page => true, :type => :member, :inline => true, :position => :after
     config.action_links.add 'show', :label => 'Print', :page => true, :type => :member, :html_options => { :class => 'print' }
+  end
+
+  def new_version
+    record = SurveyFile.find(params[:id])
+    dup = record.dup
+    dup.survey_file = SurveyFile.where("survey_file LIKE '%?%'", record.survey_file.truncate).maximum("survey_file") + 0.01
+    params[:id] = dup.id
+    dup.save!
+    redirect_to :controller => 'survey_files', :action => 'index'
   end
 end 

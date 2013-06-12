@@ -6,6 +6,7 @@ gem 'devise'
 gem 'passenger'
 gem 'mysql2'
 gem 'rails3-jquery-autocomplete', :git => 'https://github.com/crowdint/rails3-jquery-autocomplete'
+gem 'debugger'
 
 # Gems used only for assets and not required
 # in production environments by default.

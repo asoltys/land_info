@@ -11,7 +11,7 @@ LandInfo::Application.routes.draw do
   resources :marine_files do as_routes end
   resources :plan_files do 
     collection do
-      get 'subrecord'
+      get 'new_version'
       get 'latest'
     end
     as_routes 
@@ -21,6 +21,9 @@ LandInfo::Application.routes.draw do
   resources :survey_files do 
     as_routes 
     get :autocomplete_survey_file_survey_file, :on => :collection
+    collection do
+      get 'new_version'
+    end
   end
   resources :surveyors do as_routes end
 

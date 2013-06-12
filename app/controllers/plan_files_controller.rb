@@ -47,7 +47,7 @@ class PlanFilesController < ApplicationController
     config.show.link = false
     config.update.link = false
 
-    # config.action_links.add 'subrecord', :label => 'Subrecords', :type => :member
+    config.action_links.add 'new_version', :label => 'New Version', :page => true, :type => :member, :inline => true, :position => :after
     config.action_links.add 'show', :label => 'Print', :page => true, :type => :member, :html_options => { :class => 'print' }
     active_scaffold_config.columns = active_scaffold_config.columns._inheritable
   end
@@ -62,8 +62,12 @@ class PlanFilesController < ApplicationController
     params[:record][:plan_number] = params[:record][:prefix] + params[:record][:plan_number]
   end
 
-  def subrecord
-    parent = PlanFile.find(params[:id])
-    children = parent.plan_number 
+  def new_version
+    record = PlanFile.find(params[:id])
+    dup = record.dup
+    params[:id] = dup.id
+    dup.plan_number = record.latest_version
+    dup.save!
+    redirect_to :controller => 'plan_files', :action => 'index'
   end
 end 
