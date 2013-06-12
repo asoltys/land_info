@@ -44,6 +44,7 @@ class SurveyFilesController < ApplicationController
       :survey_file, 
       :description, 
       :location,
+      :location_second,
       :plan_files,
       :start_date,
       :completion_date,
