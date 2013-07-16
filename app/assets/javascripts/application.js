@@ -12,3 +12,9 @@
 //= require autocomplete-rails
 //= require print
 //= require plan_number
+
+$(function() {
+  $('body').on('mouseover', 'input[class*=date]', function() {
+    $(this).datepicker();
+  });
+});
